@@ -2,7 +2,7 @@
 
 ## Current gate
 
-Technical QC: **Ready — delivery strategy only**. Human PLAN acceptance: **pending**.
+Technical QC: **Ready — delivery strategy only**. Human PLAN acceptance: **accepted** with “K” on 2026-10-22 for PLAN presented in commit `65bf300cfe6febdaab04fba05e3963e58da267a2`. [DOCS_TASKS.md](DOCS_TASKS.md) owns acceptance publication and issue progression evidence.
 
 Reviewed root: [PLAN.md](PLAN.md), Git blob `2d02a3c4cc20a36937eeea797f6e1e3d871eada6`. No focused PLAN children are needed. No layout exists; placement coverage and combined PLAN/layout QC remain pending. TASKS readiness is **Blocked** until layout preparation, combined QC, and human acceptance are complete.
 

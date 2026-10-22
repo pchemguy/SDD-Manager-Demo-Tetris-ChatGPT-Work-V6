@@ -31,7 +31,7 @@ The running SDD Manager package's `assets/DOCS_TRACKING_TEMPLATE.json` supplies 
 - [x] DOCS-005 — Prepare and accept SPEC.
     - Specify observable behavior, interfaces, error contracts, required qualities and acceptance conditions from the accepted design.
     - Complete required SPEC QC and its human acceptance checkpoint.
-- [ ] DOCS-006 — Prepare and accept PLAN.
+- [x] DOCS-006 — Prepare and accept PLAN.
     - Define delivery phases, milestones, dependencies and exit conditions against SPEC.
     - Complete PLAN QC, then present PLAN for human approval.
 - [ ] DOCS-007 — Prepare and accept layout.
@@ -68,7 +68,7 @@ On interruption, recover the earliest unmet operation from documents, acceptance
 
 - 2026-10-22: The user selected the classic-only game target from the proposed scope options. This clarifies requirements; it does not approve a PROJECT document that has not yet been presented.
 - 2026-10-22: The user instructed the agent to manage versioning and publish a corresponding tagged GitHub release with release notes after every completed, verified, integrated implementation phase.
-- No future human checkpoint is preapproved for this repository. PLAN first approval is the next human boundary.
+- No future human checkpoint is preapproved for this repository. Layout first approval is the next human boundary.
 
 ### DOCS-002 PROJECT proposal
 
@@ -106,4 +106,4 @@ On interruption, recover the earliest unmet operation from documents, acceptance
 - Prepared [PLAN.md](PLAN.md) for one bounded classic-game phase, version 0.1.0. Four delivery milestones establish an interactive browser slice, continuous play, reliable session controls, and desktop distribution. A fifth milestone contains exactly one final phase review task. Each delivery milestone also ends with its own review/testing/report task.
 - Assessed the complete classic-only target as a small coherent first release, with direct state/view dependencies and no independent enhancement scope. Defined included/deferred milestone contracts, early demonstrations and human feedback, regressions, browser provisioning, failures, CI, integration and release gates. Task derivation must return excessive scope to PLAN rather than hide it in broad tasks.
 - [PLAN-REVIEW-REPORT.md](PLAN-REVIEW-REPORT.md) records governing source identities, semantic/count assessments, complete grouped R/G/A/K contract coverage, actual document checks, and evidence limits. Technical gate: Ready for strategy only. No confirmed strategy finding remains; placement and combined PLAN/layout QC are pending.
-- Presented PLAN content identity: blob 2d02a3c4cc20a36937eeea797f6e1e3d871eada6. Human PLAN acceptance is pending; DOCS-006 stays unchecked and issue #6 stays open. Prepare layout only after PLAN acceptance; TASKS remains blocked until layout and combined QC/acceptance. No implementation, installation, hosted phase activation, or release has occurred.
+- Presented PLAN content identity: blob 2d02a3c4cc20a36937eeea797f6e1e3d871eada6. The user accepted PLAN with “K” on 2026-10-22 in response to the approval request for published proposal commit 65bf300cfe6febdaab04fba05e3963e58da267a2. The acceptance commit retains its source blob, records human acceptance in the QC gate, and marks DOCS-006 complete. Publish and verify acceptance, then close/read back issue #6 before layout authoring. TASKS remains blocked until layout and combined QC/acceptance. Future checkpoints remain pending.
