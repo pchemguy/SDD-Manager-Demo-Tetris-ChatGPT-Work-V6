@@ -22,7 +22,7 @@ The running SDD Manager package's `assets/DOCS_TRACKING_TEMPLATE.json` supplies 
 - [x] DOCS-002 — Prepare and accept PROJECT.
     - Establish the project brief: purpose, users, outcomes, scope, non-goals and consequential constraints; identify material assumptions and unresolved decisions.
     - Review the proposal with the human and complete its acceptance checkpoint.
-- [ ] DOCS-003 — Prepare and accept ARCHITECTURE.
+- [x] DOCS-003 — Prepare and accept ARCHITECTURE.
     - Define major system blocks, relationships, dependency direction and consequential structural decisions from the accepted brief.
     - Review the proposal with the human and complete its acceptance checkpoint.
 - [ ] DOCS-004 — Prepare and accept DECOMPOSITION.
@@ -68,7 +68,7 @@ On interruption, recover the earliest unmet operation from documents, acceptance
 
 - 2026-10-22: The user selected the classic-only game target from the proposed scope options. This clarifies requirements; it does not approve a PROJECT document that has not yet been presented.
 - 2026-10-22: The user instructed the agent to manage versioning and publish a corresponding tagged GitHub release with release notes after every completed, verified, integrated implementation phase.
-- No future human checkpoint is preapproved for this repository. ARCHITECTURE first approval is the next human boundary.
+- No future human checkpoint is preapproved for this repository. DECOMPOSITION first approval is the next human boundary.
 
 ### DOCS-002 PROJECT proposal
 
@@ -80,8 +80,8 @@ On interruption, recover the earliest unmet operation from documents, acceptance
 
 ### DOCS-003 ARCHITECTURE proposal
 
-- Proposed TypeScript with strict checking, Canvas 2D and HTML controls, Vite plus a separate TypeScript check, Vitest and Playwright. Compared JavaScript/Canvas and TypeScript/DOM alternatives and retained their tradeoffs in ARCHITECTURE. These technology choices await approval of this architecture.
+- Proposed TypeScript with strict checking, Canvas 2D and HTML controls, Vite plus a separate TypeScript check, Vitest and Playwright. Compared JavaScript/Canvas and TypeScript/DOM alternatives and retained their tradeoffs in ARCHITECTURE. These technology choices were accepted with the architecture approval recorded below.
 - Defined game-core, session-controller, browser-adapter and presentation ownership, directed dependencies, explicit time/randomness inputs, snapshot flow, lifecycle ownership and failure boundaries.
 - Kept exact game contracts in SPEC, logical interface detail in DECOMPOSITION, delivery sequencing in PLAN and physical allocation in layout. Browser provisioning and recovery remain governed by the root policy.
 - Owner review checked PROJECT alignment, classic-only scope, cohesive ownership, dependency direction, determinism, test seams, appropriate document boundaries and source-backed tooling claims. Local Markdown/link and content-identity checks are recorded with the proposal commit. Browser execution and implementation are not claimed.
-- Presented ARCHITECTURE content identity: blob e9aadc3553baf30230cbafd1b8735c51c71fa510. First human approval is pending; DOCS-003 remains unchecked and issue #3 remains open. Hold dependent DECOMPOSITION authoring at this checkpoint.
+- Presented ARCHITECTURE content identity: blob e9aadc3553baf30230cbafd1b8735c51c71fa510. The user accepted this published architecture with “k” on 2026-10-22 in response to its approval request. Presented commit: 64ebe9fc76b162ff509a25952846177421c91526. The acceptance commit retains the exact ARCHITECTURE blob and marks DOCS-003 complete. Publish and verify acceptance, then close/read back issue #3 before DECOMPOSITION authoring. Future checkpoints remain pending.
