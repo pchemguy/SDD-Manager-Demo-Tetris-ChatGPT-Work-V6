@@ -17,7 +17,7 @@ The running SDD Manager package's `assets/DOCS_TRACKING_TEMPLATE.json` supplies 
 - On 2026-10-22 the user extended the complete target with hold, ghost pieces, seven-bag randomization, wall kicks, hard drop, and full-gravity-interval locking from grounding. Hard drop follows that policy by default, with a selectable immediate-hard-drop alternative.
 - The user explicitly preapproved human checkpoints through completed DOCS-008 and instructed this pass to start at DOCS-002. The grant covers PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC with its children, PLAN, layout, and TASKS, including their required owner review/QC and tracked completion. It does not waive technical gates or publication/readback.
 - Stop after DOCS-008 completion is recorded, published, and its issue closure verified. Wait for the user to request another loop or approve advancing. DOCS-009, preparation integration, phase projection, implementation, and releases are outside this pass.
-- Current position: DOCS-007 layout passed combined extended-scope PLAN/layout QC and is accepted under scoped preapproval. Verify completion publication and issue #7 closure before TASKS. DOCS-008 is the last authorized document task; its completion is the stopping boundary.
+- Current position: DOCS-008 TASKS passed extended-scope task QC and is accepted under the recorded preapproval. Publish/read back its completion and close/read back issue #8, then stop for the user. DOCS-009 stays unchecked/open; another loop or advancing requires the next user instruction.
 
 ## Preparation
 
@@ -44,7 +44,7 @@ The running SDD Manager package's `assets/DOCS_TRACKING_TEMPLATE.json` supplies 
 - [x] DOCS-007 — Prepare and accept layout.
     - Allocate source, tests, documentation and artifacts to physical paths consistently with the accepted design and PLAN.
     - Review layout against the design and PLAN, update the PLAN review report, then present layout for human approval.
-- [ ] DOCS-008 — Prepare and accept TASKS.
+- [x] DOCS-008 — Prepare and accept TASKS.
     - Derive executable tasks, dependencies and required milestone/phase review units from accepted SPEC, PLAN and layout.
     - Complete required task-list QC and its human acceptance checkpoint. Do not start implementation or project implementation-phase objects yet.
 - [ ] DOCS-009 — Pass documentation package QC.
@@ -135,6 +135,14 @@ The associated accepted AGENTS navigation was blob 6ed692d7057d468ad070e3a8497bc
 - Extended existing physical ownership for core bag/landing, numeric random sampling, sampled-clock controller/adapter collaboration, held/ghost/policy input and views, deterministic fixtures, and both phases' reports. Retained source/test boundaries, bootstrap reuse, production isolation, generated/cache homes, central policies, and root guidance links. Fifteen planned application files have unique owners; no product files exist.
 - [PLAN-REVIEW-REPORT.md](PLAN-REVIEW-REPORT.md) adds Revision 3 with L03–L05 placement corrections and actual combined recheck. Accepted PLAN/design/SPEC are unchanged. Technical gate is Ready for both PLAN and layout, with no confirmed blocker; actual runtime checks remain future work.
 - Human layout acceptance uses the recorded scoped preapproval. Accepted layout blob: 71c5936100b2e9c5769f181b1c76188476fa112f. Layout, combined evidence, and checked DOCS-007 share this completion commit. Verify publication/issue closure before deriving TASKS, then stop at completed DOCS-008 as instructed.
+
+### DOCS-008 — TASKS extension and stopping checkpoint
+
+- Prior transition verified: DOCS-007 completion commit f56d87bc36523dc00a92c1fadda41d7abbe78d45 was published/read back with confirmed cleanup; issue #7 was closed/read back as completed before TASKS.
+- Extended the retained implementation hierarchy into both accepted phases with 43 unchecked tasks: 33 delivery and ten reviews. Kept all T-001–T-024 identities/parents, inserted the independently scoped T-025 bag prerequisite before T-003, and assigned T-026–T-043 to modern play. Delivery counts are 7/4/5/4 and 3/4/3/3; final implementation reporting is owned by T-043.
+- [TASKS-REVIEW-REPORT.md](TASKS-REVIEW-REPORT.md) retains first-cycle findings/Revisions 1–2 and adds Revision 3 with exact inputs, scope/count assessments, TQ04–TQ06 corrections, complete acceptance routes, stable-ID/dependency/review/path checks, and evidence limits. Technical gate is Ready for the extended task decomposition; no confirmed blocker remains.
+- Human TASKS acceptance uses the user's explicit preapproval through completed DOCS-008. Accepted TASKS blob: f5ec46c51616189f793bdd762a12f3036520f2e0. This completion commit includes accepted TASKS, required QC evidence, refreshed HANDOFF, and checked DOCS-008. Publication/readback and issue #8 closure require confirmation before reporting the stop reached.
+- Exact stop: await the user's instruction for another docs loop or advancing. DOCS-009/package QC has not run, the preparation milestone stays open, documentation stays unmerged, implementation tasks stay unchecked, and no phase projection or release has occurred.
 
 ## Retained first-cycle preparation evidence
 

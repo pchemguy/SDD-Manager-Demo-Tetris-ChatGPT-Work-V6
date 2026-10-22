@@ -1,27 +1,32 @@
 # Project handoff
 
-Checkpoint: Main-document preparation, iteration 2 extended-scope pass, DOCS-002. Recover later completed tasks and external effects from [DOCS_TASKS.md](DOCS_TASKS.md), Git, and hosted readback; this checkpoint need not match the branch tip.
+Checkpoint: Main-document preparation, iteration 2, DOCS-008 stopping boundary. The document work is reviewed and accepted under scoped preapproval; completion publication and issue #8 closure are the remaining effects to verify before reporting the stop reached. Recover subsequent effects from [DOCS_TASKS.md](DOCS_TASKS.md), Git and exact hosted readback; this snapshot's containing commit identifies its document state.
 
 ## Workflow and sources
 
-- Workflow/stage/owner: Main development, existing preparation documents extended in place. sdd-manage coordinates DOCS-002–DOCS-008; sdd-design owns PROJECT, ARCHITECTURE, and DECOMPOSITION, followed by the SPEC, PLAN/layout, and TASKS owners.
-- Governing sources: [AGENTS.md](../../AGENTS.md), [discovery protocol](../../SKILL_DISCOVERY_PROTOCOL.md), [browser policy](../../BROWSER_DEV_POLICY.md), and the bundled [SDD Manager entry](../../.agents/plugins/sdd-manager/PLUGIN.md).
-- Project-specific docs-iteration protocol, current status, source identities, human decisions, and prior acceptance history: [DOCS_TASKS.md](DOCS_TASKS.md). The protocol remains a project override; the bundled plugin is unchanged.
-- Required package/setup availability: Repository-bundled SDD Manager 0.15.1; Linux host, Node 24, Python 3.12. Accepted TypeScript/Canvas/HTML, Vite, Vitest, and Playwright choices are being reassessed against the expanded scope. Product tooling is not established and no game code exists.
+- Workflow/owner: Main development, project-specific docs-iteration pass coordinated by sdd-manage. The design, specification, plan/layout and task owners extended their existing documents in order.
+- Governing sources: [AGENTS.md](../../AGENTS.md), [discovery protocol](../../SKILL_DISCOVERY_PROTOCOL.md), [browser policy](../../BROWSER_DEV_POLICY.md), and bundled [SDD Manager entry](../../.agents/plugins/sdd-manager/PLUGIN.md).
+- Current accepted content, checkpoint grant, completion evidence and prior histories: [DOCS_TASKS.md](DOCS_TASKS.md). The docs-iteration protocol remains a project override; SDD Manager itself is unchanged.
+- Available environment: Bundled SDD Manager 0.15.1; Linux, Node 24, Python 3.12. Product tooling/browser capability has not been established. No application or test implementation exists.
 
-## Scope and authorization
+## Target and accepted preparation
 
-- Complete target: Classic desktop browser Tetris plus hold, ghost, seven-bag, wall kicks, hard drop, and default full-gravity-interval lock delay from grounding. Hard drop uses the same delay unless immediate hard-drop locking is selected.
-- User grant on 2026-10-22: Start at DOCS-002, extend each document through completed DOCS-008, and treat those human checkpoints as preapproved. Keep owner review/QC, publication, and tracking gates. This is a bounded document pass, not implementation authorization.
-- Stop: Record and publish DOCS-008 completion, verify issue #8 closure, and wait for the user's decision on another loop or advancing. DOCS-009 and preparation integration are outside the current pass. No future checkpoint beyond DOCS-008 is preapproved.
-- Version/release policy: First playable phase 0.1.0, semantic increments reflecting delivered changes, and a published tagged GitHub release with notes after every completed, verified, integrated implementation phase. No implementation phase or release is complete.
-- Starting documents: Accepted baseline commit 1fc48c722bf55628af69e646b16f8483598498e7, retained through loop activation at 81ac5ebf530a9748ccf91e02c1cd90587442da7c. Reuse those versions and preserve historical evidence while extending them; current accepted content is recorded per task.
+- Complete target: Desktop browser Tetris with the classic foundation, hold, ghost, seven-bag, clockwise wall kicks, hard drop, and full-gravity-interval locking from grounding. Hard drop uses that delay unless the session-only immediate option is selected. Up/Space remain clockwise rotation; C is hold and D hard drop.
+- PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC/gameplay child, PLAN, layout and TASKS have been extended from their accepted starting versions and accepted under the user's scoped preapproval. SPEC/design, PLAN strategy/combined layout, and TASKS QC passed with retained prior findings and appended rechecks. This is per-document QC; DOCS-009 whole-package QC is still outstanding.
+- PLAN: Classic foundation 0.1.0 followed by Modern play 0.2.0, four delivery milestones and one phase review each. TASKS has 43 unchecked implementation tasks, 33 delivery and ten review. Existing task IDs/parents are retained; T-025 is listed before dependent T-003.
+- Version/release instruction remains: Publish a corresponding version tag and GitHub release with notes after each completed, verified, integrated implementation phase. Versions above are planned; no implementation phase or release is delivered.
 
-## Branches, tracking, and continuation
+## Authorization and exact stop
 
-- Working branch: design-docs/main. Creation parent and eventual preparation integration target: main. Branch-off: b0597bf0f02c5e4ed5329adb606acafab63c15a5. No suspended child campaign.
-- Tracking remains enabled. Native milestone #1, sdd-docs-main, is open; all nine exact issue definitions and associations were verified before writes. DOCS-001/issue #1 remain complete. DOCS-002–DOCS-008 close individually after each verified published completion; DOCS-009/issue #9 remain open.
-- DOCS-002 is locally reviewed and accepted under scoped preapproval in this checkpoint's commit. Publish/read back the commit and close/read back issue #2 before ARCHITECTURE. Later task evidence in DOCS_TASKS supersedes this entry snapshot.
-- Preserve the current range and stop after interruption. Push/read back every owned commit before further work. Do not infer completion from an old Ready label, unchanged file presence, or historical acceptance. Materially changed inputs require the affected downstream QC to be rechecked.
+- The user extended scope and explicitly preapproved checkpoints through completed DOCS-008 on 2026-10-22. The requested pass began at DOCS-002. Technical QC, publication/readback, and issue closure remain required.
+- Complete and verify DOCS-008 publication/issue closure, record the confirmed outcome, then stop. Wait for the user to request another loop or approve advancing. Do not run DOCS-009, integrate preparation, project implementation phases, execute tasks, or publish releases in this pass.
+- A requested next loop starts from these extended accepted document versions. No checkpoint beyond DOCS-008 or implementation range is authorized by this grant.
 
-Refresh this checkpoint at the DOCS-008 stopping boundary; intervening document completion evidence remains in DOCS_TASKS.
+## Branches, tracking and current operation
+
+- Working branch: design-docs/main. Creation parent/eventual preparation integration target: main. Branch-off: b0597bf0f02c5e4ed5329adb606acafab63c15a5. No suspended child campaign. Preparation remains unmerged.
+- Tracking is enabled. Reuse native milestone #1 (sdd-docs-main) and existing issues #1–#9; exact definitions/associations were verified before writes. Issues #1–#7 are closed/read back as completed. Issue #8 must close after this completion is published; issue #9 remains open and its task unchecked. Keep the milestone open.
+- Current operation: publish/read back this completion commit with process cleanup confirmed, close/read back issue #8, then persist the verified stopping outcome. Do not infer these future effects from the local completion checkbox.
+- Push/read back every owned commit. On interruption reconcile the retained operation before other work and preserve the user's exact stopping boundary.
+
+Implementation remains gated by DOCS-009, verified published preparation integration, a later human advancement/range decision, and eligible-phase tracking.
