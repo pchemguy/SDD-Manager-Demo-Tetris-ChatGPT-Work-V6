@@ -17,7 +17,7 @@ The running SDD Manager package's `assets/DOCS_TRACKING_TEMPLATE.json` supplies 
 - On 2026-10-22 the user requested another loop with four additional extensions together, then clarified: “You are to proceed with the loop with specified scope extension.” This continues the established bounded DOCS-002–DOCS-008 document pass and its checkpoint preapproval. Record acceptance under that grant, not as a new interactive approval. Technical QC, atomic document completion, publication/readback and issue closure remain required.
 - Extend the currently accepted documents in order, in one pass covering all four additions below. Preserve their contents as the starting baseline and retain earlier acceptance/QC evidence; do not create four separate loops or regenerate the documents.
 - Stop after DOCS-008 completion is recorded, published/read back and issue #8 closure verified. DOCS-009, preparation integration, implementation-phase projection, implementation and releases are outside this pass. The user will decide whether another loop or advancement follows.
-- Current operation: DOCS-004 owner review and scoped acceptance are recorded below. Publish/read back its completion and verify issue #4 closure before DOCS-005. DOCS-009 remains unchecked/open; the exact stop remains completed DOCS-008.
+- Current operation: DOCS-005 SPEC/children QC and scoped acceptance are recorded below. Publish/read back its completion and verify issue #5 closure before DOCS-006. DOCS-009 remains unchecked/open; the exact stop remains completed DOCS-008.
 
 ### Combined scope additions
 
@@ -51,7 +51,7 @@ These additions supersede the retained brief's configuration/persistence exclusi
 - [x] DOCS-004 — Prepare and accept DECOMPOSITION.
     - Define component responsibilities, collaboration, ownership and design-level interface boundaries consistently with ARCHITECTURE.
     - Review the proposal with the human and complete its acceptance checkpoint.
-- [ ] DOCS-005 — Prepare and accept SPEC.
+- [x] DOCS-005 — Prepare and accept SPEC.
     - Specify observable behavior, interfaces, error contracts, required qualities and acceptance conditions from the accepted design.
     - Complete required SPEC QC and its human acceptance checkpoint.
 - [ ] DOCS-006 — Prepare and accept PLAN.
@@ -149,6 +149,13 @@ The associated accepted AGENTS navigation was blob 6ed692d7057d468ad070e3a8497bc
 - Extended the existing components with pure configuration resolution/provenance, a browser persistence adapter, variant-aware board operations, atomic core bonus/traversal/hold state, controller save feedback and presentation frames. The composition root resolves settings before the first core snapshot. Browser state does not duplicate gameplay ownership.
 - Owner review checked ARCHITECTURE conformance, producer/consumer interfaces, cleanup/failure paths, startup and player-change ordering, held variant continuity, no duplicate landing/visibility algorithms, and direct deterministic/browser test seams. Precise admissibility, settings formats/defaults and failure outcomes are delegated to SPEC without a structural conflict.
 - Human acceptance uses the recorded scope/preapproval for this instructed loop. Accepted DECOMPOSITION blob: f46bbca88917a4efeaaa61ea6933475b901c0915. Submit it with this evidence and checked DOCS-004; verify publication/readback and issue closure before SPEC.
+
+### DOCS-005 — Complete combined behavior and persistence specification
+
+- Prior transition verified: DOCS-004 completion b1dc6ef7d3f58382cd3760ed0c22ea478d856569 was published/read back with confirmed cleanup; issue #4 was closed/read back as completed before SPEC authoring.
+- Extended SPEC/GAMEPLAY and added the cohesive CONFIGURATION child. Defined dynamic midline classification, traversable versus valid final placement, deepest penetrator landing/ghost agreement, bonus cap/spend/award and white variants, hold continuity, both general/drop policies, all six defaults/gates, exact cookie/query mappings, independent precedence, explicit-default saves, omission retention and nonfatal persistence failures.
+- SPEC/design QC passed with Revision 3 appended to SPEC-REVIEW-REPORT; retained all prior sources/findings/rechecks and resolved S05–S07. Document-data checks cover 7 R / 10 G / 6 C, 22 A / 17 K / 6 P definitions, schema/palette/math and retained geometry/kick/bag checks. This certifies documents only; browser/product evidence remains future work.
+- Human acceptance uses the recorded DOCS-002–DOCS-008 scoped preapproval for the instructed loop. Accepted blobs: SPEC.md: 24bf3f21ec51fc4f247510d6f870fd5d933de1f6; spec/GAMEPLAY.md: 0a0ab4a87640886e2a5b03a1c3712fea89e55d86; spec/CONFIGURATION.md: 6a73acc35202020f7ab8e9b760f3eaf8745cda37. QC report: a17ca22e6402f69cce4e7a989f2638b38341c467. Submit the accepted roots/children, report, decision and checked DOCS-005 together; verify publication/issue closure before PLAN.
 
 ## Iteration 2 document completion evidence
 

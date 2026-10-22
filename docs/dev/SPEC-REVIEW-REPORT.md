@@ -2,6 +2,30 @@
 
 ## Current gate
 
+Technical QC: **Ready — iteration 3 combined extension**. Human SPEC/root-and-children acceptance: **accepted under scoped preapproval** for the instructed DOCS-002–DOCS-008 loop on 2026-10-22. [DOCS_TASKS.md](DOCS_TASKS.md) owns the actual grant, accepted states, publication and issue evidence. This is design/specification QC, not product verification or DOCS-009.
+
+| Reviewed artifact | Git blob |
+| --- | --- |
+| [SPEC.md](SPEC.md) | 24bf3f21ec51fc4f247510d6f870fd5d933de1f6 |
+| [spec/GAMEPLAY.md](spec/GAMEPLAY.md) | 0a0ab4a87640886e2a5b03a1c3712fea89e55d86 |
+| [spec/CONFIGURATION.md](spec/CONFIGURATION.md) | 6a73acc35202020f7ab8e9b760f3eaf8745cda37 |
+
+Accepted governing inputs at published DECOMPOSITION completion b1dc6ef7d3f58382cd3760ed0c22ea478d856569:
+
+| Source | Git blob |
+| --- | --- |
+| [PROJECT.md](PROJECT.md) | 1a72042d6f7244922b21de09ff15967e841f94f9 |
+| [ARCHITECTURE.md](ARCHITECTURE.md) | 19a47420bbe1a66c810ad8206819d078a3130a61 |
+| [DECOMPOSITION.md](DECOMPOSITION.md) | f46bbca88917a4efeaaa61ea6933475b901c0915 |
+| [AGENTS.md](../../AGENTS.md) | 28dd2966297a912deda4f0cbf1c4e54e7a316aca |
+| [BROWSER_DEV_POLICY.md](../../BROWSER_DEV_POLICY.md) | ae71cfc01aaf694f5c4a7b055d2f15d469d7f7a7 |
+
+Revision 3 rechecks complete gameplay and configuration scope against those accepted inputs. S01–S04 retain their historical resolved dispositions; S05–S07 are resolved below. No confirmed blocker, deferred finding or exception remains. PLAN/layout and TASKS must reassess the combined scope before dependent use.
+
+## Iteration 2 accepted baseline
+
+The following former current-gate evidence and Revision 2 are retained history for the six-extension baseline. They do not certify iteration 3.
+
 Technical QC: **Ready — iteration 2 extended scope**. Human SPEC acceptance: **accepted under scoped preapproval** on 2026-10-22 for DOCS-002–DOCS-008. [DOCS_TASKS.md](DOCS_TASKS.md) owns the actual grant, completion publication, and issue progression. This is specification/design QC, not product verification or whole-package QC.
 
 Reviewed current sources:
@@ -98,3 +122,27 @@ Under the user's extended scope and DOCS-002–DOCS-008 preapproval, the author 
 Local document-data checks passed: 6 R, 9 G, 16 A and 12 K definitions; seven four-cell shapes and legal spawns; four-turn geometry; eight five-candidate kick rows; 24 all-blocked rotation constructions; both documented I-kick examples; 512 six-sample bag permutations; canonical-order/scoring/progression arithmetic. Manual review covered hold collisions and eligibility, no-draw and failure paths, ghost/drop agreement, distance zero, grounded/airborne transitions, simultaneous deadlines, pause/resume, setting retention/reload, and design ownership. Final source identities are in Current gate.
 
 These checks validate document data and examples, not an implemented engine. Markdown/link/identity checks accompany this checkpoint. No installation, browser capability, runtime test, CI, build, or release result is certified. No design amendment, deferred confirmed issue, or exception is needed for Ready.
+
+## Revision 3 — Combined configuration and penetrator scope
+
+Reviewed on 2026-10-22 by the author applying sdd-specify and the development-document QC criteria. Starting SPEC/GAMEPLAY identities were 765e6c865675dca7e8dab419e221315fdd448065 / 2e1139f2ff1d791af9676c4ce423a9c7bd0e1279, retained from iteration 2. CONFIGURATION is a cohesive child added with the same DOCS-005 checkpoint; no extra preparation issue is created. Exact corrected sources/governing states are in Current gate.
+
+| Coverage group | Conformance and objective evidence route |
+| --- | --- |
+| Conditional visibility: G09/K17, R04/A17 | One core landing/projection; uppermost landing row classifies 0–9 versus 10–19, straddling hides, and both regular/penetrator destinations follow the same rule independently of hard-drop enablement. |
+| Penetrator: G01–G04/G08–G10, K13–K15, R02/R04–R05/A18–A19 | Core owns bounded transient traversal, reachable lowest valid landing, final nonoverlap, activation/spend/award/cap, held identity and reset. Views consume variants/bonus count; white penetrators and nonwhite regular palette have browser evidence. |
+| Configuration: C01/C03, G02–G04/G06/G08–G09, K16–K17/A20 | Six typed settings/defaults and native controls; core enforces gates; live changes preserve timers/held state and follow explicit ordering. Both general locks and the override have zero-distance, failed-attempt and due-age cases. |
+| Persistence: C02/C04–C06/P01–P06, R03/R05/R07/A21–A22 | Pure per-key resolution and source provenance; browser adapter alone reads/writes cookies/URL. Explicit defaults are saved, omissions retain cookies, writes preserve unrelated URL/history data, and independent nonfatal failures retain active settings. |
+| Existing game/distribution: G01–G09/K01–K12, R01–R06/A01–A16 | Retains geometry, kicks, bag, score, time, focus/lifecycle, static root/prefix launch, browser policy and per-phase version/release guarantees, with explicit setting/variant interactions. No saved game, persistent score or runtime service is added. |
+
+| Finding | Located conflict in the retained baseline or review | Correction owner / recheck | Disposition |
+| --- | --- | --- | --- |
+| S05 | G01/G02 required every active cell empty and G09 stopped at the first obstruction; using that contract for a penetrator would reject traversal or give the wrong ghost/drop destination. | sdd-specify: distinguish valid final placement from traversable active placement; require a reachable valid landing for every transient proposal. Recheck grounding, hold spawn, final locking and the obstruction/bottom fixture. | Resolved in Revision 3 |
+| S06 | R01 explicitly required no setting persistence; the single-policy snapshot/control contract omitted five new choices and per-setting omission/default-write semantics. | sdd-specify: replace the conflicting browser contract with C01–C06, validate six independent mappings/defaults, startup/save ordering, malformed/duplicate values and failure isolation. | Resolved in Revision 3 |
+| S07 | G04's interval-only timer and hard-drop exception did not specify failed-attempt locking or live changes between the general policies. Timer age could otherwise reset or become due without a defined outcome. | sdd-specify: preserve/cap contact age under both policies, enable only the selected lock trigger, resolve due age on the next advance including zero, and define follow-drop's final probe. Recheck K16 and chronological ties/remainders. | Resolved in Revision 3 |
+
+Manual review traced every user requirement through the accepted design and 7 R / 10 G / 6 C groups to 22 system, 17 core and 6 configuration acceptance cases. It checked transient overlaps, last-cavity rejection, all movement/kick/hold/activation paths, color qualification, one-symbol-per-bonus output, general/drop policy combinations, pause/restart, source validation, immutability, startup and independent write failures. Corrected a draft white-color overgeneralization and a detached acceptance-table row; final tables and palette are coherent.
+
+Local document-data checks passed the retained seven-shape/spawn/four-turn, eight ordered kick-row, 24 blocked-rotation, two I-kick, 512 bag-permutation and score/gravity checks. Added checks passed six unique key/cookie/query schemas and allowed defaults, nonwhite palette values, the O traversal fixture (regular y=6, penetrator y=17, 34 drop points, invalid y=18), midline 9/10, policy 400/1000-ms example, bonus cap and cookie-lifetime arithmetic. Markdown/link/source checks accompany this checkpoint. Primary browser API documentation was consulted for cookie attributes, first-parameter extraction and same-origin history replacement; the project-specific behavior is explicit in CONFIGURATION.
+
+These are document and mathematical checks, not a game implementation, browser capability probe, production test, CI run or release. No design amendment, unresolved confirmed issue or exception is needed for Ready. The next owner is sdd-plan after DOCS-005 publication/issue closure; whole-package QC remains outside this pass.
