@@ -1,8 +1,8 @@
-# Classic browser Tetris
+# Browser Tetris
 
-A single-player browser-based Tetris project with a classic-only target. Development is currently in documentation preparation; the game is not implemented.
+A single-player desktop browser Tetris project with classic gameplay, hold, ghost pieces, seven-bag randomization, wall kicks, hard drop, and gravity-interval lock delay. Development is currently in documentation preparation; the game is not implemented.
 
-See the proposed [project brief](docs/dev/PROJECT.md) and [documentation tasks](docs/dev/DOCS_TASKS.md) for scope and progress.
+See the [project brief](docs/dev/PROJECT.md) and [documentation tasks](docs/dev/DOCS_TASKS.md) for scope, accepted document versions, and progress.
 
 Development uses [SDD Manager](SDD-MANAGER.md). See the [AI-assisted development disclosure](AI_DISCLOSURE.md).
 

@@ -44,7 +44,7 @@ Follow `sdd-manage`'s preparation and phase-activation workflows for required tr
 
 Maintain project-specific navigation and validated setup/check commands here as they become established. Do not invent commands, paths, requirements or completion claims.
 
-This project develops a classic desktop browser Tetris game. Development documents and proposals are [PROJECT](docs/dev/PROJECT.md), [ARCHITECTURE](docs/dev/ARCHITECTURE.md), [DECOMPOSITION](docs/dev/DECOMPOSITION.md), [SPEC](docs/dev/SPEC.md), [PLAN](docs/dev/PLAN.md), and [layout](docs/dev/layout.md).
+This project develops a desktop browser Tetris game with a classic foundation and modern extensions. Development documents and proposals are [PROJECT](docs/dev/PROJECT.md), [ARCHITECTURE](docs/dev/ARCHITECTURE.md), [DECOMPOSITION](docs/dev/DECOMPOSITION.md), [SPEC](docs/dev/SPEC.md), [PLAN](docs/dev/PLAN.md), and [layout](docs/dev/layout.md).
 
 [DOCS_TASKS](docs/dev/DOCS_TASKS.md) owns documentation preparation status and human decisions. Layout describes planned source/test/configuration locations; product files and validated application setup/check commands are not established yet. Add implementation navigation and validated commands as those become available.
 

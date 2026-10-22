@@ -6,11 +6,18 @@ This list owns main documentation preparation. Product implementation tasks belo
 
 Outside the project-specific iteration mode below, each document task and its issue track development through the document’s first human approval. After that approval, mark the task complete. Later document revisions normally leave this task complete and its issue closed. An explicit preapproval may satisfy the human checkpoint within its stated scope; it does not waive QC or publication. The user may preapprove future checkpoints at any time.
 
-Include the checked task in `DOCS_TASKS.md` in the same commit that submits the approved document and records its first approval. If the reviewed document was already published unchanged, retain that exact document state in the acceptance commit; do not rewrite it merely to create a diff. Push and verify remote containment before closing the corresponding issue or advancing.
+Include the checked task in `DOCS_TASKS.md` in the same commit that submits the approved document and records its first approval or the active iteration's acceptance. If the reviewed document was already published unchanged, retain that exact document state in the acceptance commit; do not rewrite it merely to create a diff. Push and verify remote containment before closing the corresponding issue or advancing.
 
 When tracking is enabled, each `DOCS-*` task maps to one issue in the `sdd-docs-main` milestone. Verify the milestone, all nine issues and their associations before modifying the repository. Reuse their stable identities on resume. Close issues only after the corresponding completion commit is published and verified. With tracking disabled, apply the same local task and checkpoint requirements.
 
 The running SDD Manager package's `assets/DOCS_TRACKING_TEMPLATE.json` supplies the fixed milestone title/description and all nine issue definitions, including dependencies. Use those definitions through sdd-forge; this Markdown remains the local completion owner. Neither asset records provider handles or proves runtime eligibility. Resolve source/content conflicts before projection rather than replacing this list or inventing issue text.
+
+## Active iteration 2 scope and authorization
+
+- On 2026-10-22 the user extended the complete target with hold, ghost pieces, seven-bag randomization, wall kicks, hard drop, and full-gravity-interval locking from grounding. Hard drop follows that policy by default, with a selectable immediate-hard-drop alternative.
+- The user explicitly preapproved human checkpoints through completed DOCS-008 and instructed this pass to start at DOCS-002. The grant covers PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC with its children, PLAN, layout, and TASKS, including their required owner review/QC and tracked completion. It does not waive technical gates or publication/readback.
+- Stop after DOCS-008 completion is recorded, published, and its issue closure verified. Wait for the user to request another loop or approve advancing. DOCS-009, preparation integration, phase projection, implementation, and releases are outside this pass.
+- Current position: DOCS-002 PROJECT is reviewed and accepted under this preapproval. Its completion publication and issue #2 closure must be verified before DOCS-003. Remaining documents use the retained accepted versions as their starting point; affected first-cycle QC is historical until rechecked for the extension.
 
 ## Preparation
 
@@ -19,7 +26,7 @@ The running SDD Manager package's `assets/DOCS_TRACKING_TEMPLATE.json` supplies 
     - Record which root files existed and which were copied; verify copied bytes and preserved content.
     - Establish/reconcile `docs/dev/HANDOFF.md` as generated checkpoint metadata, outside the four-file presence/copy test. Include it with this task's completion and initialization result, push and verify; then close and verify its issue when tracking is enabled.
     - Report initialization. If some but not all of the four root files existed initially, warn with the retained/copied filenames and end the turn before document work, unless the user explicitly preapproved continuation through this checkpoint. If none or all existed, continue without an additional approval pause.
-- [ ] DOCS-002 — Prepare and accept PROJECT.
+- [x] DOCS-002 — Prepare and accept PROJECT.
     - Establish the project brief: purpose, users, outcomes, scope, non-goals and consequential constraints; identify material assumptions and unresolved decisions.
     - Review the proposal with the human and complete its acceptance checkpoint.
 - [ ] DOCS-003 — Prepare and accept ARCHITECTURE.
@@ -61,15 +68,15 @@ The user activated this project-specific protocol on 2026-10-22 after accepting 
 1. Record and publish the current proposal's acceptance before resetting the preparation state. Preserve its exact accepted content and acceptance history.
 2. Keep DOCS-001 complete. Uncheck DOCS-002–DOCS-009 for the new iteration, reopen their existing issues, and retain the existing preparation milestone and issue identities. Keep the milestone open while preparation is incomplete.
 3. Start from the currently accepted document versions, including necessary children. Review and revise those versions in task order; do not regenerate them, rewind Git, or erase prior acceptance/QC evidence. Reassess affected QC under the owning procedure and retain unchanged valid evidence with its source identities.
-4. Record each new iteration's review and human decision separately from the retained baseline. Historical approvals do not complete the new iteration. Normal human checkpoints, publication/readback, and issue-closure requirements still apply; there is no future-checkpoint preapproval.
-5. At activation, stop ready at DOCS-002. Repeating the document reviews, package QC, integration, implementation, and releases are outside this reset's authorized work. Apply another reset only when the user requests it.
+4. Record each new iteration's review and human decision separately from the retained baseline. Historical approvals do not complete the new iteration. Normal human checkpoints, publication/readback, and issue-closure requirements still apply; honor only the explicitly recorded scope of any future-checkpoint preapproval.
+5. Activation alone stops ready at DOCS-002. A later instruction may authorize a bounded document pass; retain its actual task range and stopping checkpoint. Apply another reset only when the user requests it.
 
 ### Iteration 2 activation
 
 - Accepted starting point: commit 1fc48c722bf55628af69e646b16f8483598498e7, published on design-docs/main with exact matching remote readback and confirmed process cleanup. DOCS-008 issue #8 was then closed and read back as completed before this reset.
-- Local state: DOCS-001 remains complete; DOCS-002–DOCS-009 are unchecked for iteration 2. Prior approvals below are retained baseline history. DOCS-009 has never passed; no whole-package QC report exists.
+- Activation state: DOCS-001 remained complete; DOCS-002–DOCS-009 were unchecked for iteration 2. Prior approvals below are retained baseline history. DOCS-009 has never passed; no whole-package QC report exists.
 - Hosted transition verified: reset commit e11f520a4a9092cf1abd7bab40f183974089f043 was published with exact matching remote readback and confirmed process cleanup. Issues #2–#8 were reopened; issue #9 was already open and remains open. A final readback confirmed all eight open, issue #1 closed as completed, and every existing issue identity/association intact. Milestone #1 (sdd-docs-main) remains open. Reset comments link the published protocol; titles, bodies, labels, assignees, and milestone associations were preserved for each reset issue.
-- Next boundary: ready for DOCS-002 / PROJECT review using the retained version. No iteration 2 document review has started. Documentation remains on design-docs/main, unmerged; no implementation phase is activated and no release is due from this workflow-only change.
+- Activation stopped ready for DOCS-002 / PROJECT review using the retained version. The later bounded-pass authorization below governs subsequent work. Documentation remains on design-docs/main, unmerged; implementation has not started.
 
 The following accepted content identities are unchanged by activation:
 
@@ -84,7 +91,15 @@ The following accepted content identities are unchanged by activation:
 | [layout.md](layout.md) | 4f2643c49661a477ee23dfac91b4fe67a1b5d35e |
 | [TASKS.md](TASKS.md) | b5c135676d04fac801e925191e09c727cc117c04 |
 
-The associated accepted AGENTS navigation was blob 6ed692d7057d468ad070e3a8497bcba8af38daeb. Its entire content is retained as a prefix; the new project protocol pointer is appended. QC reports retain baseline findings and add iteration context, without claiming a fresh technical review.
+The associated accepted AGENTS navigation was blob 6ed692d7057d468ad070e3a8497bcba8af38daeb. At activation its entire content was retained as a prefix and the project protocol pointer was appended. Later authorized project-guidance changes are recorded with their owning document task. QC reports retain baseline findings and add iteration context, without claiming a fresh technical review.
+
+## Iteration 2 document completion evidence
+
+### DOCS-002 — PROJECT extension
+
+- Extended the retained brief with all six requested modern requirements and the selectable immediate-hard-drop exception. Retained desktop keyboard use, classic foundation, deterministic checks, static delivery, browser-policy reference, and phase-release/version rules. Excluded unrelated configuration, persistence, and service scope.
+- Updated README scope/navigation and the project description in AGENTS; original governing instructions are unchanged. Owner review checked the request against included scope, exclusions, intended outcomes, delegated SPEC details, delivery boundaries, and actual implementation status. No material question blocks architecture.
+- Human decision basis: the user's explicit DOCS-002–DOCS-008 preapproval for this pass, not a new interactive approval. Accepted PROJECT blob: 979274fe1d8af394300b13eb53f96df1c2ec0c46; associated README blob: 082c9227e2e61c0dbf81f4fce5b96c39d99ab986; associated AGENTS blob: 4804c99fa5d2fd765d3745af5d89740df9513d99. This completion commit includes the checked DOCS-002 and reviewed content. Publication and issue closure require actual readback before the next task.
 
 ## Retained first-cycle preparation evidence
 
