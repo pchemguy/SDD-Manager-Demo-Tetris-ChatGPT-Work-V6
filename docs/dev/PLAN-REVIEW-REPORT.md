@@ -2,9 +2,9 @@
 
 ## Current gate
 
-Technical QC: **Ready — iteration 2 strategy only**. Human PLAN acceptance: **accepted under scoped preapproval** for DOCS-002–DOCS-008 on 2026-10-22. Extended layout and combined PLAN/layout QC are **pending DOCS-007**, so TASKS readiness is held. [DOCS_TASKS.md](DOCS_TASKS.md) owns acceptance/publication/issue evidence.
+Technical QC: **Ready — iteration 2 PLAN and layout**. Human PLAN and layout acceptance: **accepted under scoped preapproval** for DOCS-002–DOCS-008 on 2026-10-22. Combined conformance passed; TASKS follows verified DOCS-007 publication and issue closure. [DOCS_TASKS.md](DOCS_TASKS.md) owns acceptance/publication/issue evidence.
 
-Reviewed PLAN blob: `84e0d67d1c20010b70852966647220560b5b4e66`. No PLAN children are required. Governing inputs at published SPEC completion `b3eb837c6053dfa971333faece41f171ea2ddec7`:
+Reviewed PLAN blob: `84e0d67d1c20010b70852966647220560b5b4e66`; layout blob: `71c5936100b2e9c5769f181b1c76188476fa112f`. No focused PLAN/layout children are required. Governing inputs at published SPEC completion `b3eb837c6053dfa971333faece41f171ea2ddec7`:
 
 | Source | Git blob |
 | --- | --- |
@@ -17,7 +17,7 @@ Reviewed PLAN blob: `84e0d67d1c20010b70852966647220560b5b4e66`. No PLAN children
 | [AGENTS.md](../../AGENTS.md) | 4804c99fa5d2fd765d3745af5d89740df9513d99 |
 | [BROWSER_DEV_POLICY.md](../../BROWSER_DEV_POLICY.md) | ae71cfc01aaf694f5c4a7b055d2f15d469d7f7a7 |
 
-SPEC/design QC is current for these behavioral and structural inputs. Existing layout blob `4f2643c49661a477ee23dfac91b4fe67a1b5d35e` was inspected for dependencies; it needs bag/random/clock ownership, held/ghost/policy routes, and second-phase report homes. DOCS-007 owns those placement updates and combined recheck. Revision 2 establishes strategy coverage and counts, with P01–P02 resolved; no confirmed strategy blocker or human exception remains. No implementation/browser/build/CI/release result is certified.
+SPEC/design QC remains current for the unchanged governing inputs. Accepted PLAN completion `9e6b1a02750587f816e02ff19a79bfde3f1fee32` was published/read back and issue #6 closed before layout authoring. Revision 2's strategy assessment and Revision 3's placement assessment cover both phases; P01–P02 and L01–L05 are resolved in their stated scopes. No confirmed combined blocker or human exception remains. TASKS derivation, whole-package QC and implementation are distinct later gates; no runtime/build/browser/CI/release result is certified here.
 
 ## First-cycle accepted baseline
 
@@ -117,3 +117,19 @@ Each delivery milestone retains its own final review/testing/report task. Counts
 Manual review checked early usefulness, realistic prerequisites, all modern routes, intentional zero-offset-only Phase 1 rotation, timed-input and bag dependencies, native/controlled evidence scopes, failures, clean checkout/CI, preserved prior behavior, tracking, integration and separate phase releases. Local checks passed two phase identities, ten unique ordered milestone IDs, four delivery plus one dedicated review per phase, complete R01–R06/G01–G09/A01–A16/K01–K12 coverage references, both versions/tags, and absence of implementation task IDs/checklists. Markdown/link/source checks accompany this checkpoint.
 
 No behavioral/design amendment is needed. Layout is a staged dependent checkpoint and remains unaccepted/unassessed for the extended placement scope until DOCS-007. This Ready result covers strategy only and does not release the TASKS gate. Previous source/findings/revision evidence is retained above.
+
+## Revision 3 — Extended combined PLAN/layout review
+
+Reviewed accepted PLAN blob `84e0d67d1c20010b70852966647220560b5b4e66` with revised layout `71c5936100b2e9c5769f181b1c76188476fa112f` against the unchanged extended design/SPEC inputs above. Added core bag operations, numeric random adapter, clock sampling, shared landing, held/ghost/policy view/input ownership, and both phases' report homes. Fifteen planned application files have unique owners; the directory map supports component-to-source/check navigation in both directions. No product files were created.
+
+| Finding | Located placement gap and consequence | Correction and actual recheck | Disposition |
+| --- | --- | --- | --- |
+| L03 | Retained layout placed piece selection in a browser adapter and lacked the core bag and sampled-clock boundary. TASKS could assign rule state or clock validation to the wrong owner. | Assign bag.ts to core algorithm/validation, random.ts to numeric sampling, frame.ts to clock/frame APIs, and elapsed/stream validation to controller.ts. Check dependencies and deterministic fixture/check routes. | Resolved in Revision 3 |
+| L04 | Retained view/input map described two canvases and basic controls, omitting held/ghost/policy resources and cleanup. Modern tasks lacked clear presentation/binding owners. | Extend existing canvas/status/input/bootstrap/page owners, keep geometry/landing in core, and include partial-held-preview failure and native control routes. Recheck R01–R05 and phased integration. | Resolved in Revision 3 |
+| L05 | Retained report paths named Phase 1 only and did not place final reporting at the last phase review. Phase 2 evidence could be misplaced or finalized early. | Define phase-indexed milestone/phase homes for 1 and 2, and final implementation reporting at 2.5. Recheck all PLAN review exits and release evidence ownership. | Resolved in Revision 3 |
+
+Manual combined review confirmed cohesive model/geometry/board/bag/engine ownership, controller independence, read-only snapshot views, one shared landing calculation, same-origin clock callbacks, production/bootstrap separation, meaningful unit versus native-browser evidence, fixture exclusion, isolated generated/cache locations, preserved central policies, both release routes, and no new behavior/phase decision. Source/check allocation supports foundation and every modern milestone without placeholder controls or a second runtime ruleset.
+
+Local checks passed fifteen unique safe ownership-table file paths; required bag/random/clock/landing locations; unit/controller/browser/fixture routes; both phase-report homes and final-review ownership; unchanged accepted PLAN/design/SPEC; current source identities; and absence of product/configuration creation. A path-count probe initially included narrative index.html as a definition; restricting counts to ownership rows resolved that checker false positive without a source correction. Markdown/link checks accompany this checkpoint.
+
+Combined technical readiness is Ready; no unresolved confirmed finding or exception remains. The actual scoped human grant covers layout. Current next owner is sdd-tasks after publication/issue closure; whole-package QC and integration remain outside this bounded pass.

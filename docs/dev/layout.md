@@ -11,37 +11,38 @@ All production TypeScript and CSS belong under `src/`; root `index.html` is the 
 | Component or responsibility | Intended location | Ownership boundary |
 | --- | --- | --- |
 | Core data contracts | `src/core/model.ts` | Plain piece/cell/board/state/input/snapshot types and canonical data constants. No browser or runner dependencies. |
-| Canonical piece geometry | `src/core/geometry.ts` | Shape catalogue, orientation geometry, and occupied-cell projection used by board checks and engine snapshots. |
-| Board operations | `src/core/board.ts` | Bounds/overlap, placement, row detection, and compaction; uses core data/geometry. |
-| Rules engine and snapshot projection | `src/core/engine.ts` | Initialization and complete transitions, including rule time, selection, score/progression, status, and immutable presentation snapshots. Scoring remains in this cohesive rule owner. |
-| Session controller | `src/session/controller.ts` | Current core-state reference, browser-time adaptation, injected callbacks, presentation coordination, and session lifecycle. Exports its narrow callback/session contracts here. |
-| Input bindings | `src/browser/input.ts` | DOM keyboard/button subscriptions, focus/repeat interpretation, command delivery, and binding cleanup. |
-| Frame source | `src/browser/frame.ts` | Browser frame scheduling and cancellation; elapsed-time conversion stays in the controller. |
-| Production piece source | `src/browser/pieces.ts` | Production randomness through the canonical piece-kind boundary; no second geometry catalogue. |
-| Board/preview renderer | `src/view/canvas.ts` | Both Canvas surfaces, drawing-buffer/cell sizing, colors, and drawing from snapshot cells. Shared drawing primitives remain here. |
-| HTML status/control view | `src/view/status.ts` | Metrics, status, control labels/enabled state, and readable failure presentation. Event subscriptions remain with browser bindings. |
+| Canonical piece geometry and kicks | `src/core/geometry.ts` | Shape/orientation catalogue, ordered kick data, and occupied-cell projection used by board checks and the engine. |
+| Board operations and landing | `src/core/board.ts` | Bounds/overlap, shared landing projection for ghost/hard drop, placement, row detection and compaction; uses model/geometry. |
+| Bag operations | `src/core/bag.ts` | Explicit shuffle/refill/consume operations and numeric-source validation. The engine retains bag remainder and decides consumption timing. |
+| Rules engine and snapshot projection | `src/core/engine.ts` | Complete transitions, hold/eligibility, gravity/grounded timers, hard-drop policy, spawning, score/progression, status and immutable snapshots. No browser timing or duplicated landing algorithm. |
+| Session controller | `src/session/controller.ts` | Current core reference, sampled-clock/frame adaptation, command/policy routing, presentation and lifecycle. Exports narrow callback/session contracts; elapsed-before-action ordering stays here. |
+| Input bindings | `src/browser/input.ts` | Keyboard/button/checkbox subscriptions, focus/repeat handling, command/policy delivery, and cleanup. |
+| Clock and frame source | `src/browser/frame.ts` | Same-origin now sampling, frame scheduling/timestamps and cancellation; elapsed conversion/stream validation stay in the controller. |
+| Production random source | `src/browser/random.ts` | Numeric random samples through the injected source boundary; no bag, piece-selection or geometry state. |
+| Board/preview renderer | `src/view/canvas.ts` | Board/ghost, next and held Canvas surfaces, buffer/cell sizing, colors and snapshot drawing. Shared drawing primitives remain here; no collision or landing decisions. |
+| HTML status/control view | `src/view/status.ts` | Metrics/status, held kind/availability, native control/checkbox presentation, and readable failure output. Event subscriptions stay in bindings; setting state stays in the core. |
 | Browser composition root | `src/browser/bootstrap.ts` | Resolve resources, assemble concrete collaborators, wire resize/redraw, and handle startup/partial-assembly cleanup. Its reusable mounting boundary supports controlled browser fixtures. |
 | Production startup | `src/main.ts` | Load application styling and invoke the browser composition root. Keeps automatic page startup separate from importing the reusable bootstrap in tests. |
-| Page structure and presentation | `index.html`, `src/styles.css` | Semantic playfield/controls/metrics/instructions and desktop layout/focus styling. Rule data comes from the core and views. |
+| Page structure and presentation | `index.html`, `src/styles.css` | Semantic playfield/controls/metrics/instructions, held preview and policy choice, desktop layout/focus and ghost styling. Rule data comes from core snapshots. |
 
 Public values/functions are exported from their owning modules. This small application needs no barrel layer, generic service registry, shared miscellaneous module, or separate interface package.
 
 ## Dependency and lifecycle placement
 
-Core modules import only core modules. Geometry uses model data; board operations use model/geometry; the engine uses those core units. The controller imports the core and receives browser/presentation services through narrow callbacks. It does not import concrete DOM/Canvas adapters.
+Core modules import only core modules. Geometry uses model data; board uses model/geometry; bag uses model and supplied numeric samples; engine uses these units. The controller imports core and receives browser/presentation services through narrow callbacks, without concrete DOM/Canvas imports.
 
-Input/frame/piece adapters use core data and the controller's public callback types as needed. Views consume snapshot data and browser drawing/DOM APIs; they do not import engine transitions or maintain rotation/spawn rules. `bootstrap.ts` is the intentional assembly point allowed to import concrete collaborators across these areas. `main.ts` provides production startup rather than reusable test assembly.
+Input/clock/frame/random adapters use core data and controller callback types as needed. Views consume snapshot data and browser APIs; they do not import engine transitions or maintain rotation, landing or hold rules. `bootstrap.ts` assembles concrete collaborators, including all required drawing resources and the policy sink. `main.ts` provides automatic production startup separately from reusable test assembly.
 
-Resize wiring belongs to bootstrap and participates in the existing session/composition cleanup lifetime. It redraws through presentation coordination without a gameplay command or piece draw. Established-session failure disposes through the controller; startup failure cleans resources already acquired. The status view supplies readable HTML failure output, including the missing-normal-status case. SPEC R03/R05 remain authoritative for outcomes and stale-callback guarantees.
+Resize wiring belongs to bootstrap and the existing cleanup lifetime. It redraws the latest snapshot without a gameplay command, time advance or random sample. Established-session failure disposes through the controller; startup failure cleans acquired resources, including partial held-preview assembly. Status supplies readable HTML failure output even when the normal status element is missing. SPEC R03/R05 own outcomes and stale-callback guarantees.
 
 ## Checks and fixtures
 
 | Evidence owner | Intended location | Boundary |
 | --- | --- | --- |
-| Geometry, board, and engine unit checks | `tests/unit/core/` | Vitest `*.test.ts` files follow the relevant core module names and test canonical contracts with controlled values. |
-| Controller checks | `tests/unit/session/controller.test.ts` | Controlled input/frame/piece/render callbacks; no real browser clock dependency. |
-| Production adapter unit checks | `tests/unit/browser/` | Deterministic checks for browser-independent adapter behavior, especially production piece selection with controlled random values. Native event/frame delivery stays in browser checks. |
-| Shared deterministic fixture data | `tests/fixtures/` | Valid boards, piece sequences, and recording helpers only where reuse is useful. Product code never imports test fixtures. |
+| Geometry, board, bag, and engine unit checks | `tests/unit/core/` | Module-aligned Vitest checks for tables, landing, shuffle/consumption, hold, policy/timers, progression and immutable transitions. |
+| Controller checks | `tests/unit/session/controller.test.ts` | Controlled now/frame/input/policy/random/render callbacks, including interleaved timestamp streams and deadline-before-command behavior. |
+| Production adapter unit checks | `tests/unit/browser/` | Meaningful browser-independent adapter contracts where present. Thin wrappers may use production-entry coverage; avoid duplicate units that mirror delegation. Native event delivery remains browser evidence. |
+| Shared deterministic fixture data | `tests/fixtures/` | Valid boards/state/bag values, numeric sample sequences, controlled clocks and recording helpers where reusable. Product code never imports these fixtures. |
 | Native browser and production-entry checks | `tests/browser/` | Playwright `*.spec.ts` files own input/focus, Canvas output, lifecycle/faults, and built root/prefix acceptance. |
 | Controlled browser fixture entry | `tests/browser/fixtures/` | Test-only HTML/TypeScript entry and composition helpers import production bootstrap/components. They provide injected sources/faults without production test hooks or a substitute game engine. |
 
@@ -65,14 +66,14 @@ Root `.gitignore` must exclude generated locations before they are populated and
 
 [README.md](../../README.md) owns the user-facing project status, supported game capabilities/controls, launch/build/check instructions, and navigation. Commands are added as validated during implementation. Root [AGENTS.md](../../AGENTS.md) provides concise governing-document/owner navigation and points to established setup/check guidance.
 
-`docs/dev/` owns PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC with `spec/GAMEPLAY.md`, PLAN, this layout, implementation/preparation task records, and their adjacent QC reports. The future `TASKS.md` owns executable implementation progress; `DOCS_TASKS.md` owns preparation progress. `HANDOFF.md` remains a checkpoint recovered with later owning records and Git.
+`docs/dev/` owns PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC with `spec/GAMEPLAY.md`, PLAN, this layout, implementation/preparation task records, and their adjacent QC reports. `TASKS.md` owns executable implementation progress; `DOCS_TASKS.md` owns preparation progress. `HANDOFF.md` remains a checkpoint recovered with later owning records and Git.
 
-Milestone reports belong at `docs/dev/reports/phases/1/<milestone-id>.md`; the phase report at `docs/dev/reports/phases/1/PHASE-REPORT.md`; the final implementation report at `docs/dev/reports/IMPLEMENTATION-REPORT.md`. Review tasks own their evidence and TODO aggregation under PLAN.
+Milestone reports belong at `docs/dev/reports/phases/<phase>/<milestone-id>.md`, with phase values 1 and 2; each phase report is `PHASE-REPORT.md` in its phase directory. The final implementation report at `docs/dev/reports/IMPLEMENTATION-REPORT.md` is owned by the last phase review, 2.5. Review tasks own their evidence and TODO aggregation under PLAN.
 
 The root `RELEASE-NOTES.md` owns finalized release text when release preparation begins. Package metadata owns the version; Git tags and GitHub releases publish the corresponding verified source and notes under the accepted release gates. Built output remains generated. No extra distribution asset is required by this layout.
 
 ## Placement review boundary
 
-The source map covers every decomposed component and its checks; the reusable bootstrap and test-only entry support early production-path integration and controlled failures. Unit/browser separation, production import boundaries, generated-file isolation, and documentation/release homes support all four delivery milestones without changing PLAN or SPEC.
+The source map covers every decomposed component and its checks; reusable bootstrap/test-only entry support early production-path integration and controlled failures. Phase 1 creates its supported foundation paths and controls; Phase 2 extends the same owners for held/ghost/kick/drop behavior without shipping a second ruleset or placeholder controls. Unit/browser separation, output isolation and report/release homes support both phases without changing PLAN or SPEC.
 
 [PLAN-REVIEW-REPORT.md](PLAN-REVIEW-REPORT.md) owns combined strategy/layout QC. Human layout acceptance precedes TASKS derivation. A later required file may be assigned within its existing owner; a material new owner, dependency, or phase boundary requires the appropriate document review.

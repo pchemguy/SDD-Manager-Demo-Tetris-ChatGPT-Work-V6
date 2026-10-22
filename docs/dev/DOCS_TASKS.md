@@ -17,7 +17,7 @@ The running SDD Manager package's `assets/DOCS_TRACKING_TEMPLATE.json` supplies 
 - On 2026-10-22 the user extended the complete target with hold, ghost pieces, seven-bag randomization, wall kicks, hard drop, and full-gravity-interval locking from grounding. Hard drop follows that policy by default, with a selectable immediate-hard-drop alternative.
 - The user explicitly preapproved human checkpoints through completed DOCS-008 and instructed this pass to start at DOCS-002. The grant covers PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC with its children, PLAN, layout, and TASKS, including their required owner review/QC and tracked completion. It does not waive technical gates or publication/readback.
 - Stop after DOCS-008 completion is recorded, published, and its issue closure verified. Wait for the user to request another loop or approve advancing. DOCS-009, preparation integration, phase projection, implementation, and releases are outside this pass.
-- Current position: DOCS-006 PLAN passed extended-scope strategy QC and is accepted under scoped preapproval. Verify completion publication and issue #6 closure before layout. Combined PLAN/layout and TASKS QC remain pending.
+- Current position: DOCS-007 layout passed combined extended-scope PLAN/layout QC and is accepted under scoped preapproval. Verify completion publication and issue #7 closure before TASKS. DOCS-008 is the last authorized document task; its completion is the stopping boundary.
 
 ## Preparation
 
@@ -41,7 +41,7 @@ The running SDD Manager package's `assets/DOCS_TRACKING_TEMPLATE.json` supplies 
 - [x] DOCS-006 — Prepare and accept PLAN.
     - Define delivery phases, milestones, dependencies and exit conditions against SPEC.
     - Complete PLAN QC, then present PLAN for human approval.
-- [ ] DOCS-007 — Prepare and accept layout.
+- [x] DOCS-007 — Prepare and accept layout.
     - Allocate source, tests, documentation and artifacts to physical paths consistently with the accepted design and PLAN.
     - Review layout against the design and PLAN, update the PLAN review report, then present layout for human approval.
 - [ ] DOCS-008 — Prepare and accept TASKS.
@@ -128,6 +128,13 @@ The associated accepted AGENTS navigation was blob 6ed692d7057d468ad070e3a8497bc
 - Extended the retained plan into Classic foundation 0.1.0 and Modern play 0.2.0, each with four integrated delivery milestones and one final phase review. The foundation uses the required bag/grounded-delay rules; later milestones deliver hold, kicks/ghost, hard drop/policy, and complete-target acceptance. Deferred contract portions and per-phase releases are explicit.
 - [PLAN-REVIEW-REPORT.md](PLAN-REVIEW-REPORT.md) retains first-cycle history and adds Revision 2 with semantic/count assessments, full R/G/A/K delivery routes, P01/P02 corrections, actual document checks, and strategy-only readiness. Existing layout placement gaps are owned by DOCS-007; TASKS remains held until combined QC.
 - Human PLAN acceptance uses the recorded scoped preapproval. Accepted PLAN blob: 84e0d67d1c20010b70852966647220560b5b4e66. PLAN, review evidence, and checked DOCS-006 share this completion commit; publication and issue closure precede layout. No implementation-phase objects or release were created.
+
+### DOCS-007 — Layout extension and combined QC
+
+- Prior transition verified: DOCS-006 completion commit 9e6b1a02750587f816e02ff19a79bfde3f1fee32 was published/read back with confirmed cleanup; issue #6 was closed/read back as completed before layout.
+- Extended existing physical ownership for core bag/landing, numeric random sampling, sampled-clock controller/adapter collaboration, held/ghost/policy input and views, deterministic fixtures, and both phases' reports. Retained source/test boundaries, bootstrap reuse, production isolation, generated/cache homes, central policies, and root guidance links. Fifteen planned application files have unique owners; no product files exist.
+- [PLAN-REVIEW-REPORT.md](PLAN-REVIEW-REPORT.md) adds Revision 3 with L03–L05 placement corrections and actual combined recheck. Accepted PLAN/design/SPEC are unchanged. Technical gate is Ready for both PLAN and layout, with no confirmed blocker; actual runtime checks remain future work.
+- Human layout acceptance uses the recorded scoped preapproval. Accepted layout blob: 71c5936100b2e9c5769f181b1c76188476fa112f. Layout, combined evidence, and checked DOCS-007 share this completion commit. Verify publication/issue closure before deriving TASKS, then stop at completed DOCS-008 as instructed.
 
 ## Retained first-cycle preparation evidence
 
