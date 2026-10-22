@@ -17,7 +17,7 @@ The running SDD Manager package's `assets/DOCS_TRACKING_TEMPLATE.json` supplies 
 - On 2026-10-22 the user requested another loop with four additional extensions together, then clarified: “You are to proceed with the loop with specified scope extension.” This continues the established bounded DOCS-002–DOCS-008 document pass and its checkpoint preapproval. Record acceptance under that grant, not as a new interactive approval. Technical QC, atomic document completion, publication/readback and issue closure remain required.
 - Extend the currently accepted documents in order, in one pass covering all four additions below. Preserve their contents as the starting baseline and retain earlier acceptance/QC evidence; do not create four separate loops or regenerate the documents.
 - Stop after DOCS-008 completion is recorded, published/read back and issue #8 closure verified. DOCS-009, preparation integration, implementation-phase projection, implementation and releases are outside this pass. The user will decide whether another loop or advancement follows.
-- Current operation: DOCS-008 task-list QC and scoped acceptance are recorded below. Publish/read back its completion and verify issue #8 closure, then stop without DOCS-009 or advancement. DOCS-009 remains unchecked/open; the exact stop remains completed DOCS-008.
+- Current position: DOCS-008 is complete, published/read back, and issue #8 is closed/read back as completed. This bounded iteration 3 pass is stopped. DOCS-009 remains unchecked/open; wait for the user to request another loop or approve advancing.
 
 ### Combined scope additions
 
@@ -177,6 +177,29 @@ The associated accepted AGENTS navigation was blob 6ed692d7057d468ad070e3a8497bc
 - Extended the accepted list with the complete configurable penetrator phase, retaining all 43 prior IDs/parents and adding T-044–T-064. The list has 64 unchecked implementation tasks (49 delivery, 15 reviews), 15 milestones and three phases; 82 implementation hierarchy boxes remain unchecked. Delivery counts are 7/4/5/4, 3/4/3/3 and 5/3/5/3. Final implementation reporting belongs to T-064/3.5; phase versions are planned 0.1.0/0.2.0/0.3.0.
 - Task-list QC passed in appended Revision 4, retaining prior source/findings/rechecks and resolving TQ07–TQ08. Checked complete scope/acceptance routes, exact PLAN identities, stable parents, acyclic dependencies/review gates, one executable owner, report/source paths, count/semantic scope, current upstream QC and no product completion claims. No strategy or behavior amendment was needed.
 - Human acceptance uses the recorded scoped preapproval for this instructed loop. Accepted TASKS blob: 63e8b388f19844e44442d893f974c71450358449; QC report: beb6ee6ef07bbd5e9280c4464172af918fbb4f97. Submit these sources, this decision, checked DOCS-008 and refreshed HANDOFF together. Publication/readback and issue #8 closure remain subsequent effects requiring confirmation. Stop after they are verified; DOCS-009 stays unchecked/open.
+
+### Verified iteration 3 stopping outcome
+
+- DOCS-008 completion c39f3b4ec5b1f6bb2a23d702176b7c759f34c3c7 was published on design-docs/main with exact matching remote readback and confirmed process cleanup. Issue #8 then closed/read back as completed with accepted-source/QC evidence linked to that commit.
+- Final fresh readback confirmed all nine exact predefined definitions, markers, dependencies and milestone associations. Issues #1–#8 are closed/completed, issue #9 is open, and native milestone #1 remains open with its exact predefined title/description (eight closed issues, one open). No issue or milestone identity was replaced.
+- Local DOCS-001–DOCS-008 are checked, DOCS-009 unchecked. All 64 implementation tasks and their phase/milestone boxes remain unchecked. Required per-document QC passed for the accepted sources; no DOCS-009 report, preparation merge, implementation-phase projection, product work or release was performed.
+- All four additions were incorporated together in this one bounded pass, starting from the extended iteration 2 accepted sources. The loop is stopped. Only a further user request can select another reset or advancement.
+
+The accepted content at this stop is retained for any requested next loop:
+
+| Artifact | Accepted Git blob at DOCS-008 completion |
+| --- | --- |
+| [PROJECT.md](PROJECT.md) | 1a72042d6f7244922b21de09ff15967e841f94f9 |
+| [ARCHITECTURE.md](ARCHITECTURE.md) | 19a47420bbe1a66c810ad8206819d078a3130a61 |
+| [DECOMPOSITION.md](DECOMPOSITION.md) | f46bbca88917a4efeaaa61ea6933475b901c0915 |
+| [SPEC.md](SPEC.md) | 24bf3f21ec51fc4f247510d6f870fd5d933de1f6 |
+| [spec/GAMEPLAY.md](spec/GAMEPLAY.md) | 0a0ab4a87640886e2a5b03a1c3712fea89e55d86 |
+| [spec/CONFIGURATION.md](spec/CONFIGURATION.md) | 6a73acc35202020f7ab8e9b760f3eaf8745cda37 |
+| [PLAN.md](PLAN.md) | 36741b6f42c1bd01558db6ef0d71831b0d3688f4 |
+| [layout.md](layout.md) | 486c33d1b3076d46ce9ce2cb87181dc620b9190b |
+| [TASKS.md](TASKS.md) | 63e8b388f19844e44442d893f974c71450358449 |
+
+The three current QC reports identify these reviewed inputs and preserve earlier findings/rechecks. This stopping record changes no accepted source, report, root navigation or plugin content; it records only the verified external effects and exact next boundary.
 
 ## Iteration 2 document completion evidence
 

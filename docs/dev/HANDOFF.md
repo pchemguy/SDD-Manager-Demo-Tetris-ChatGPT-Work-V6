@@ -1,6 +1,6 @@
 # Project handoff
 
-Checkpoint: Main-document preparation, iteration 3, completed DOCS-008 review/acceptance recorded. This completion must be published/read back and issue #8 closed/read back before the bounded pass is fully stopped. Recover subsequent effects from [DOCS_TASKS.md](DOCS_TASKS.md), Git and hosted readback; this snapshot's containing commit identifies the document state.
+Checkpoint: Main-document preparation, iteration 3, stopped after completed DOCS-008. Document review/acceptance, completion publication/readback and issue #8 closure/readback are verified. Await the user's decision on another loop or advancing. Recover subsequent effects from [DOCS_TASKS.md](DOCS_TASKS.md), Git and hosted readback; this snapshot's containing commit identifies the document state.
 
 ## Workflow and sources
 
@@ -21,13 +21,14 @@ Checkpoint: Main-document preparation, iteration 3, completed DOCS-008 review/ac
 ## Authorization and exact stop
 
 - The user requested another loop with four additions and clarified “You are to proceed with the loop with specified scope extension.” Continue the established DOCS-002–DOCS-008 pass with its scoped checkpoint preapproval. QC, publication/readback and issue closure remain required; no new interactive approval is claimed.
-- After DOCS-008 publication and verified issue #8 closure, stop and await the user's next loop/advancement decision. DOCS-009, preparation integration, implementation-phase projection, implementation and releases remain outside this pass.
+- The DOCS-002–DOCS-008 pass is complete and stopped. Wait for the user's next loop/advancement decision. DOCS-009, preparation integration, implementation-phase projection, implementation and releases remain outside this pass.
 
-## Branches, tracking and pending effects
+## Branches, tracking and current operation
 
 - Working branch: design-docs/main. Creation parent/eventual preparation integration target: main. Branch-off: b0597bf0f02c5e4ed5329adb606acafab63c15a5. No suspended child campaign; preparation remains unmerged.
 - Tracking is enabled. Native milestone #1 (sdd-docs-main) and all nine definitions/associations were verified before entry writes. Reset 0f02b85dd34a8ae0720019d2fb37b7dddb40ba7a was published/read back and issues #2–#8 reopened. DOCS-002–007 completions were each published/read back and their issues closed/read back before dependent authoring.
-- Last confirmed prior transition: layout completion b0854a6c01b0a87fe6cfc527cee353696cf77290 was published with exact remote readback/confirmed cleanup; issue #7 then closed/read back as completed. Issues #1–#7 are closed/completed, #8/#9 open and milestone #1 open as of this checkpoint. DOCS-001–008 are checked locally, DOCS-009 unchecked; issue #8 awaits this completion's publication before closure.
-- Push/read back this completion, close/read back issue #8 with evidence, verify final checklist/hosted states and stop. Reconcile interrupted effects before replay; preserve all issue identities and the exact stopping boundary.
+- Verified completion: c39f3b4ec5b1f6bb2a23d702176b7c759f34c3c7 was published with exact remote readback/confirmed cleanup; issue #8 then closed/read back as completed. Final fresh readback confirmed issues #1–#8 closed/completed, #9 open, exact definitions/markers/dependencies/associations preserved and milestone #1 open with its predefined title/description. Local DOCS checkboxes match those states.
+- Current operation: wait for the user. No further document or implementation task is active. A requested next loop starts from the accepted iteration 3 sources, including CONFIGURATION; no reset or advancement occurs automatically.
+- Push/read back every owned commit. Reconcile interrupted effects before replay and preserve the exact stopping boundary. The verified stopping record changes only workflow metadata; accepted source/QC/navigation/plugin content is retained.
 
 Implementation remains gated by DOCS-009, published preparation integration, a later advancement/range decision and eligible-phase tracking.
