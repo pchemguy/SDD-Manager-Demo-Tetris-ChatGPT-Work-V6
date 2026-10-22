@@ -17,7 +17,7 @@ The running SDD Manager package's `assets/DOCS_TRACKING_TEMPLATE.json` supplies 
 - On 2026-10-22 the user extended the complete target with hold, ghost pieces, seven-bag randomization, wall kicks, hard drop, and full-gravity-interval locking from grounding. Hard drop follows that policy by default, with a selectable immediate-hard-drop alternative.
 - The user explicitly preapproved human checkpoints through completed DOCS-008 and instructed this pass to start at DOCS-002. The grant covers PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC with its children, PLAN, layout, and TASKS, including their required owner review/QC and tracked completion. It does not waive technical gates or publication/readback.
 - Stop after DOCS-008 completion is recorded, published, and its issue closure verified. Wait for the user to request another loop or approve advancing. DOCS-009, preparation integration, phase projection, implementation, and releases are outside this pass.
-- Current position: DOCS-002 PROJECT is reviewed and accepted under this preapproval. Its completion publication and issue #2 closure must be verified before DOCS-003. Remaining documents use the retained accepted versions as their starting point; affected first-cycle QC is historical until rechecked for the extension.
+- Current position: DOCS-003 ARCHITECTURE is reviewed and accepted under scoped preapproval. Verify its completion publication and issue #3 closure before DOCS-004. Affected first-cycle QC remains historical until rechecked for the extension.
 
 ## Preparation
 
@@ -29,7 +29,7 @@ The running SDD Manager package's `assets/DOCS_TRACKING_TEMPLATE.json` supplies 
 - [x] DOCS-002 — Prepare and accept PROJECT.
     - Establish the project brief: purpose, users, outcomes, scope, non-goals and consequential constraints; identify material assumptions and unresolved decisions.
     - Review the proposal with the human and complete its acceptance checkpoint.
-- [ ] DOCS-003 — Prepare and accept ARCHITECTURE.
+- [x] DOCS-003 — Prepare and accept ARCHITECTURE.
     - Define major system blocks, relationships, dependency direction and consequential structural decisions from the accepted brief.
     - Review the proposal with the human and complete its acceptance checkpoint.
 - [ ] DOCS-004 — Prepare and accept DECOMPOSITION.
@@ -100,6 +100,13 @@ The associated accepted AGENTS navigation was blob 6ed692d7057d468ad070e3a8497bc
 - Extended the retained brief with all six requested modern requirements and the selectable immediate-hard-drop exception. Retained desktop keyboard use, classic foundation, deterministic checks, static delivery, browser-policy reference, and phase-release/version rules. Excluded unrelated configuration, persistence, and service scope.
 - Updated README scope/navigation and the project description in AGENTS; original governing instructions are unchanged. Owner review checked the request against included scope, exclusions, intended outcomes, delegated SPEC details, delivery boundaries, and actual implementation status. No material question blocks architecture.
 - Human decision basis: the user's explicit DOCS-002–DOCS-008 preapproval for this pass, not a new interactive approval. Accepted PROJECT blob: 979274fe1d8af394300b13eb53f96df1c2ec0c46; associated README blob: 082c9227e2e61c0dbf81f4fce5b96c39d99ab986; associated AGENTS blob: 4804c99fa5d2fd765d3745af5d89740df9513d99. This completion commit includes the checked DOCS-002 and reviewed content. Publication and issue closure require actual readback before the next task.
+
+### DOCS-003 — ARCHITECTURE extension
+
+- Prior transition verified: DOCS-002 completion commit 020b2676e7c3e91067c2df8a076ff84c58a0f76a was published with exact remote readback and confirmed cleanup; issue #2 was then closed/read back as completed before architecture authoring.
+- Extended the retained four-block design with core-owned bag/hold/policy/timer state, injected numeric randomness, shared ghost/hard-drop projection, and semantic setting/held-piece presentation. Retained directed dependencies, browser isolation, static distribution, failure ownership, and deterministic testing. Compared core-owned bags with an external stateful generator and selected the former to keep consumption/reset state explicit.
+- Owner review checked complete PROJECT coverage, one owner per rule/state, view-only projection consumption, a single clock/lifecycle owner, no browser locking timers or duplicate landing algorithms, and proportionate components. SPEC owns exact kicks, commands, and timer semantics; no material structural decision remains unresolved.
+- Human acceptance uses the recorded DOCS-002–DOCS-008 preapproval. Accepted ARCHITECTURE blob: 821f53a68bc9e0ec20e518d63e4b1d0003628967. The checked task and reviewed architecture are submitted together; publication and issue #3 closure require verification before DECOMPOSITION.
 
 ## Retained first-cycle preparation evidence
 
