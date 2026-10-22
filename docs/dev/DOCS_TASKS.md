@@ -17,7 +17,7 @@ The running SDD Manager package's `assets/DOCS_TRACKING_TEMPLATE.json` supplies 
 - On 2026-10-22 the user extended the complete target with hold, ghost pieces, seven-bag randomization, wall kicks, hard drop, and full-gravity-interval locking from grounding. Hard drop follows that policy by default, with a selectable immediate-hard-drop alternative.
 - The user explicitly preapproved human checkpoints through completed DOCS-008 and instructed this pass to start at DOCS-002. The grant covers PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC with its children, PLAN, layout, and TASKS, including their required owner review/QC and tracked completion. It does not waive technical gates or publication/readback.
 - Stop after DOCS-008 completion is recorded, published, and its issue closure verified. Wait for the user to request another loop or approve advancing. DOCS-009, preparation integration, phase projection, implementation, and releases are outside this pass.
-- Current position: DOCS-003 ARCHITECTURE is reviewed and accepted under scoped preapproval. Verify its completion publication and issue #3 closure before DOCS-004. Affected first-cycle QC remains historical until rechecked for the extension.
+- Current position: DOCS-004 DECOMPOSITION is reviewed and accepted under scoped preapproval. Verify its completion publication and issue #4 closure before SPEC. Required extended-scope SPEC, PLAN/layout, and TASKS QC remain pending.
 
 ## Preparation
 
@@ -32,7 +32,7 @@ The running SDD Manager package's `assets/DOCS_TRACKING_TEMPLATE.json` supplies 
 - [x] DOCS-003 — Prepare and accept ARCHITECTURE.
     - Define major system blocks, relationships, dependency direction and consequential structural decisions from the accepted brief.
     - Review the proposal with the human and complete its acceptance checkpoint.
-- [ ] DOCS-004 — Prepare and accept DECOMPOSITION.
+- [x] DOCS-004 — Prepare and accept DECOMPOSITION.
     - Define component responsibilities, collaboration, ownership and design-level interface boundaries consistently with ARCHITECTURE.
     - Review the proposal with the human and complete its acceptance checkpoint.
 - [ ] DOCS-005 — Prepare and accept SPEC.
@@ -107,6 +107,13 @@ The associated accepted AGENTS navigation was blob 6ed692d7057d468ad070e3a8497bc
 - Extended the retained four-block design with core-owned bag/hold/policy/timer state, injected numeric randomness, shared ghost/hard-drop projection, and semantic setting/held-piece presentation. Retained directed dependencies, browser isolation, static distribution, failure ownership, and deterministic testing. Compared core-owned bags with an external stateful generator and selected the former to keep consumption/reset state explicit.
 - Owner review checked complete PROJECT coverage, one owner per rule/state, view-only projection consumption, a single clock/lifecycle owner, no browser locking timers or duplicate landing algorithms, and proportionate components. SPEC owns exact kicks, commands, and timer semantics; no material structural decision remains unresolved.
 - Human acceptance uses the recorded DOCS-002–DOCS-008 preapproval. Accepted ARCHITECTURE blob: 821f53a68bc9e0ec20e518d63e4b1d0003628967. The checked task and reviewed architecture are submitted together; publication and issue #3 closure require verification before DECOMPOSITION.
+
+### DOCS-004 — DECOMPOSITION extension
+
+- Prior transition verified: DOCS-003 completion commit 3a4c80f1d873bfe0ce765522f0352fc3f0a1e3fa was published/read back with confirmed cleanup; issue #3 was closed/read back as completed before this task.
+- Extended existing component responsibilities and collaboration. Added cohesive bag operations, shared landing projection in board operations, core kick data and hold/policy/timer transitions, same-origin clock sampling for timed commands, policy input, and snapshot-driven held/ghost views. Kept state in the engine/controller rather than duplicate browser managers.
+- Owner review checked ARCHITECTURE conformance, producer/consumer interfaces, dependency direction, atomic transitions, deterministic seams, reset/cleanup ownership, and clear delegation of exact behavior to SPEC. No physical layout or implementation is claimed, and no structural blocker remains.
+- Human acceptance uses the recorded scoped preapproval. Accepted DECOMPOSITION blob: c24ea1ba1f3e6712c65805f49842784e0f10da93. Reviewed content and checked DOCS-004 share this completion commit; publication and issue closure precede SPEC.
 
 ## Retained first-cycle preparation evidence
 
