@@ -17,7 +17,7 @@ The running SDD Manager package's `assets/DOCS_TRACKING_TEMPLATE.json` supplies 
 - On 2026-10-22 the user requested another loop with four additional extensions together, then clarified: “You are to proceed with the loop with specified scope extension.” This continues the established bounded DOCS-002–DOCS-008 document pass and its checkpoint preapproval. Record acceptance under that grant, not as a new interactive approval. Technical QC, atomic document completion, publication/readback and issue closure remain required.
 - Extend the currently accepted documents in order, in one pass covering all four additions below. Preserve their contents as the starting baseline and retain earlier acceptance/QC evidence; do not create four separate loops or regenerate the documents.
 - Stop after DOCS-008 completion is recorded, published/read back and issue #8 closure verified. DOCS-009, preparation integration, implementation-phase projection, implementation and releases are outside this pass. The user will decide whether another loop or advancement follows.
-- Current operation: reset DOCS-002–DOCS-009 and reopen their existing issues; DOCS-001 remains complete. Hosted reset effects require verification after publishing this reset. Then proceed at DOCS-002, not merely a ready-state pause.
+- Current operation: DOCS-002 owner review and scoped acceptance are recorded below. Publish/read back its completion and verify issue #2 closure before DOCS-003. DOCS-009 remains unchecked/open; the exact stop remains completed DOCS-008.
 
 ### Combined scope additions
 
@@ -42,7 +42,7 @@ These additions supersede the retained brief's configuration/persistence exclusi
     - Record which root files existed and which were copied; verify copied bytes and preserved content.
     - Establish/reconcile `docs/dev/HANDOFF.md` as generated checkpoint metadata, outside the four-file presence/copy test. Include it with this task's completion and initialization result, push and verify; then close and verify its issue when tracking is enabled.
     - Report initialization. If some but not all of the four root files existed initially, warn with the retained/copied filenames and end the turn before document work, unless the user explicitly preapproved continuation through this checkpoint. If none or all existed, continue without an additional approval pause.
-- [ ] DOCS-002 — Prepare and accept PROJECT.
+- [x] DOCS-002 — Prepare and accept PROJECT.
     - Establish the project brief: purpose, users, outcomes, scope, non-goals and consequential constraints; identify material assumptions and unresolved decisions.
     - Review the proposal with the human and complete its acceptance checkpoint.
 - [ ] DOCS-003 — Prepare and accept ARCHITECTURE.
@@ -90,7 +90,7 @@ The user activated this project-specific protocol on 2026-10-22 after accepting 
 ### Iteration 3 activation
 
 - Accepted starting point: iteration 2 DOCS-008 completion 444da5a092543b8121ba1044b9bde773b99c7560 and verified stopping record c330297a0e5de93b8508cb1abc62e21db50599c4. Both were published with exact remote readback and confirmed cleanup; issue #8 was closed/read back as completed before this reset. No duplicate acceptance is needed.
-- Before reset writes, all nine exact predefined issue definitions/markers/dependencies/milestone associations and native milestone #1 title/description/open state were read back and verified. DOCS-001 remains complete; DOCS-002–DOCS-009 are reset locally. Existing issues #2–#8 must be reopened after reset publication; #9 was already open. Preserve all identities and historical comments. The preparation milestone remains open.
+- Before reset writes, all nine exact predefined issue definitions/markers/dependencies/milestone associations and native milestone #1 title/description/open state were read back and verified. DOCS-001 remains complete; DOCS-002–DOCS-009 are reset locally. Reset 0f02b85dd34a8ae0720019d2fb37b7dddb40ba7a was published with exact matching remote readback and confirmed cleanup. Issues #2–#8 were reopened and read back, #9 remained open, and #1 remained closed/completed; final connected readback verified all definitions/associations. Identities, labels, assignees and historical comments were preserved. Milestone #1 remains open.
 - The accepted content identities below are unchanged by reset. Existing QC reports describe that retained iteration 2 baseline; they do not certify the new scope. Each affected owner must append the next assessment and retain old findings/source identities.
 
 | Document | Accepted starting Git blob |
@@ -127,6 +127,14 @@ The following accepted content identities are unchanged by activation:
 | [TASKS.md](TASKS.md) | b5c135676d04fac801e925191e09c727cc117c04 |
 
 The associated accepted AGENTS navigation was blob 6ed692d7057d468ad070e3a8497bcba8af38daeb. At activation its entire content was retained as a prefix and the project protocol pointer was appended. Later authorized project-guidance changes are recorded with their owning document task. QC reports retain baseline findings and add iteration context, without claiming a fresh technical review.
+
+## Iteration 3 document completion evidence
+
+### DOCS-002 — Combined-scope PROJECT extension
+
+- Extended the retained brief with all four additions together: conditional ghost visibility, penetrator traversal/bonuses/white rendering, all six side-panel controls, and independent URL/cookie/default persistence. Removed the conflicting configuration/persistence exclusion; retained desktop keyboard play, static delivery, deterministic verification and phase-release/version constraints. Updated README and project navigation without changing governing instructions.
+- Owner review traced every requested capability and persistence precedence/write rule to the brief, checked scope/non-goals and delegated precise mechanics/defaults/errors to SPEC. No material intent or scope question blocks architecture. This is a review of the intended game, not an implementation claim.
+- Human decision basis: the user's instruction to proceed with this next loop continues the established DOCS-002–DOCS-008 scoped preapproval. Accepted PROJECT blob: 1a72042d6f7244922b21de09ff15967e841f94f9; README: b5c388dbaa808f084e183a81b6dc0cf51d25ad41; AGENTS: 28dd2966297a912deda4f0cbf1c4e54e7a316aca. Submit these accepted sources, this review/decision and the checked DOCS-002 together. Publication/readback and issue closure are required before dependent authoring.
 
 ## Iteration 2 document completion evidence
 

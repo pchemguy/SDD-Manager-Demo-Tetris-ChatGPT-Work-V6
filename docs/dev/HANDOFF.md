@@ -1,6 +1,6 @@
 # Project handoff
 
-Checkpoint: Main-document preparation, iteration 3 entry. The user requested all four scope additions in one loop and explicitly instructed proceeding with that loop. The local reset is recorded; publication and existing-issue reopening require actual readback before DOCS-002 authoring. Recover later effects from [DOCS_TASKS.md](DOCS_TASKS.md), Git and hosted readback.
+Checkpoint: Main-document preparation, iteration 3 entry. The user requested all four scope additions in one loop and explicitly instructed proceeding with that loop. Reset 0f02b85dd34a8ae0720019d2fb37b7dddb40ba7a is published with exact remote readback/confirmed cleanup; existing issues #2–#8 are reopened and #9 remains open, with final readback verified. DOCS-002 acceptance is recorded; recover its later publication/closure from DOCS_TASKS and readback before DOCS-003. Recover later effects from [DOCS_TASKS.md](DOCS_TASKS.md), Git and hosted readback.
 
 ## Workflow and sources
 
@@ -24,8 +24,8 @@ Checkpoint: Main-document preparation, iteration 3 entry. The user requested all
 ## Branches, tracking and current operation
 
 - Working branch: design-docs/main. Creation parent/eventual preparation integration target: main. Branch-off: b0597bf0f02c5e4ed5329adb606acafab63c15a5. No suspended child campaign; preparation remains unmerged.
-- Tracking is enabled. Native milestone #1 (sdd-docs-main) and all nine issue definitions/associations were verified before entry writes. DOCS-001 stays checked/closed. DOCS-002–DOCS-009 are unchecked; publish/read back this reset, reopen existing issues #2–#8, verify #9 open, and preserve object identities. Milestone #1 remains open.
-- Last accepted completion: 444da5a092543b8121ba1044b9bde773b99c7560; verified stop c330297a0e5de93b8508cb1abc62e21db50599c4. Both are published; issue #8 closure was verified. Current entry effects are pending, not yet complete.
+- Tracking is enabled. Native milestone #1 (sdd-docs-main) and all nine issue definitions/associations were verified before entry writes. DOCS-001 stays checked/closed. All reset effects were verified with unchanged identities. DOCS-002 completion is recorded; its publication/closure is pending confirmation. DOCS-003–DOCS-009 remain unchecked/open. Milestone #1 remains open.
+- Last accepted completion: 444da5a092543b8121ba1044b9bde773b99c7560; verified stop c330297a0e5de93b8508cb1abc62e21db50599c4. Both are published; issue #8 closure was verified. The reset is verified; subsequent task effects are owned by DOCS_TASKS and actual readback.
 - Push/read back every owned commit before further work. Reconcile interrupted effects before replay and retain the exact stopping boundary.
 
 Implementation remains gated by DOCS-009, published preparation integration, a later advancement/range decision and eligible-phase tracking.
