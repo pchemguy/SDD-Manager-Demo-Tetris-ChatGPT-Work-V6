@@ -68,7 +68,7 @@ The user activated this project-specific protocol on 2026-10-22 after accepting 
 
 - Accepted starting point: commit 1fc48c722bf55628af69e646b16f8483598498e7, published on design-docs/main with exact matching remote readback and confirmed process cleanup. DOCS-008 issue #8 was then closed and read back as completed before this reset.
 - Local state: DOCS-001 remains complete; DOCS-002–DOCS-009 are unchecked for iteration 2. Prior approvals below are retained baseline history. DOCS-009 has never passed; no whole-package QC report exists.
-- Hosted transition: publish/read back this reset, then reopen issues #2–#8 and verify issue #9 is open, retaining milestone #1 (sdd-docs-main). These effects require actual readback before activation is reported ready.
+- Hosted transition verified: reset commit e11f520a4a9092cf1abd7bab40f183974089f043 was published with exact matching remote readback and confirmed process cleanup. Issues #2–#8 were reopened; issue #9 was already open and remains open. A final readback confirmed all eight open, issue #1 closed as completed, and every existing issue identity/association intact. Milestone #1 (sdd-docs-main) remains open. Reset comments link the published protocol; titles, bodies, labels, assignees, and milestone associations were preserved for each reset issue.
 - Next boundary: ready for DOCS-002 / PROJECT review using the retained version. No iteration 2 document review has started. Documentation remains on design-docs/main, unmerged; no implementation phase is activated and no release is due from this workflow-only change.
 
 The following accepted content identities are unchanged by activation:

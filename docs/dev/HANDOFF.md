@@ -1,6 +1,6 @@
 # Project handoff
 
-Checkpoint: Project-specific docs-iteration activation, iteration 2. Local reset is prepared; publication and hosted reopening require confirmation below. [DOCS_TASKS.md](DOCS_TASKS.md) owns task status, human decisions, and accepted document identities. Recover later effects from that record, Git, and exact hosted readback; the containing commit identifies this snapshot.
+Checkpoint: Project-specific docs-iteration loop, iteration 2, ready at DOCS-002. Reset publication and hosted reopening are verified. [DOCS_TASKS.md](DOCS_TASKS.md) owns task status, human decisions, and accepted document identities. Recover later effects from that record, Git, and exact hosted readback; the containing commit identifies this snapshot.
 
 Outcome: TASKS acceptance was published/read back and issue #8 closed/read back as completed before the reset. All seven accepted root development documents and the gameplay child remain unchanged. DOCS-001 stays complete; DOCS-002–DOCS-009 are unchecked for iteration 2. Whole-package QC has not run and no game implementation exists.
 
@@ -19,7 +19,7 @@ Outcome: TASKS acceptance was published/read back and issue #8 closed/read back 
 - Current authorized work: Record acceptance, reset DOCS-002–DOCS-009, reopen their existing issues, and stop ready to repeat the cycle from DOCS-002 using the accepted versions. Keep DOCS-001 complete and preserve acceptance/QC history.
 - Exact stopping boundary: Ready for DOCS-002 / PROJECT review. No iteration 2 review has started; package QC, documentation integration, phase projection, implementation, and release are outside this reset.
 - Future-checkpoint preapprovals: None. Historical approvals are baseline evidence, not completion of the new iteration's checkpoints.
-- Tracking: Enabled for documentation preparation and implementation by root AGENTS.md. Reuse native milestone #1 (sdd-docs-main) and its nine existing issues. Exact definitions/associations were verified before these writes. Issue #1 stays complete; issues #2–#8 must be reopened and #9 verified open after reset publication. Keep milestone #1 open.
+- Tracking: Enabled for documentation preparation and implementation by root AGENTS.md. Native milestone #1 (sdd-docs-main) remains open with its nine existing issues. Exact definitions/associations were verified before these writes. Issue #1 remains closed as completed; issues #2–#8 were reopened and #9 remains open. Final readback confirmed every state, task identity, and milestone association.
 - Publication: Push and read back each owned commit. Reporting preference: Standard.
 
 ## Branches and return
@@ -30,8 +30,7 @@ Outcome: TASKS acceptance was published/read back and issue #8 closed/read back 
 - Suspended parent or child campaign: None.
 - Preparation remains unmerged. Package QC and verified published integration precede implementation; the user must authorize the implementation range. Initial planned release is 0.1.0; no implementation phase or release has been delivered.
 
-## Pending work and next action
+## Ready checkpoint and next action
 
-- Publish/read back the reset commit, then reopen issues #2–#8 and verify #9 open with their identities and milestone associations preserved. Do not infer those future effects from this checkpoint.
-- Read back the complete hosted state and persist the confirmed activation outcome. The local checklist already has only DOCS-001 checked; all accepted document contents are unchanged.
+- Reset commit e11f520a4a9092cf1abd7bab40f183974089f043 was published with exact matching remote readback and confirmed process cleanup. All requested hosted transitions/readbacks are complete, with issue descriptions, labels, assignees, and milestone associations preserved. The local checklist has only DOCS-001 checked; accepted document contents and first-cycle evidence are retained.
 - Stop ready at DOCS-002. On the user's next instruction to repeat the cycle, review the existing PROJECT first, then proceed in task order through normal QC and human checkpoints. Do not regenerate accepted documents or infer implementation authority from their presence.
