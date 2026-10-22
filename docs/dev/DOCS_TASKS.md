@@ -62,10 +62,18 @@ On interruption, recover the earliest unmet operation from documents, acceptance
 - Preservation was checked against baseline b0597bf0f02c5e4ed5329adb606acafab63c15a5. No mixed-initialization continuation pause applies.
 - Created this checklist from the bundled SDD Manager 0.15.1 template and established HANDOFF.md. Added the credential exclusion to the existing root ignore file.
 - Preparation tracking is selected by root AGENTS.md. The exact bundled sdd-docs-main milestone and all nine DOCS issue definitions/associations were read back before any repository write.
-- Local verification: root-file preservation, checklist identity/order, checkpoint links, Markdown spacing, and credential exclusion. This completion commit requires subsequent push/readback and DOCS-001 issue closure verification.
+- Local verification: root-file preservation, checklist identity/order, checkpoint links, Markdown spacing, and credential exclusion. Initialization commit b79a8cd165ab6a9eed641bc84b9d076b1349dc6c was pushed to refs/heads/design-docs/main with exact matching remote readback and confirmed process cleanup. DOCS-001 issue #1 was then closed and read back as completed.
 
 ### Scope and release decisions
 
 - 2026-10-22: The user selected the classic-only game target from the proposed scope options. This clarifies requirements; it does not approve a PROJECT document that has not yet been presented.
 - 2026-10-22: The user instructed the agent to manage versioning and publish a corresponding tagged GitHub release with release notes after every completed, verified, integrated implementation phase.
 - No future human checkpoint is preapproved for this repository. PROJECT first approval is the next human boundary.
+
+### DOCS-002 PROJECT proposal
+
+- Prepared PROJECT.md and the root README with scope/progress navigation and SDD Manager/disclosure links.
+- Decision basis: the user's classic-only selection and phase-release instruction. The brief proposes desktop keyboard play, a 10-by-20 board, seven tetrominoes, scoring/levels, next preview and session controls. Additional non-goals are stated as proposed scope boundaries.
+- Agent-selected initial release version: 0.1.0. Subsequent phase releases use semantic version increments reflecting delivered changes; every release follows phase completion, verification and integration.
+- Owner review checked purpose and intended outcome, principal scope and exclusions, confirmed versus proposed decisions, testability/delivery constraints, centralized browser-policy reference and later-stage decision boundaries. Markdown spacing and local links passed. This is brief review, not SPEC or whole-package QC.
+- Presented PROJECT content identity: blob 01071a30988992a29a75e26be6577b0fcc6257e1. First human approval is pending; DOCS-002 remains unchecked and issue #2 remains open. Hold dependent ARCHITECTURE authoring at this checkpoint.
