@@ -2,9 +2,9 @@
 
 ## Current gate
 
-Technical QC: **Ready — PLAN and layout**. Human PLAN acceptance: **accepted** with “K” on 2026-10-22 for PLAN presented in commit `65bf300cfe6febdaab04fba05e3963e58da267a2`. Human layout acceptance: **pending**. [DOCS_TASKS.md](DOCS_TASKS.md) owns acceptance publication and issue progression evidence.
+Technical QC: **Ready — PLAN and layout**. Human PLAN acceptance: **accepted** with “K” on 2026-10-22 for PLAN presented in commit `65bf300cfe6febdaab04fba05e3963e58da267a2`. Human layout acceptance: **accepted** with “K” on 2026-10-22 for the layout/navigation proposal in commit `c571fbf134f3c5346fb00a6f77b7af5cdc1ebacd`. [DOCS_TASKS.md](DOCS_TASKS.md) owns acceptance publication and issue progression evidence.
 
-Reviewed scope: [PLAN.md](PLAN.md), unchanged blob `2d02a3c4cc20a36937eeea797f6e1e3d871eada6`; [layout.md](layout.md), blob `4f2643c49661a477ee23dfac91b4fe67a1b5d35e`; and root navigation in [AGENTS.md](../../AGENTS.md), blob `c1458f61a903d66979227b34418235324e19901a`. No focused PLAN/layout children are needed. Revision 1 records combined coverage and rechecks. TASKS authoring remains **Blocked** by pending human layout acceptance.
+Reviewed scope: [PLAN.md](PLAN.md), unchanged blob `2d02a3c4cc20a36937eeea797f6e1e3d871eada6`; [layout.md](layout.md), blob `4f2643c49661a477ee23dfac91b4fe67a1b5d35e`; and root navigation in [AGENTS.md](../../AGENTS.md), blob `c1458f61a903d66979227b34418235324e19901a`. No focused PLAN/layout children are needed. Revision 1 records combined coverage and rechecks. TASKS derivation follows verified acceptance publication and issue closure.
 
 The original strategy review used the following governing states at published SPEC acceptance commit `a897264bc265c4a86838fa5ef5cb86d82113b7b4`. These historical identities are retained; Revision 1 identifies the later accepted PLAN baseline and navigation-only change.
 

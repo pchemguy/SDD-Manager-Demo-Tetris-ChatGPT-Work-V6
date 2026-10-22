@@ -34,7 +34,7 @@ The running SDD Manager package's `assets/DOCS_TRACKING_TEMPLATE.json` supplies 
 - [x] DOCS-006 — Prepare and accept PLAN.
     - Define delivery phases, milestones, dependencies and exit conditions against SPEC.
     - Complete PLAN QC, then present PLAN for human approval.
-- [ ] DOCS-007 — Prepare and accept layout.
+- [x] DOCS-007 — Prepare and accept layout.
     - Allocate source, tests, documentation and artifacts to physical paths consistently with the accepted design and PLAN.
     - Review layout against the design and PLAN, update the PLAN review report, then present layout for human approval.
 - [ ] DOCS-008 — Prepare and accept TASKS.
@@ -68,7 +68,7 @@ On interruption, recover the earliest unmet operation from documents, acceptance
 
 - 2026-10-22: The user selected the classic-only game target from the proposed scope options. This clarifies requirements; it does not approve a PROJECT document that has not yet been presented.
 - 2026-10-22: The user instructed the agent to manage versioning and publish a corresponding tagged GitHub release with release notes after every completed, verified, integrated implementation phase.
-- No future human checkpoint is preapproved for this repository. Layout first approval is the next human boundary.
+- No future human checkpoint is preapproved for this repository. TASKS first approval is the next human boundary.
 
 ### DOCS-002 PROJECT proposal
 
@@ -113,4 +113,4 @@ On interruption, recover the earliest unmet operation from documents, acceptance
 - Prepared [layout.md](layout.md) with source/interface ownership for every decomposed component, a reusable browser bootstrap and thin production entry, unit/native-browser/fixture boundaries, build/configuration/CI ownership, generated-file isolation, and documentation/report/release locations. Proposed product paths are explicitly distinguished from existing documents.
 - Appended project-document navigation to root AGENTS.md through the documentation owner. Preserved its existing instructions as an unchanged prefix, linked preparation acceptance ownership, and stated that product paths and validated application commands are not established yet.
 - Extended [PLAN-REVIEW-REPORT.md](PLAN-REVIEW-REPORT.md) with Revision 1 combined coverage. Corrected adapter-unit-test placement and pending-proposal navigation wording; retained initial findings, source identities, actual rechecks, and the original strategy assessment. Technical gate: Ready for PLAN and layout. No strategy, gameplay, or architectural amendment was needed.
-- Presented layout blob: 4f2643c49661a477ee23dfac91b4fe67a1b5d35e. Associated navigation blob: c1458f61a903d66979227b34418235324e19901a. Human layout acceptance is pending; DOCS-007 stays unchecked and issue #7 stays open. Hold TASKS until acceptance. No product code, installation, browser execution, hosted phase activation, or release is claimed.
+- Presented layout blob: 4f2643c49661a477ee23dfac91b4fe67a1b5d35e. Associated navigation blob: c1458f61a903d66979227b34418235324e19901a. The user accepted the layout proposal with “K” on 2026-10-22 in response to the approval request for published commit c571fbf134f3c5346fb00a6f77b7af5cdc1ebacd. The acceptance commit retains both source blobs, records human acceptance in combined QC, and marks DOCS-007 complete. Publish and verify acceptance, then close/read back issue #7 before TASKS authoring. Future checkpoints remain pending.
