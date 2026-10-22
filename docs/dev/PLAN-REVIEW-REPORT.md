@@ -2,9 +2,9 @@
 
 ## Current gate
 
-Technical QC: **Ready — iteration 3 PLAN strategy only**. Human PLAN acceptance: **accepted under scoped preapproval** for the instructed DOCS-002–DOCS-008 loop. Current layout remains the iteration 2 baseline and requires DOCS-007 revision/combined review before TASKS. [DOCS_TASKS.md](DOCS_TASKS.md) owns acceptance/publication/issue evidence.
+Technical QC: **Ready — iteration 3 combined PLAN and layout**. Human PLAN and layout acceptance: **accepted under scoped preapproval** for the instructed DOCS-002–DOCS-008 loop. Strategy and physical allocation conform; TASKS follows verified DOCS-007 publication and issue closure. [DOCS_TASKS.md](DOCS_TASKS.md) owns acceptance/publication/issue evidence.
 
-Reviewed PLAN blob: 36741b6f42c1bd01558db6ef0d71831b0d3688f4. Governing inputs at published SPEC completion e40118ff1817fc2d1348f2a648354f42c756f316:
+Reviewed PLAN blob: 36741b6f42c1bd01558db6ef0d71831b0d3688f4; layout blob: 486c33d1b3076d46ce9ce2cb87181dc620b9190b. No focused PLAN/layout children are required. Governing inputs at published SPEC completion e40118ff1817fc2d1348f2a648354f42c756f316:
 
 | Source | Git blob |
 | --- | --- |
@@ -16,7 +16,7 @@ Reviewed PLAN blob: 36741b6f42c1bd01558db6ef0d71831b0d3688f4. Governing inputs a
 | [spec/CONFIGURATION.md](spec/CONFIGURATION.md) | 6a73acc35202020f7ab8e9b760f3eaf8745cda37 |
 | [SPEC-REVIEW-REPORT.md](SPEC-REVIEW-REPORT.md) | a17ca22e6402f69cce4e7a989f2638b38341c467 |
 
-Revision 4 assesses all three bounded phases, complete contract routing and explicit earlier-release deferrals. P01–P02 and L01–L05 remain historically resolved; P03–P04 are resolved below. No strategy blocker or exception remains. Combined layout readiness and TASKS remain blocked pending DOCS-007; Ready here does not certify placement or implementation.
+Revision 4 assesses all three bounded phases and complete routing; Revision 5 assesses their physical ownership and test/integration seams. P01–P04 and L01–L07 are resolved in their stated scopes. Accepted PLAN completion 733afb842ae69c07c390c1bd0c221f689a625cc9 was published/read back and issue #6 closed before layout authoring. No combined blocker or exception remains. Whole-package QC, integration and implementation remain separate later gates.
 
 ## Iteration 2 accepted baseline
 
@@ -174,3 +174,18 @@ Each phase fits the preferred 3–5 delivery-milestone range after scope assessm
 Manual conformance review covered all 7 R / 10 G / 6 C groups, 22 A / 17 K / 6 P cases, browser/core evidence distinctions, per-key explicit-default/omission/failure paths, safe penetrator landing/hold/bonus/color behavior, timed live policies and earlier-phase regressions. Earlier phase descriptions use the hard-drop selector and explicit fixed-default subset rather than promise incomplete full-target acceptance. Phase entry, final review, integration, version/tag/release and exact requested-range stops remain separate gates. Local checks confirmed three phase identities, five milestone definitions per phase with four delivery plus one review, contract-reference coverage, Markdown/links and unchanged SPEC/design.
 
 Layout is deliberately not revised by DOCS-006. Its new configuration/persistence owners, third-phase report homes and final-report owner require DOCS-007 combined review. No unresolved strategy issue or human exception remains; this Ready result is limited to strategy and does not release TASKS. No product code, tool installation, runtime/browser/CI test, integration or release was performed.
+
+## Revision 5 — Combined configuration/penetrator layout review
+
+Reviewed on 2026-10-22. The owner extended layout from retained blob 71c5936100b2e9c5769f181b1c76188476fa112f; accepted PLAN and every SPEC/design input are unchanged from Revision 4. Current gate identifies the reviewed sources. Strategy has three phases with four delivery milestones plus one excluded phase review each; this placement review changes no phase, milestone or behavior.
+
+| Finding | Located gap in retained layout | Correction / recheck | Disposition |
+| --- | --- | --- | --- |
+| L06 | Application/check tables assigned only the earlier single-policy interaction; no physical owner existed for pure six-setting validation/resolution, browser cookie/URL persistence or nonfatal save feedback. | sdd-plan: allocate src/core/settings.ts and src/browser/settings.ts, extend existing controller/view/input/bootstrap ownership and assign pure/adapter/native checks. Confirm directed imports, frame/save types and lifecycle/failure seams without another state manager. | Resolved in Revision 5 |
+| L07 | Documentation/report ownership listed only the gameplay child and phases 1–2, with final implementation at 2.5, conflicting with accepted PLAN's configuration child and final 3.5. | sdd-plan: include spec/CONFIGURATION.md, all three phase report homes and final-report owner 3.5. Confirm source/navigation, task/check boundaries and unchanged report lifecycle. | Resolved in Revision 5 |
+
+Manual review traced every decomposed component to its source/check owner and back; distinct setting-value and browser-effect responsibilities justify the two small modules. The model imports pure setting types; that module imports no engine/browser code, the controller takes injected persistence callbacks, and views consume snapshots/frames without cookie access or landing calculations. Test-only fixtures retain real production components; native cookies/history/reload remain both-browser evidence rather than mocked success. Root/prefix operation and output isolation support all three phase releases. Root AGENTS already points to the owning layout and document records; its governing instructions/navigation remain valid and unchanged.
+
+Local checks passed 17 unique application-file ownership definitions, the two settings-module/check homes, safe relative paths, three-phase/final-report homes, no created product files, unchanged accepted PLAN/SPEC/design, and Markdown/link/source checks. The first path-count check mistakenly included the introductory index.html reference; restricting it to ownership-table rows eliminated that false positive without changing layout. No duplicate owner was present.
+
+Combined technical readiness is Ready, with all confirmed placement findings resolved and no exception. The actual scoped checkpoint grant covers layout acceptance; TASKS is the next owner after completion publication and issue closure. No application tooling, browser capability, runtime/build/CI evidence, integration or release is certified.

@@ -17,7 +17,7 @@ The running SDD Manager package's `assets/DOCS_TRACKING_TEMPLATE.json` supplies 
 - On 2026-10-22 the user requested another loop with four additional extensions together, then clarified: “You are to proceed with the loop with specified scope extension.” This continues the established bounded DOCS-002–DOCS-008 document pass and its checkpoint preapproval. Record acceptance under that grant, not as a new interactive approval. Technical QC, atomic document completion, publication/readback and issue closure remain required.
 - Extend the currently accepted documents in order, in one pass covering all four additions below. Preserve their contents as the starting baseline and retain earlier acceptance/QC evidence; do not create four separate loops or regenerate the documents.
 - Stop after DOCS-008 completion is recorded, published/read back and issue #8 closure verified. DOCS-009, preparation integration, implementation-phase projection, implementation and releases are outside this pass. The user will decide whether another loop or advancement follows.
-- Current operation: DOCS-006 strategy QC and scoped acceptance are recorded below. Publish/read back its completion and verify issue #6 closure before DOCS-007. DOCS-009 remains unchecked/open; the exact stop remains completed DOCS-008.
+- Current operation: DOCS-007 combined layout QC and scoped acceptance are recorded below. Publish/read back its completion and verify issue #7 closure before DOCS-008. DOCS-009 remains unchecked/open; the exact stop remains completed DOCS-008.
 
 ### Combined scope additions
 
@@ -57,7 +57,7 @@ These additions supersede the retained brief's configuration/persistence exclusi
 - [x] DOCS-006 — Prepare and accept PLAN.
     - Define delivery phases, milestones, dependencies and exit conditions against SPEC.
     - Complete PLAN QC, then present PLAN for human approval.
-- [ ] DOCS-007 — Prepare and accept layout.
+- [x] DOCS-007 — Prepare and accept layout.
     - Allocate source, tests, documentation and artifacts to physical paths consistently with the accepted design and PLAN.
     - Review layout against the design and PLAN, update the PLAN review report, then present layout for human approval.
 - [ ] DOCS-008 — Prepare and accept TASKS.
@@ -163,6 +163,13 @@ The associated accepted AGENTS navigation was blob 6ed692d7057d468ad070e3a8497bc
 - Extended the retained strategy to foundation 0.1.0, modern play 0.2.0 and configurable penetrator play 0.3.0. The new phase delivers controls/dynamic ghost, persistence, penetrators and complete release acceptance as four integrated milestones plus one phase review. Earlier useful releases have explicit scoped deferrals; final implementation reporting moves to 3.5.
 - PLAN/SPEC strategy QC passed with Revision 4, retaining prior source/finding history and resolving P03–P04. All three phases have four delivery milestones plus an excluded one-task phase-review milestone; semantic scope and every contract/evidence group were assessed. Layout remains pending at DOCS-007; this strategy acceptance does not release TASKS.
 - Human acceptance uses the recorded scoped preapproval for this instructed loop. Accepted PLAN blob: 36741b6f42c1bd01558db6ef0d71831b0d3688f4; strategy QC report: e78229bf2e4353fdbfa132e0344f34a97d8cbbae. Submit these with the decision and checked DOCS-006; verify publication/readback and issue closure before layout. Versions are planned, not delivered releases.
+
+### DOCS-007 — Physical ownership and combined QC
+
+- Prior transition verified: DOCS-006 completion 733afb842ae69c07c390c1bd0c221f689a625cc9 was published/read back with confirmed cleanup; issue #6 was closed/read back as completed before layout authoring.
+- Extended the accepted layout with pure core settings/resolution and browser persistence modules, controller presentation/save contracts, feature/variant/bonus view ownership, targeted pure/adapter/native checks, the configuration child and all three phase/final-report homes. Preserved existing production/test separation, browser policy and source owners. No product path was created.
+- Combined PLAN/layout QC passed in appended Revision 5, retaining prior source/finding history and resolving L06–L07. Checked 17 unique application ownership definitions, source/check navigation, acyclic dependencies, startup/save/failure seams and unchanged PLAN/SPEC/design. A path-check false positive counted a narrative index.html reference; narrowing the check to definitions passed without a document repair.
+- Human acceptance uses the recorded scoped preapproval for this instructed loop. Accepted layout blob: 486c33d1b3076d46ce9ce2cb87181dc620b9190b; combined QC report: 1de24f8ec7749df055ecebd401206d79a67696a4. Submit these with this decision and checked DOCS-007; verify publication/readback and issue closure before TASKS.
 
 ## Iteration 2 document completion evidence
 
