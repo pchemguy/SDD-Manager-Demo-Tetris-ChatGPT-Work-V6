@@ -19,7 +19,7 @@ The running SDD Manager package's `assets/DOCS_TRACKING_TEMPLATE.json` supplies 
     - Record which root files existed and which were copied; verify copied bytes and preserved content.
     - Establish/reconcile `docs/dev/HANDOFF.md` as generated checkpoint metadata, outside the four-file presence/copy test. Include it with this task's completion and initialization result, push and verify; then close and verify its issue when tracking is enabled.
     - Report initialization. If some but not all of the four root files existed initially, warn with the retained/copied filenames and end the turn before document work, unless the user explicitly preapproved continuation through this checkpoint. If none or all existed, continue without an additional approval pause.
-- [ ] DOCS-002 — Prepare and accept PROJECT.
+- [x] DOCS-002 — Prepare and accept PROJECT.
     - Establish the project brief: purpose, users, outcomes, scope, non-goals and consequential constraints; identify material assumptions and unresolved decisions.
     - Review the proposal with the human and complete its acceptance checkpoint.
 - [ ] DOCS-003 — Prepare and accept ARCHITECTURE.
@@ -68,7 +68,7 @@ On interruption, recover the earliest unmet operation from documents, acceptance
 
 - 2026-10-22: The user selected the classic-only game target from the proposed scope options. This clarifies requirements; it does not approve a PROJECT document that has not yet been presented.
 - 2026-10-22: The user instructed the agent to manage versioning and publish a corresponding tagged GitHub release with release notes after every completed, verified, integrated implementation phase.
-- No future human checkpoint is preapproved for this repository. PROJECT first approval is the next human boundary.
+- No future human checkpoint is preapproved for this repository. ARCHITECTURE first approval is the next human boundary.
 
 ### DOCS-002 PROJECT proposal
 
@@ -76,4 +76,4 @@ On interruption, recover the earliest unmet operation from documents, acceptance
 - Decision basis: the user's classic-only selection and phase-release instruction. The brief proposes desktop keyboard play, a 10-by-20 board, seven tetrominoes, scoring/levels, next preview and session controls. Additional non-goals are stated as proposed scope boundaries.
 - Agent-selected initial release version: 0.1.0. Subsequent phase releases use semantic version increments reflecting delivered changes; every release follows phase completion, verification and integration.
 - Owner review checked purpose and intended outcome, principal scope and exclusions, confirmed versus proposed decisions, testability/delivery constraints, centralized browser-policy reference and later-stage decision boundaries. Markdown spacing and local links passed. This is brief review, not SPEC or whole-package QC.
-- Presented PROJECT content identity: blob 01071a30988992a29a75e26be6577b0fcc6257e1. First human approval is pending; DOCS-002 remains unchecked and issue #2 remains open. Hold dependent ARCHITECTURE authoring at this checkpoint.
+- Presented PROJECT content identity: blob 01071a30988992a29a75e26be6577b0fcc6257e1. The user approved this exact proposal with “Approve” on 2026-10-22, as published in commit f5b9ceab26a97fdc56b4d3421a6d44920846467b. The acceptance commit retains its exact PROJECT blob and marks DOCS-002 complete. Publish and verify this acceptance, then close/read back issue #2 before dependent ARCHITECTURE authoring. This accepts PROJECT only; no future checkpoint is preapproved.
