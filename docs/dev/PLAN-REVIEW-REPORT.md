@@ -2,7 +2,26 @@
 
 ## Current gate
 
-Iteration context: this report retains the accepted first-cycle baseline below. Iteration 2 is active under [DOCS_TASKS.md](DOCS_TASKS.md#active-docs-iteration-protocol); its PLAN/layout reviews and human acceptances are pending in task order. The reset changes workflow status without performing new technical QC or changing either reviewed document.
+Technical QC: **Ready — iteration 2 strategy only**. Human PLAN acceptance: **accepted under scoped preapproval** for DOCS-002–DOCS-008 on 2026-10-22. Extended layout and combined PLAN/layout QC are **pending DOCS-007**, so TASKS readiness is held. [DOCS_TASKS.md](DOCS_TASKS.md) owns acceptance/publication/issue evidence.
+
+Reviewed PLAN blob: `84e0d67d1c20010b70852966647220560b5b4e66`. No PLAN children are required. Governing inputs at published SPEC completion `b3eb837c6053dfa971333faece41f171ea2ddec7`:
+
+| Source | Git blob |
+| --- | --- |
+| [docs/dev/PROJECT.md](PROJECT.md) | 979274fe1d8af394300b13eb53f96df1c2ec0c46 |
+| [docs/dev/ARCHITECTURE.md](ARCHITECTURE.md) | 821f53a68bc9e0ec20e518d63e4b1d0003628967 |
+| [docs/dev/DECOMPOSITION.md](DECOMPOSITION.md) | c24ea1ba1f3e6712c65805f49842784e0f10da93 |
+| [docs/dev/SPEC.md](SPEC.md) | 765e6c865675dca7e8dab419e221315fdd448065 |
+| [docs/dev/spec/GAMEPLAY.md](spec/GAMEPLAY.md) | 2e1139f2ff1d791af9676c4ce423a9c7bd0e1279 |
+| [docs/dev/SPEC-REVIEW-REPORT.md](SPEC-REVIEW-REPORT.md) | 27155a0bbb389459f6a953cde494f51e14a262d5 |
+| [AGENTS.md](../../AGENTS.md) | 4804c99fa5d2fd765d3745af5d89740df9513d99 |
+| [BROWSER_DEV_POLICY.md](../../BROWSER_DEV_POLICY.md) | ae71cfc01aaf694f5c4a7b055d2f15d469d7f7a7 |
+
+SPEC/design QC is current for these behavioral and structural inputs. Existing layout blob `4f2643c49661a477ee23dfac91b4fe67a1b5d35e` was inspected for dependencies; it needs bag/random/clock ownership, held/ghost/policy routes, and second-phase report homes. DOCS-007 owns those placement updates and combined recheck. Revision 2 establishes strategy coverage and counts, with P01–P02 resolved; no confirmed strategy blocker or human exception remains. No implementation/browser/build/CI/release result is certified.
+
+## First-cycle accepted baseline
+
+This section, Initial review and Revision 1 retain the historical classic-only assessment. Their Current gate references identify this baseline, not the extended-scope gate above.
 
 Technical QC: **Ready — PLAN and layout**. Human PLAN acceptance: **accepted** with “K” on 2026-10-22 for PLAN presented in commit `65bf300cfe6febdaab04fba05e3963e58da267a2`. Human layout acceptance: **accepted** with “K” on 2026-10-22 for the layout/navigation proposal in commit `c571fbf134f3c5346fb00a6f77b7af5cdc1ebacd`. [DOCS_TASKS.md](DOCS_TASKS.md) owns acceptance publication and issue progression evidence.
 
@@ -78,3 +97,23 @@ The layout wording for implementation/preparation task records was also clarifie
 Performed manual design/SPEC/PLAN/layout conformance review and local Python checks for Markdown spacing/links, unique ownership-table definitions, safe relative application paths, unchanged PLAN, preserved prior agent instructions, deterministic adapter-check placement, and absence of product/configuration creation. Checks passed. Narrative references are excluded from ownership-definition counts. The corrected source identities match Current gate.
 
 No confirmed issue remains; no exception or deferred finding supports Ready. Required browser/build/test/CI/release execution is still planned implementation evidence. The current next boundary is human layout acceptance before TASKS; this review does not authorize implementation or hosted phase activation.
+
+## Revision 2 — Extended delivery strategy
+
+The author applying sdd-plan reviewed extended SPEC/design and retained PLAN/layout under the user's scoped preapproval. The plan keeps the existing foundation milestones and adds a bounded modern-play phase. Seven-bag and the required default delay supply the foundation's basic piece-selection/locking responsibilities without a new interaction mode. Hold, translated kicks, ghost, and hard drop have later integrated outcomes; no backend, persistence, extra modes, or speculative framework is included.
+
+| Phase | Delivery count | Excluded review | Semantic/count assessment |
+| --- | --- | --- | --- |
+| 1 — Classic foundation | 4: 1.1–1.4 | 1.5, one phase-review task | A usable continuous desktop game, next preview, sessions, failure containment and static delivery. Every game needs piece selection and locking; the requested bag/timer rules are bounded core dependencies. Hold/ghost/kicked rotation/drop/checkbox stay outside this phase. Four milestones give early production-path evidence and a complete useful exit. |
+| 2 — Modern play | 4: 2.1–2.4 | 2.5, one phase-review task | Four mechanics evolve the existing game through hold, placement guidance, and drop-policy demonstrations. Reuses the bag/timer/lifecycle/static foundation, preserves unaffected behavior, and completes whole-target acceptance. This is a bounded gameplay extension with explicit integration exits, not an unspecified remainder bucket. |
+
+Each delivery milestone retains its own final review/testing/report task. Counts are within the preferred range after semantic review; no phase-shape override or count-based padding is used. Executable task counts remain for TASKS.
+
+| Finding | Located incompatibility and consequence | Correction/recheck | Disposition |
+| --- | --- | --- | --- |
+| P01 | The retained strategy described the complete target as classic-only in one phase and required full SPEC at its exit. Adding all modern scope there would erase the usable-baseline boundary; omitting it would lose accepted scope. | Two phases with explicit included/deferred contracts and 0.1.0/0.2.0 release gates. Review both phases' useful outcomes and expand the coverage map against every R/G/A/K definition. | Resolved in Revision 2 |
+| P02 | The retained phase-1 review owned the global final implementation report. With later work scheduled, that would finalize the whole task list prematurely. | Phase 1 owns its phase report; 2.5 owns final implementation reporting/TODO aggregation after the last delivery phase. Rechecked review predecessors and per-phase release exits. | Resolved in Revision 2 |
+
+Manual review checked early usefulness, realistic prerequisites, all modern routes, intentional zero-offset-only Phase 1 rotation, timed-input and bag dependencies, native/controlled evidence scopes, failures, clean checkout/CI, preserved prior behavior, tracking, integration and separate phase releases. Local checks passed two phase identities, ten unique ordered milestone IDs, four delivery plus one dedicated review per phase, complete R01–R06/G01–G09/A01–A16/K01–K12 coverage references, both versions/tags, and absence of implementation task IDs/checklists. Markdown/link/source checks accompany this checkpoint.
+
+No behavioral/design amendment is needed. Layout is a staged dependent checkpoint and remains unaccepted/unassessed for the extended placement scope until DOCS-007. This Ready result covers strategy only and does not release the TASKS gate. Previous source/findings/revision evidence is retained above.

@@ -17,7 +17,7 @@ The running SDD Manager package's `assets/DOCS_TRACKING_TEMPLATE.json` supplies 
 - On 2026-10-22 the user extended the complete target with hold, ghost pieces, seven-bag randomization, wall kicks, hard drop, and full-gravity-interval locking from grounding. Hard drop follows that policy by default, with a selectable immediate-hard-drop alternative.
 - The user explicitly preapproved human checkpoints through completed DOCS-008 and instructed this pass to start at DOCS-002. The grant covers PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC with its children, PLAN, layout, and TASKS, including their required owner review/QC and tracked completion. It does not waive technical gates or publication/readback.
 - Stop after DOCS-008 completion is recorded, published, and its issue closure verified. Wait for the user to request another loop or approve advancing. DOCS-009, preparation integration, phase projection, implementation, and releases are outside this pass.
-- Current position: DOCS-005 SPEC and its gameplay child passed extended-scope design/contract QC and are accepted under scoped preapproval. Verify completion publication and issue #5 closure before PLAN. PLAN/layout and TASKS QC remain pending for the extended scope.
+- Current position: DOCS-006 PLAN passed extended-scope strategy QC and is accepted under scoped preapproval. Verify completion publication and issue #6 closure before layout. Combined PLAN/layout and TASKS QC remain pending.
 
 ## Preparation
 
@@ -38,7 +38,7 @@ The running SDD Manager package's `assets/DOCS_TRACKING_TEMPLATE.json` supplies 
 - [x] DOCS-005 — Prepare and accept SPEC.
     - Specify observable behavior, interfaces, error contracts, required qualities and acceptance conditions from the accepted design.
     - Complete required SPEC QC and its human acceptance checkpoint.
-- [ ] DOCS-006 — Prepare and accept PLAN.
+- [x] DOCS-006 — Prepare and accept PLAN.
     - Define delivery phases, milestones, dependencies and exit conditions against SPEC.
     - Complete PLAN QC, then present PLAN for human approval.
 - [ ] DOCS-007 — Prepare and accept layout.
@@ -121,6 +121,13 @@ The associated accepted AGENTS navigation was blob 6ed692d7057d468ad070e3a8497bc
 - Extended SPEC and its existing gameplay child with all modern behavior. Exact delegated defaults include clockwise ordered kick tables, C hold/D hard drop while retaining Up/Space rotation, six-sample bag refill, one hold per lock, shared landing, 2*d hard-drop points, full grounded intervals, and the session-only immediate-hard-drop choice. Added precise pause/reset/error/snapshot and elapsed-before-command contracts without unrelated settings/persistence.
 - [SPEC-REVIEW-REPORT.md](SPEC-REVIEW-REPORT.md) retains first-cycle findings and Revision 1, and adds Revision 2 with current source identities, complete design/contract coverage, S03 clock and S04 cross-round bag corrections, actual document-data checks, and evidence limits. Technical gate is Ready for extended scope; no confirmed blocker remains.
 - Human acceptance uses the recorded scoped preapproval, including the gameplay child. Accepted SPEC blob: 765e6c865675dca7e8dab419e221315fdd448065; GAMEPLAY blob: 2e1139f2ff1d791af9676c4ce423a9c7bd0e1279. Sources, QC evidence, and checked DOCS-005 share this completion commit. Publication and issue closure precede PLAN. No product/browser test has run.
+
+### DOCS-006 — PLAN extension and strategy QC
+
+- Prior transition verified: DOCS-005 completion commit b3eb837c6053dfa971333faece41f171ea2ddec7 was published/read back with confirmed cleanup; issue #5 was closed/read back as completed before PLAN.
+- Extended the retained plan into Classic foundation 0.1.0 and Modern play 0.2.0, each with four integrated delivery milestones and one final phase review. The foundation uses the required bag/grounded-delay rules; later milestones deliver hold, kicks/ghost, hard drop/policy, and complete-target acceptance. Deferred contract portions and per-phase releases are explicit.
+- [PLAN-REVIEW-REPORT.md](PLAN-REVIEW-REPORT.md) retains first-cycle history and adds Revision 2 with semantic/count assessments, full R/G/A/K delivery routes, P01/P02 corrections, actual document checks, and strategy-only readiness. Existing layout placement gaps are owned by DOCS-007; TASKS remains held until combined QC.
+- Human PLAN acceptance uses the recorded scoped preapproval. Accepted PLAN blob: 84e0d67d1c20010b70852966647220560b5b4e66. PLAN, review evidence, and checked DOCS-006 share this completion commit; publication and issue closure precede layout. No implementation-phase objects or release were created.
 
 ## Retained first-cycle preparation evidence
 
