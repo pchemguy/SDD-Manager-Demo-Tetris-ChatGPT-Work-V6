@@ -17,7 +17,7 @@ The running SDD Manager package's `assets/DOCS_TRACKING_TEMPLATE.json` supplies 
 - On 2026-10-22 the user requested another loop with four additional extensions together, then clarified: “You are to proceed with the loop with specified scope extension.” This continues the established bounded DOCS-002–DOCS-008 document pass and its checkpoint preapproval. Record acceptance under that grant, not as a new interactive approval. Technical QC, atomic document completion, publication/readback and issue closure remain required.
 - Extend the currently accepted documents in order, in one pass covering all four additions below. Preserve their contents as the starting baseline and retain earlier acceptance/QC evidence; do not create four separate loops or regenerate the documents.
 - Stop after DOCS-008 completion is recorded, published/read back and issue #8 closure verified. DOCS-009, preparation integration, implementation-phase projection, implementation and releases are outside this pass. The user will decide whether another loop or advancement follows.
-- Current operation: DOCS-002 owner review and scoped acceptance are recorded below. Publish/read back its completion and verify issue #2 closure before DOCS-003. DOCS-009 remains unchecked/open; the exact stop remains completed DOCS-008.
+- Current operation: DOCS-003 owner review and scoped acceptance are recorded below. Publish/read back its completion and verify issue #3 closure before DOCS-004. DOCS-009 remains unchecked/open; the exact stop remains completed DOCS-008.
 
 ### Combined scope additions
 
@@ -45,7 +45,7 @@ These additions supersede the retained brief's configuration/persistence exclusi
 - [x] DOCS-002 — Prepare and accept PROJECT.
     - Establish the project brief: purpose, users, outcomes, scope, non-goals and consequential constraints; identify material assumptions and unresolved decisions.
     - Review the proposal with the human and complete its acceptance checkpoint.
-- [ ] DOCS-003 — Prepare and accept ARCHITECTURE.
+- [x] DOCS-003 — Prepare and accept ARCHITECTURE.
     - Define major system blocks, relationships, dependency direction and consequential structural decisions from the accepted brief.
     - Review the proposal with the human and complete its acceptance checkpoint.
 - [ ] DOCS-004 — Prepare and accept DECOMPOSITION.
@@ -135,6 +135,13 @@ The associated accepted AGENTS navigation was blob 6ed692d7057d468ad070e3a8497bc
 - Extended the retained brief with all four additions together: conditional ghost visibility, penetrator traversal/bonuses/white rendering, all six side-panel controls, and independent URL/cookie/default persistence. Removed the conflicting configuration/persistence exclusion; retained desktop keyboard play, static delivery, deterministic verification and phase-release/version constraints. Updated README and project navigation without changing governing instructions.
 - Owner review traced every requested capability and persistence precedence/write rule to the brief, checked scope/non-goals and delegated precise mechanics/defaults/errors to SPEC. No material intent or scope question blocks architecture. This is a review of the intended game, not an implementation claim.
 - Human decision basis: the user's instruction to proceed with this next loop continues the established DOCS-002–DOCS-008 scoped preapproval. Accepted PROJECT blob: 1a72042d6f7244922b21de09ff15967e841f94f9; README: b5c388dbaa808f084e183a81b6dc0cf51d25ad41; AGENTS: 28dd2966297a912deda4f0cbf1c4e54e7a316aca. Submit these accepted sources, this review/decision and the checked DOCS-002 together. Publication/readback and issue closure are required before dependent authoring.
+
+### DOCS-003 — Configuration and penetrator architecture
+
+- Prior transition verified: DOCS-002 completion 334093291b5006444c8e78025eab0d4ccdce7a13 was published with exact remote readback/confirmed cleanup; issue #2 was then closed/read back as completed before architecture authoring.
+- Extended the retained four-block design with pure configuration values/resolution, a browser persistence adapter, core-owned validated settings/penetrator state/bonuses, shared variant-aware landing, and controller-owned save feedback outside gameplay state. Feature gates and conditional ghost derivation remain core rules; browser writes mirror accepted settings.
+- Owner review checked full PROJECT coverage, one owner per state/algorithm, directed dependencies, startup and failure paths, no core browser access, no duplicate landing logic, and proportionate modules. Compared browser-owned configuration with core-owned typed settings plus a pure model; the latter keeps feature gates and deterministic projection coherent. Persistence failures remain nonfatal and independently reportable. Exact formats and gameplay details are delegated to SPEC; no structural blocker remains.
+- Human acceptance uses the recorded DOCS-002–DOCS-008 scoped preapproval for the instructed loop. Accepted ARCHITECTURE blob: 19a47420bbe1a66c810ad8206819d078a3130a61. Submit the checked task, design and evidence together; verify publication and issue closure before DECOMPOSITION. Downstream iteration 2 QC remains historical until each affected owner rechecks the new scope.
 
 ## Iteration 2 document completion evidence
 

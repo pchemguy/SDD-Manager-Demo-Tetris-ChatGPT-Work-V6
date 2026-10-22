@@ -20,18 +20,18 @@ These choices keep the production application limited to game code and browser A
 
 | Block | Responsibility and state ownership | Dependencies |
 | --- | --- | --- |
-| Game core | Own board, active/next/held pieces, bag remainder, hold eligibility, gameplay status, gravity and grounded-lock timers, hard-drop policy, score, lines, and level. Apply transitions and derive presentation snapshots. | Plain TypeScript data and explicit inputs; no browser APIs. |
-| Session controller | Hold current core state, route commands and the hard-drop policy choice, convert browser timestamps into elapsed-time inputs, and coordinate snapshots. Own lifecycle handles and the clock anchor. | Game core and narrow callbacks for browser services and presentation. |
-| Browser adapters | Translate keyboard/button/setting events and animation timestamps into controller inputs. Supply production random samples and attach/detach bindings under the controller's lifecycle ownership. | Browser APIs and the controller's command boundary. |
-| Presentation | Draw board, ghost, next and hold snapshots, update HTML metrics/status/setting state, and size drawing surfaces for the desktop layout. Own visual styling and drawing resources. | Read-only core snapshots, Canvas 2D, and the DOM. |
+| Game core | Own board, active/next/held pieces and their variants, bag remainder, hold eligibility, penetrator bonuses, gameplay status, gravity/grounded timers, all six validated settings, score, lines and level. Apply transitions and derive presentation snapshots. Pure configuration values/validation/resolution share this browser-free boundary. | Plain TypeScript data and explicit inputs; no browser APIs. |
+| Session controller | Hold current core state, route commands and setting changes, convert browser timestamps into elapsed-time inputs, and coordinate presentation and persistence callbacks. Own lifecycle handles, the clock anchor and nonfatal save feedback. | Game core and narrow callbacks for browser services and presentation. |
+| Browser adapters | Translate keyboard/button/setting events and animation timestamps into controller inputs. Supply production random samples, read/write setting cookies and URL parameters, and attach/detach bindings under the controller's lifecycle ownership. | Browser APIs and the controller's command boundary. |
+| Presentation | Draw board/ghost/preview snapshots with piece variants, update HTML metrics/status, bonus symbols, all six configuration controls and save feedback, and size drawing surfaces for the desktop layout. Own visual styling and drawing resources. | Read-only core snapshots, Canvas 2D, and the DOM. |
 
 Compose these blocks through direct function calls and narrow callbacks. Browser adapters and presentation depend on the core's public data contracts; the core has no dependency on either. Detailed component boundaries and interface shapes belong in DECOMPOSITION.
 
 ## State and execution flow
 
-Browser startup resolves HTML elements and drawing contexts, creates the production random source, initializes the core, and connects the controller to input, timing, and presentation.
+Browser startup resolves HTML elements and drawing contexts, creates the production random source, resolves per-setting startup configuration through the browser adapter and pure configuration model, initializes the core with those settings, and connects the controller to input, timing, persistence and presentation. Resolve settings before the first snapshot; no default-state flash or later reload transition is required.
 
-Input adapters submit game commands or the immediate-hard-drop choice. The controller passes commands and explicit elapsed time into the core, stores the resulting state, and presents its snapshot. The core owns collision, kicked rotation, hold, bag consumption, hard drop, locking, line removal, scoring, progression, and game over. Presentation does not reproduce those decisions.
+Input adapters submit game commands or a typed change to one setting. The controller passes commands and explicit elapsed time into the core, stores the resulting state, and presents its snapshot. The core owns collision, kicked rotation, hold, bag consumption, penetrator activation/traversal/bonus accounting, hard drop, both general locking policies, line removal, scoring, progression and game over. Presentation does not reproduce those decisions.
 
 Random samples enter through an injected numeric source. The core owns seven-bag shuffling and consumption; production supplies JavaScript randomness and tests supply fixed or seeded samples. Keeping the bag in core state makes restart, hold-related draws, and replay deterministic without hidden adapter state. An external stateful piece generator would weaken that ownership and is unnecessary. The core reads neither ambient randomness nor wall-clock time.
 
@@ -41,26 +41,36 @@ The board's logical coordinates remain independent of CSS size and device-pixel 
 
 ## Placement and policy ownership
 
-One core landing projection supplies both ghost geometry and the hard-drop destination. It derives a position without changing board, timers, bag, or hold state. The renderer consumes that result, so visual guidance and executed placement cannot use different collision algorithms.
+One core landing projection, parameterized by the piece variant, supplies both ghost geometry and the hard-drop destination. Regular pieces use the collision-limited descent; penetrators search through intervening occupied cells for the lowest valid nonoverlapping placement. Board operations keep inside-bounds, transient traversal and final-placement checks distinct. The engine permits traversal without changing locked cells and guarantees every active penetrator can still reach a valid final placement. It derives a position without changing board, timers, bag, or hold state. The renderer consumes that result, so visual guidance and executed placement cannot use different collision algorithms.
 
 Rotation geometry and ordered kick candidates are core rule data. Hold eligibility and held-piece replacement are core transitions, including spawn collision and random-consumption rules. Components remain ordinary functions and immutable data; these features do not require a plugin framework or a class per piece.
 
-The default grounded lock interval and the selectable immediate-hard-drop exception belong to core policy. The setting is exposed through semantic HTML and routed by the controller; it is retained for the application's current session without cookies, URL parameters, or storage. Rendering or changing a view cannot reset a gameplay timer. Exact timer-reset, pause, restart, and setting-change semantics belong to SPEC.
+The default grounded interval, failed-downward-attempt alternative and hard-drop override belong to core policy. Feature-off choices are enforced by the core as well as reflected in controls; hiding a preview does not change piece selection or hold storage. Conditional ghost visibility is a snapshot decision based on the shared landing, not a second placement algorithm in the view. Bonus earning/spending and active/held penetrator identity belong to the engine; the renderer uses explicit variants to render white penetrators while keeping regular colors distinct.
+
+## Configuration boundary
+
+A pure configuration model owns setting identities, allowed values, defaults and independent URL/cookie/default resolution. The core retains the resulting typed settings and validates setting-update inputs; it never reads a document, URL, cookie or ambient location.
+
+A browser configuration adapter owns extracting URL/cookie strings and persisting individual values. Composition uses it at startup; the controller invokes it after accepting a player setting change. Explicit valid URL values are saved to their cookies, including defaults. Missing URL values retain cookies. Setting changes update that setting's cookie and URL parameter without changing gameplay history, resetting the game or erasing unrelated URL data. SPEC owns exact names, encoding, precedence, invalid-value behavior and live policy transitions.
+
+Cookie and URL write/read failures return bounded save feedback rather than throwing into the gameplay failure path. The controller retains that feedback separately from core state and supplies a presentation frame containing the game snapshot and save status. One failed destination does not suppress the other save attempt; selected in-memory settings remain usable. This adds a small browser adapter and pure value module, not a second state manager, backend or generic settings service. No gameplay board, score or bonus state is persisted.
 
 ## System invariants and failure boundaries
 
 - Given the same initial state, commands, elapsed time, policy choices, and random samples, the core produces the same result.
-- A rendering pass consumes a snapshot without advancing gameplay, selecting a piece, or modifying the board.
+- A rendering pass consumes a presentation frame without advancing gameplay, selecting a piece, or modifying the board.
 - One controller owns each game's current state, event registrations, and animation-loop lifecycle.
 - Game over is an ordinary core state. The browser composition boundary owns startup failures, including an unavailable drawing context, and presents a readable failure state.
-- Controls, instructions, score, and status use semantic HTML. Canvas pixels are not the authoritative source of textual state.
+- Settings have one validated in-memory owner; persistence mirrors selected values and does not become a second gameplay state source.
+- Controls, instructions, score, bonuses and status use semantic HTML. Canvas pixels are not the authoritative source of textual state.
 
 ## Verification and delivery
 
 | Boundary | Verification approach |
 | --- | --- |
-| Game core | Vitest exercises geometry/kicks, bags and hold consumption, shared landing projection, hard-drop policies, and chronological gravity/lock contracts using controlled state, elapsed time, and random samples. |
-| Session controller | Tests supply a controlled clock and callbacks to check command/setting routing, pause/restart, and lifecycle coordination. |
+| Game core | Vitest exercises geometry/kicks, bags and hold consumption, regular/penetrator landing and traversal, bonus/hold identity, both general/drop lock policies, setting validation and chronological gravity/lock contracts using controlled state, elapsed time, and random samples. |
+| Session controller | Tests supply a controlled clock and callbacks to check command/setting routing, elapsed ordering, independent save attempts/feedback, pause/restart and lifecycle coordination. |
+| Configuration | Pure resolution/validation cases plus browser cookies, URL/history updates, reload/reopen, invalid/omitted/default values and independent adapter failures. |
 | Browser integration | Playwright drives the served application with real keyboard/button input and checks DOM state plus Canvas output. |
 | Production build | Explicit TypeScript checking, Vite build, and browser checks against the generated static application. |
 
@@ -74,7 +84,7 @@ Package metadata supplies the authoritative application version. Built version i
 
 ## Subsequent design boundaries
 
-DECOMPOSITION defines cohesive components, ownership details, and interfaces for commands, snapshots, random supply, timing, policy, and rendering. SPEC owns exact gameplay and failure contracts. PLAN owns delivery order and phase exits, and layout owns physical paths. This architecture requires no focused child documents.
+DECOMPOSITION defines cohesive components, ownership details, and interfaces for commands, settings/resolution/persistence, presentation frames, random supply, timing, piece variants/bonuses and rendering. SPEC owns exact gameplay and failure contracts. PLAN owns delivery order and phase exits, and layout owns physical paths. This architecture requires no focused child documents.
 
 ## Technical sources
 
