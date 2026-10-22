@@ -49,3 +49,5 @@ This project develops a classic desktop browser Tetris game. Development documen
 [DOCS_TASKS](docs/dev/DOCS_TASKS.md) owns documentation preparation status and human decisions. Layout describes planned source/test/configuration locations; product files and validated application setup/check commands are not established yet. Add implementation navigation and validated commands as those become available.
 
 Read applicable nested instructions before editing their paths. Load this root file explicitly when the execution host has not discovered it.
+
+[TASKS](docs/dev/TASKS.md) contains the implementation hierarchy. Task-list acceptance, preparation completion, and implementation-range authorization follow DOCS_TASKS and the coordinator's checkpoints.
