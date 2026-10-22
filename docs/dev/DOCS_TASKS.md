@@ -17,7 +17,7 @@ The running SDD Manager package's `assets/DOCS_TRACKING_TEMPLATE.json` supplies 
 - On 2026-10-22 the user extended the complete target with hold, ghost pieces, seven-bag randomization, wall kicks, hard drop, and full-gravity-interval locking from grounding. Hard drop follows that policy by default, with a selectable immediate-hard-drop alternative.
 - The user explicitly preapproved human checkpoints through completed DOCS-008 and instructed this pass to start at DOCS-002. The grant covers PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC with its children, PLAN, layout, and TASKS, including their required owner review/QC and tracked completion. It does not waive technical gates or publication/readback.
 - Stop after DOCS-008 completion is recorded, published, and its issue closure verified. Wait for the user to request another loop or approve advancing. DOCS-009, preparation integration, phase projection, implementation, and releases are outside this pass.
-- Current position: DOCS-008 TASKS passed extended-scope task QC and is accepted under the recorded preapproval. Publish/read back its completion and close/read back issue #8, then stop for the user. DOCS-009 stays unchecked/open; another loop or advancing requires the next user instruction.
+- Current position: DOCS-008 is complete, published/read back, and issue #8 is closed/read back as completed. This bounded pass is stopped. DOCS-009 stays unchecked/open; wait for the user to request another loop or approve advancing.
 
 ## Preparation
 
@@ -141,8 +141,25 @@ The associated accepted AGENTS navigation was blob 6ed692d7057d468ad070e3a8497bc
 - Prior transition verified: DOCS-007 completion commit f56d87bc36523dc00a92c1fadda41d7abbe78d45 was published/read back with confirmed cleanup; issue #7 was closed/read back as completed before TASKS.
 - Extended the retained implementation hierarchy into both accepted phases with 43 unchecked tasks: 33 delivery and ten reviews. Kept all T-001–T-024 identities/parents, inserted the independently scoped T-025 bag prerequisite before T-003, and assigned T-026–T-043 to modern play. Delivery counts are 7/4/5/4 and 3/4/3/3; final implementation reporting is owned by T-043.
 - [TASKS-REVIEW-REPORT.md](TASKS-REVIEW-REPORT.md) retains first-cycle findings/Revisions 1–2 and adds Revision 3 with exact inputs, scope/count assessments, TQ04–TQ06 corrections, complete acceptance routes, stable-ID/dependency/review/path checks, and evidence limits. Technical gate is Ready for the extended task decomposition; no confirmed blocker remains.
-- Human TASKS acceptance uses the user's explicit preapproval through completed DOCS-008. Accepted TASKS blob: f5ec46c51616189f793bdd762a12f3036520f2e0. This completion commit includes accepted TASKS, required QC evidence, refreshed HANDOFF, and checked DOCS-008. Publication/readback and issue #8 closure require confirmation before reporting the stop reached.
+- Human TASKS acceptance uses the user's explicit preapproval through completed DOCS-008. Accepted TASKS blob: f5ec46c51616189f793bdd762a12f3036520f2e0. Completion commit 444da5a092543b8121ba1044b9bde773b99c7560 includes accepted TASKS, required QC evidence, refreshed HANDOFF, and checked DOCS-008. Supervised publication/readback matched this exact commit on design-docs/main with process cleanup confirmed; issue #8 was then closed/read back as completed.
 - Exact stop: await the user's instruction for another docs loop or advancing. DOCS-009/package QC has not run, the preparation milestone stays open, documentation stays unmerged, implementation tasks stay unchecked, and no phase projection or release has occurred.
+
+### Verified iteration 2 stopping outcome
+
+Final hosted readback confirmed issues #1–#8 closed as completed and issue #9 open, with exact issue definitions and all existing milestone associations preserved. Native milestone #1 (sdd-docs-main) remains open with its predefined title/description. The local checklist matches: DOCS-001–DOCS-008 checked; DOCS-009 unchecked. No next-cycle reset or downstream operation was started.
+
+A requested next loop starts from these extended accepted sources at DOCS-008 completion, preserving their review and acceptance history:
+
+| Document | Accepted Git blob |
+| --- | --- |
+| [PROJECT.md](PROJECT.md) | 979274fe1d8af394300b13eb53f96df1c2ec0c46 |
+| [ARCHITECTURE.md](ARCHITECTURE.md) | 821f53a68bc9e0ec20e518d63e4b1d0003628967 |
+| [DECOMPOSITION.md](DECOMPOSITION.md) | c24ea1ba1f3e6712c65805f49842784e0f10da93 |
+| [SPEC.md](SPEC.md) | 765e6c865675dca7e8dab419e221315fdd448065 |
+| [spec/GAMEPLAY.md](spec/GAMEPLAY.md) | 2e1139f2ff1d791af9676c4ce423a9c7bd0e1279 |
+| [PLAN.md](PLAN.md) | 84e0d67d1c20010b70852966647220560b5b4e66 |
+| [layout.md](layout.md) | 71c5936100b2e9c5769f181b1c76188476fa112f |
+| [TASKS.md](TASKS.md) | f5ec46c51616189f793bdd762a12f3036520f2e0 |
 
 ## Retained first-cycle preparation evidence
 
