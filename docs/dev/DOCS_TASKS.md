@@ -17,7 +17,7 @@ The running SDD Manager package's `assets/DOCS_TRACKING_TEMPLATE.json` supplies 
 - On 2026-10-22 the user extended the complete target with hold, ghost pieces, seven-bag randomization, wall kicks, hard drop, and full-gravity-interval locking from grounding. Hard drop follows that policy by default, with a selectable immediate-hard-drop alternative.
 - The user explicitly preapproved human checkpoints through completed DOCS-008 and instructed this pass to start at DOCS-002. The grant covers PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC with its children, PLAN, layout, and TASKS, including their required owner review/QC and tracked completion. It does not waive technical gates or publication/readback.
 - Stop after DOCS-008 completion is recorded, published, and its issue closure verified. Wait for the user to request another loop or approve advancing. DOCS-009, preparation integration, phase projection, implementation, and releases are outside this pass.
-- Current position: DOCS-004 DECOMPOSITION is reviewed and accepted under scoped preapproval. Verify its completion publication and issue #4 closure before SPEC. Required extended-scope SPEC, PLAN/layout, and TASKS QC remain pending.
+- Current position: DOCS-005 SPEC and its gameplay child passed extended-scope design/contract QC and are accepted under scoped preapproval. Verify completion publication and issue #5 closure before PLAN. PLAN/layout and TASKS QC remain pending for the extended scope.
 
 ## Preparation
 
@@ -35,7 +35,7 @@ The running SDD Manager package's `assets/DOCS_TRACKING_TEMPLATE.json` supplies 
 - [x] DOCS-004 — Prepare and accept DECOMPOSITION.
     - Define component responsibilities, collaboration, ownership and design-level interface boundaries consistently with ARCHITECTURE.
     - Review the proposal with the human and complete its acceptance checkpoint.
-- [ ] DOCS-005 — Prepare and accept SPEC.
+- [x] DOCS-005 — Prepare and accept SPEC.
     - Specify observable behavior, interfaces, error contracts, required qualities and acceptance conditions from the accepted design.
     - Complete required SPEC QC and its human acceptance checkpoint.
 - [ ] DOCS-006 — Prepare and accept PLAN.
@@ -114,6 +114,13 @@ The associated accepted AGENTS navigation was blob 6ed692d7057d468ad070e3a8497bc
 - Extended existing component responsibilities and collaboration. Added cohesive bag operations, shared landing projection in board operations, core kick data and hold/policy/timer transitions, same-origin clock sampling for timed commands, policy input, and snapshot-driven held/ghost views. Kept state in the engine/controller rather than duplicate browser managers.
 - Owner review checked ARCHITECTURE conformance, producer/consumer interfaces, dependency direction, atomic transitions, deterministic seams, reset/cleanup ownership, and clear delegation of exact behavior to SPEC. No physical layout or implementation is claimed, and no structural blocker remains.
 - Human acceptance uses the recorded scoped preapproval. Accepted DECOMPOSITION blob: c24ea1ba1f3e6712c65805f49842784e0f10da93. Reviewed content and checked DOCS-004 share this completion commit; publication and issue closure precede SPEC.
+
+### DOCS-005 — SPEC extension and QC
+
+- Prior transition verified: DOCS-004 completion commit 04f966dd4b7f8c304b56e4fd2d63d2126793e91a was published/read back with cleanup confirmed; issue #4 was closed/read back as completed before SPEC authoring.
+- Extended SPEC and its existing gameplay child with all modern behavior. Exact delegated defaults include clockwise ordered kick tables, C hold/D hard drop while retaining Up/Space rotation, six-sample bag refill, one hold per lock, shared landing, 2*d hard-drop points, full grounded intervals, and the session-only immediate-hard-drop choice. Added precise pause/reset/error/snapshot and elapsed-before-command contracts without unrelated settings/persistence.
+- [SPEC-REVIEW-REPORT.md](SPEC-REVIEW-REPORT.md) retains first-cycle findings and Revision 1, and adds Revision 2 with current source identities, complete design/contract coverage, S03 clock and S04 cross-round bag corrections, actual document-data checks, and evidence limits. Technical gate is Ready for extended scope; no confirmed blocker remains.
+- Human acceptance uses the recorded scoped preapproval, including the gameplay child. Accepted SPEC blob: 765e6c865675dca7e8dab419e221315fdd448065; GAMEPLAY blob: 2e1139f2ff1d791af9676c4ce423a9c7bd0e1279. Sources, QC evidence, and checked DOCS-005 share this completion commit. Publication and issue closure precede PLAN. No product/browser test has run.
 
 ## Retained first-cycle preparation evidence
 

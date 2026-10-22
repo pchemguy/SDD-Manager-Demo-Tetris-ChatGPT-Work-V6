@@ -2,7 +2,30 @@
 
 ## Current gate
 
-Iteration context: this report retains the accepted first-cycle baseline below. Iteration 2 is active under [DOCS_TASKS.md](DOCS_TASKS.md#active-docs-iteration-protocol); its SPEC review and human acceptance are pending in task order. The reset changes workflow status without performing a new technical review or changing the reviewed specification.
+Technical QC: **Ready — iteration 2 extended scope**. Human SPEC acceptance: **accepted under scoped preapproval** on 2026-10-22 for DOCS-002–DOCS-008. [DOCS_TASKS.md](DOCS_TASKS.md) owns the actual grant, completion publication, and issue progression. This is specification/design QC, not product verification or whole-package QC.
+
+Reviewed current sources:
+
+| Artifact | Git blob |
+| --- | --- |
+| [SPEC.md](SPEC.md) | 765e6c865675dca7e8dab419e221315fdd448065 |
+| [spec/GAMEPLAY.md](spec/GAMEPLAY.md) | 2e1139f2ff1d791af9676c4ce423a9c7bd0e1279 |
+
+Accepted governing inputs at published DECOMPOSITION completion `04f966dd4b7f8c304b56e4fd2d63d2126793e91a`:
+
+| Source | Git blob |
+| --- | --- |
+| [docs/dev/PROJECT.md](PROJECT.md) | 979274fe1d8af394300b13eb53f96df1c2ec0c46 |
+| [docs/dev/ARCHITECTURE.md](ARCHITECTURE.md) | 821f53a68bc9e0ec20e518d63e4b1d0003628967 |
+| [docs/dev/DECOMPOSITION.md](DECOMPOSITION.md) | c24ea1ba1f3e6712c65805f49842784e0f10da93 |
+| [AGENTS.md](../../AGENTS.md) | 4804c99fa5d2fd765d3745af5d89740df9513d99 |
+| [BROWSER_DEV_POLICY.md](../../BROWSER_DEV_POLICY.md) | ae71cfc01aaf694f5c4a7b055d2f15d469d7f7a7 |
+
+Revision 2 covers the modern target, input-clock synchronization, cross-component state/errors, and unchanged static/browser/release requirements. S01–S02 remain resolved in their historical scope; S03–S04 are resolved below. No confirmed SPEC/design blocker or human exception remains. PLAN/layout and TASKS require extended-scope reviews before dependent use; historical Ready labels are insufficient.
+
+## First-cycle accepted baseline
+
+This section and Revision 1 are historical. Their references to Current gate identify this retained baseline, not the extended-scope gate above.
 
 Technical QC: **Ready** for the reviewed specification. Human acceptance: **accepted** with “K” on 2026-10-22 for SPEC and its gameplay child presented in commit `3774c63e6795526afb5f384b5b59379a6322c520`. [DOCS_TASKS.md](DOCS_TASKS.md) owns the acceptance publication and issue progression evidence.
 
@@ -54,3 +77,24 @@ Rechecked the final blobs listed in Current gate against the unchanged governing
 The initial ID-check pattern counted an R06 traceability reference as a definition. Restricting contract definitions to headings removed that checker false positive; no document correction was needed for it.
 
 These checks validate documents and examples. Canvas rendering, native browser interactions, production hosting, runtime failures, and build/release execution remain required implementation evidence. No exception or deferred confirmed issue is used to obtain Ready.
+
+## Revision 2 — Extended-scope contracts and recheck
+
+Under the user's extended scope and DOCS-002–DOCS-008 preapproval, the author applying sdd-specify reviewed the retained SPEC/child against accepted PROJECT, ARCHITECTURE, and DECOMPOSITION. Preserved geometry, scoring/progression foundations, focus/pause, immutable boundaries, static delivery, browser policy, and release obligations; specified bags, hold, clockwise kicks, shared ghost/drop landing, grounded deadlines, and the session-only hard-drop choice.
+
+| Group | Current coverage and conformance |
+| --- | --- |
+| Hold and bag | G02/G07/G08, R01/R02/R04/R05, K02/K06–K09, A04/A11/A13: explicit bag state/refill, sample versus queue consumption, one hold per lock, replacement/collision, and reset. |
+| Rotation and placement | G01/G03/G09, R02/R04/R05, K01/K03/K10/K11, A02/A12/A14/A16: ordered family-specific candidates, shared landing, visible ghost, distance/score and both drop policies. Up/Space stay clockwise; C/D are one-shot hold/drop. |
+| Timing and policy | G02–G04/G08/G09, R01/R03, K04/K06/K10/K12, A03/A08/A15/A16: full interval from grounding, no grounded movement reset, airborne cancellation/regrounding, ties/remainder, pause, restart and non-retroactive setting changes. |
+| State, errors and ownership | G06, R03/R05, K07/A08: explicit numeric samples/time, immutable state/snapshots, failure atomicity, caller preconditions, independent clock streams, cleanup and readable failures. Core owns gameplay; views consume geometry. |
+| Delivery and usability | R04/R06, A01–A10/A16: desktop sizes/DPR, native accessible controls, production root/prefix, isolated browsers, no service/persistence, and per-phase version/release requirements. Paths/phases/tasks remain downstream. |
+
+| Finding | Located issue and consequence | Correction and objective recheck | Disposition |
+| --- | --- | --- | --- |
+| S03 | Retained R03 advanced only on frames, so input could act before an expired grounded deadline. Directly comparing frame timestamps with interleaved input clock samples could also reject a valid sequence. | Added now sampling and elapsed-before-command; independently validate the two ordered streams. Checked start/resume, pause gaps, input-before-frame, expired deadline, malformed values, restart and disposal against controller ownership. | Resolved in Revision 2 |
+| S04 | The first extended G07/A13 draft stated a seven-kind permutation without scoping restart. Discarding a partial bag then filling a fresh one violates that cross-round claim. | Scope groups to one round and restart grouping on restart; distinguish consumed bags, refills, queue kinds and placement order. Rechecked G02/G07, K06/K08, and A04/A13. | Resolved in Revision 2 |
+
+Local document-data checks passed: 6 R, 9 G, 16 A and 12 K definitions; seven four-cell shapes and legal spawns; four-turn geometry; eight five-candidate kick rows; 24 all-blocked rotation constructions; both documented I-kick examples; 512 six-sample bag permutations; canonical-order/scoring/progression arithmetic. Manual review covered hold collisions and eligibility, no-draw and failure paths, ghost/drop agreement, distance zero, grounded/airborne transitions, simultaneous deadlines, pause/resume, setting retention/reload, and design ownership. Final source identities are in Current gate.
+
+These checks validate document data and examples, not an implemented engine. Markdown/link/identity checks accompany this checkpoint. No installation, browser capability, runtime test, CI, build, or release result is certified. No design amendment, deferred confirmed issue, or exception is needed for Ready.
