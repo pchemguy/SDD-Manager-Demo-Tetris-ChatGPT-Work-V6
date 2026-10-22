@@ -17,7 +17,7 @@ The running SDD Manager package's `assets/DOCS_TRACKING_TEMPLATE.json` supplies 
 - On 2026-10-22 the user requested another loop with four additional extensions together, then clarified: “You are to proceed with the loop with specified scope extension.” This continues the established bounded DOCS-002–DOCS-008 document pass and its checkpoint preapproval. Record acceptance under that grant, not as a new interactive approval. Technical QC, atomic document completion, publication/readback and issue closure remain required.
 - Extend the currently accepted documents in order, in one pass covering all four additions below. Preserve their contents as the starting baseline and retain earlier acceptance/QC evidence; do not create four separate loops or regenerate the documents.
 - Stop after DOCS-008 completion is recorded, published/read back and issue #8 closure verified. DOCS-009, preparation integration, implementation-phase projection, implementation and releases are outside this pass. The user will decide whether another loop or advancement follows.
-- Current operation: DOCS-005 SPEC/children QC and scoped acceptance are recorded below. Publish/read back its completion and verify issue #5 closure before DOCS-006. DOCS-009 remains unchecked/open; the exact stop remains completed DOCS-008.
+- Current operation: DOCS-006 strategy QC and scoped acceptance are recorded below. Publish/read back its completion and verify issue #6 closure before DOCS-007. DOCS-009 remains unchecked/open; the exact stop remains completed DOCS-008.
 
 ### Combined scope additions
 
@@ -54,7 +54,7 @@ These additions supersede the retained brief's configuration/persistence exclusi
 - [x] DOCS-005 — Prepare and accept SPEC.
     - Specify observable behavior, interfaces, error contracts, required qualities and acceptance conditions from the accepted design.
     - Complete required SPEC QC and its human acceptance checkpoint.
-- [ ] DOCS-006 — Prepare and accept PLAN.
+- [x] DOCS-006 — Prepare and accept PLAN.
     - Define delivery phases, milestones, dependencies and exit conditions against SPEC.
     - Complete PLAN QC, then present PLAN for human approval.
 - [ ] DOCS-007 — Prepare and accept layout.
@@ -156,6 +156,13 @@ The associated accepted AGENTS navigation was blob 6ed692d7057d468ad070e3a8497bc
 - Extended SPEC/GAMEPLAY and added the cohesive CONFIGURATION child. Defined dynamic midline classification, traversable versus valid final placement, deepest penetrator landing/ghost agreement, bonus cap/spend/award and white variants, hold continuity, both general/drop policies, all six defaults/gates, exact cookie/query mappings, independent precedence, explicit-default saves, omission retention and nonfatal persistence failures.
 - SPEC/design QC passed with Revision 3 appended to SPEC-REVIEW-REPORT; retained all prior sources/findings/rechecks and resolved S05–S07. Document-data checks cover 7 R / 10 G / 6 C, 22 A / 17 K / 6 P definitions, schema/palette/math and retained geometry/kick/bag checks. This certifies documents only; browser/product evidence remains future work.
 - Human acceptance uses the recorded DOCS-002–DOCS-008 scoped preapproval for the instructed loop. Accepted blobs: SPEC.md: 24bf3f21ec51fc4f247510d6f870fd5d933de1f6; spec/GAMEPLAY.md: 0a0ab4a87640886e2a5b03a1c3712fea89e55d86; spec/CONFIGURATION.md: 6a73acc35202020f7ab8e9b760f3eaf8745cda37. QC report: a17ca22e6402f69cce4e7a989f2638b38341c467. Submit the accepted roots/children, report, decision and checked DOCS-005 together; verify publication/issue closure before PLAN.
+
+### DOCS-006 — Three bounded phase releases
+
+- Prior transition verified: DOCS-005 completion e40118ff1817fc2d1348f2a648354f42c756f316 was published/read back with confirmed cleanup; issue #5 was closed/read back as completed before PLAN authoring.
+- Extended the retained strategy to foundation 0.1.0, modern play 0.2.0 and configurable penetrator play 0.3.0. The new phase delivers controls/dynamic ghost, persistence, penetrators and complete release acceptance as four integrated milestones plus one phase review. Earlier useful releases have explicit scoped deferrals; final implementation reporting moves to 3.5.
+- PLAN/SPEC strategy QC passed with Revision 4, retaining prior source/finding history and resolving P03–P04. All three phases have four delivery milestones plus an excluded one-task phase-review milestone; semantic scope and every contract/evidence group were assessed. Layout remains pending at DOCS-007; this strategy acceptance does not release TASKS.
+- Human acceptance uses the recorded scoped preapproval for this instructed loop. Accepted PLAN blob: 36741b6f42c1bd01558db6ef0d71831b0d3688f4; strategy QC report: e78229bf2e4353fdbfa132e0344f34a97d8cbbae. Submit these with the decision and checked DOCS-006; verify publication/readback and issue closure before layout. Versions are planned, not delivered releases.
 
 ## Iteration 2 document completion evidence
 

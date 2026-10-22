@@ -2,6 +2,26 @@
 
 ## Current gate
 
+Technical QC: **Ready — iteration 3 PLAN strategy only**. Human PLAN acceptance: **accepted under scoped preapproval** for the instructed DOCS-002–DOCS-008 loop. Current layout remains the iteration 2 baseline and requires DOCS-007 revision/combined review before TASKS. [DOCS_TASKS.md](DOCS_TASKS.md) owns acceptance/publication/issue evidence.
+
+Reviewed PLAN blob: 36741b6f42c1bd01558db6ef0d71831b0d3688f4. Governing inputs at published SPEC completion e40118ff1817fc2d1348f2a648354f42c756f316:
+
+| Source | Git blob |
+| --- | --- |
+| [PROJECT.md](PROJECT.md) | 1a72042d6f7244922b21de09ff15967e841f94f9 |
+| [ARCHITECTURE.md](ARCHITECTURE.md) | 19a47420bbe1a66c810ad8206819d078a3130a61 |
+| [DECOMPOSITION.md](DECOMPOSITION.md) | f46bbca88917a4efeaaa61ea6933475b901c0915 |
+| [SPEC.md](SPEC.md) | 24bf3f21ec51fc4f247510d6f870fd5d933de1f6 |
+| [spec/GAMEPLAY.md](spec/GAMEPLAY.md) | 0a0ab4a87640886e2a5b03a1c3712fea89e55d86 |
+| [spec/CONFIGURATION.md](spec/CONFIGURATION.md) | 6a73acc35202020f7ab8e9b760f3eaf8745cda37 |
+| [SPEC-REVIEW-REPORT.md](SPEC-REVIEW-REPORT.md) | a17ca22e6402f69cce4e7a989f2638b38341c467 |
+
+Revision 4 assesses all three bounded phases, complete contract routing and explicit earlier-release deferrals. P01–P02 and L01–L05 remain historically resolved; P03–P04 are resolved below. No strategy blocker or exception remains. Combined layout readiness and TASKS remain blocked pending DOCS-007; Ready here does not certify placement or implementation.
+
+## Iteration 2 accepted baseline
+
+The following former current-gate evidence and Revisions 2–3 describe the retained two-phase baseline. They do not certify iteration 3 strategy or layout.
+
 Technical QC: **Ready — iteration 2 PLAN and layout**. Human PLAN and layout acceptance: **accepted under scoped preapproval** for DOCS-002–DOCS-008 on 2026-10-22. Combined conformance passed; TASKS follows verified DOCS-007 publication and issue closure. [DOCS_TASKS.md](DOCS_TASKS.md) owns acceptance/publication/issue evidence.
 
 Reviewed PLAN blob: `84e0d67d1c20010b70852966647220560b5b4e66`; layout blob: `71c5936100b2e9c5769f181b1c76188476fa112f`. No focused PLAN/layout children are required. Governing inputs at published SPEC completion `b3eb837c6053dfa971333faece41f171ea2ddec7`:
@@ -133,3 +153,24 @@ Manual combined review confirmed cohesive model/geometry/board/bag/engine owners
 Local checks passed fifteen unique safe ownership-table file paths; required bag/random/clock/landing locations; unit/controller/browser/fixture routes; both phase-report homes and final-review ownership; unchanged accepted PLAN/design/SPEC; current source identities; and absence of product/configuration creation. A path-count probe initially included narrative index.html as a definition; restricting counts to ownership rows resolved that checker false positive without a source correction. Markdown/link checks accompany this checkpoint.
 
 Combined technical readiness is Ready; no unresolved confirmed finding or exception remains. The actual scoped human grant covers layout. Current next owner is sdd-tasks after publication/issue closure; whole-package QC and integration remain outside this bounded pass.
+
+## Revision 4 — Combined-scope delivery strategy
+
+Reviewed on 2026-10-22 by the author applying sdd-plan and the development-document QC criteria. Starting PLAN blob was 84e0d67d1c20010b70852966647220560b5b4e66; the corrected strategy and accepted governing identities are in Current gate. SPEC/design QC covers the exact inputs, including the configuration child; its material gameplay/design contracts are unchanged by this stage.
+
+| Phase | Delivery milestones | Excluded review milestone | Semantic scope and count assessment |
+| --- | --- | --- | --- |
+| 1 — 0.1.0 foundation | 4 (1.1–1.4) | 1.5, one review task | Retain the simplest useful continuous desktop game, essential bag/grounding rule, session reliability and static distribution. Only regular pieces/default gameplay are delivered; small variant data is established with core cells, without future mode behavior or placeholder controls. |
+| 2 — 0.2.0 modern play | 4 (2.1–2.4) | 2.5, one review task | Retain hold, kicks/ghost and drop override on the shared game path. The general policy is fixed to interval and independent settings/persistence/penetrators remain explicit Phase 3 obligations. A modern playable outcome does not need those independent additions. |
+| 3 — 0.3.0 configurable penetrator play | 4 (3.1–3.4) | 3.5, one review task | Deliver native configuration before persistence, then one bonus-driven traversal mechanic on existing pieces, then complete release acceptance. All are integrated game capabilities on established components; no generic framework, server or saved-game subsystem broadens this phase. |
+
+Each phase fits the preferred 3–5 delivery-milestone range after scope assessment. No 1–2 fragmentation or 10+ overload trigger applies. Phase 3's three capability milestones have distinct state/side-effect/interaction boundaries and timely demonstrations; 3.4 is actual full-target acceptance/distribution work, not report-only padding. TASKS must derive localized units and return an evidenced oversized boundary to PLAN. Four milestones alone are not proof of cohesion.
+
+| Finding | Located conflict under the new scope | Correction owner / objective recheck | Disposition |
+| --- | --- | --- | --- |
+| P03 | The retained strategy explicitly excluded persistence/settings/modes and claimed full SPEC completion at 2.4/2.5. It had no route for conditional ghost, six controls or penetrators. | sdd-plan: add a bounded third capability phase, keep Phase 1 minimal and Phase 2 useful, and map all G/R/C/K/A/P groups to included exits and regressions. | Resolved in Revision 4 |
+| P04 | Final reporting/version transitions named only two phases; treating 2.5 as full implementation would omit the new scope and its acceptance/release evidence. | sdd-plan: assign final implementation/TODO aggregation to 3.5, retain all three phase releases at 0.1.0/0.2.0/0.3.0 and separate pre-integration from published tag/GitHub evidence. | Resolved in Revision 4 |
+
+Manual conformance review covered all 7 R / 10 G / 6 C groups, 22 A / 17 K / 6 P cases, browser/core evidence distinctions, per-key explicit-default/omission/failure paths, safe penetrator landing/hold/bonus/color behavior, timed live policies and earlier-phase regressions. Earlier phase descriptions use the hard-drop selector and explicit fixed-default subset rather than promise incomplete full-target acceptance. Phase entry, final review, integration, version/tag/release and exact requested-range stops remain separate gates. Local checks confirmed three phase identities, five milestone definitions per phase with four delivery plus one review, contract-reference coverage, Markdown/links and unchanged SPEC/design.
+
+Layout is deliberately not revised by DOCS-006. Its new configuration/persistence owners, third-phase report homes and final-report owner require DOCS-007 combined review. No unresolved strategy issue or human exception remains; this Ready result is limited to strategy and does not release TASKS. No product code, tool installation, runtime/browser/CI test, integration or release was performed.
