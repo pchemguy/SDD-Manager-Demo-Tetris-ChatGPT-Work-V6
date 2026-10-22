@@ -2,6 +2,8 @@
 
 ## Current gate
 
+Iteration context: this report retains the accepted first-cycle baseline below. Iteration 2 is active under [DOCS_TASKS.md](DOCS_TASKS.md#active-docs-iteration-protocol); its TASKS review and human acceptance are pending in task order. The reset changes workflow status without performing new technical QC or changing the reviewed task list.
+
 Technical QC: **Ready — task decomposition**. Human TASKS acceptance: **accepted** with “Record acceptance” on 2026-10-22 for the TASKS/navigation proposal published in commit `0bd92a885f1b6822b9cb7dc889a538297f63edb3`. [DOCS_TASKS.md](DOCS_TASKS.md) owns acceptance publication and issue progression evidence. The user then requested a project-specific documentation iteration reset, stopping ready at DOCS-002. Implementation and hosted phase projection remain blocked; package QC, integration, and implementation-range authorization remain later gates.
 
 Reviewed scope: [TASKS.md](TASKS.md), blob `b5c135676d04fac801e925191e09c727cc117c04`, and its appended [AGENTS.md](../../AGENTS.md) navigation, blob `6ed692d7057d468ad070e3a8497bcba8af38daeb`. No TASKS children or active FEATURE-TASKS exist. All phase, milestone, and task boxes are unchecked.

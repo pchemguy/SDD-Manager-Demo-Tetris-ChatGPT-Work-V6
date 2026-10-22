@@ -2,6 +2,8 @@
 
 ## Current gate
 
+Iteration context: this report retains the accepted first-cycle baseline below. Iteration 2 is active under [DOCS_TASKS.md](DOCS_TASKS.md#active-docs-iteration-protocol); its SPEC review and human acceptance are pending in task order. The reset changes workflow status without performing a new technical review or changing the reviewed specification.
+
 Technical QC: **Ready** for the reviewed specification. Human acceptance: **accepted** with “K” on 2026-10-22 for SPEC and its gameplay child presented in commit `3774c63e6795526afb5f384b5b59379a6322c520`. [DOCS_TASKS.md](DOCS_TASKS.md) owns the acceptance publication and issue progression evidence.
 
 Scope: [SPEC.md](SPEC.md), including [spec/GAMEPLAY.md](spec/GAMEPLAY.md). Current reviewed Git blobs:

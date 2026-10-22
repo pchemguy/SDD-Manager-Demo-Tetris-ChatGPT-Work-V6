@@ -4,7 +4,7 @@ This list owns main documentation preparation. Product implementation tasks belo
 
 ## Completion and tracking
 
-Each document task and its issue track development through the document’s first human approval. After that approval, mark the task complete. Later document revisions leave this task complete and its issue closed. An explicit preapproval may satisfy the human checkpoint within its stated scope; it does not waive QC or publication. The user may preapprove future checkpoints at any time.
+Outside the project-specific iteration mode below, each document task and its issue track development through the document’s first human approval. After that approval, mark the task complete. Later document revisions normally leave this task complete and its issue closed. An explicit preapproval may satisfy the human checkpoint within its stated scope; it does not waive QC or publication. The user may preapprove future checkpoints at any time.
 
 Include the checked task in `DOCS_TASKS.md` in the same commit that submits the approved document and records its first approval. If the reviewed document was already published unchanged, retain that exact document state in the acceptance commit; do not rewrite it merely to create a diff. Push and verify remote containment before closing the corresponding issue or advancing.
 
@@ -19,25 +19,25 @@ The running SDD Manager package's `assets/DOCS_TRACKING_TEMPLATE.json` supplies 
     - Record which root files existed and which were copied; verify copied bytes and preserved content.
     - Establish/reconcile `docs/dev/HANDOFF.md` as generated checkpoint metadata, outside the four-file presence/copy test. Include it with this task's completion and initialization result, push and verify; then close and verify its issue when tracking is enabled.
     - Report initialization. If some but not all of the four root files existed initially, warn with the retained/copied filenames and end the turn before document work, unless the user explicitly preapproved continuation through this checkpoint. If none or all existed, continue without an additional approval pause.
-- [x] DOCS-002 — Prepare and accept PROJECT.
+- [ ] DOCS-002 — Prepare and accept PROJECT.
     - Establish the project brief: purpose, users, outcomes, scope, non-goals and consequential constraints; identify material assumptions and unresolved decisions.
     - Review the proposal with the human and complete its acceptance checkpoint.
-- [x] DOCS-003 — Prepare and accept ARCHITECTURE.
+- [ ] DOCS-003 — Prepare and accept ARCHITECTURE.
     - Define major system blocks, relationships, dependency direction and consequential structural decisions from the accepted brief.
     - Review the proposal with the human and complete its acceptance checkpoint.
-- [x] DOCS-004 — Prepare and accept DECOMPOSITION.
+- [ ] DOCS-004 — Prepare and accept DECOMPOSITION.
     - Define component responsibilities, collaboration, ownership and design-level interface boundaries consistently with ARCHITECTURE.
     - Review the proposal with the human and complete its acceptance checkpoint.
-- [x] DOCS-005 — Prepare and accept SPEC.
+- [ ] DOCS-005 — Prepare and accept SPEC.
     - Specify observable behavior, interfaces, error contracts, required qualities and acceptance conditions from the accepted design.
     - Complete required SPEC QC and its human acceptance checkpoint.
-- [x] DOCS-006 — Prepare and accept PLAN.
+- [ ] DOCS-006 — Prepare and accept PLAN.
     - Define delivery phases, milestones, dependencies and exit conditions against SPEC.
     - Complete PLAN QC, then present PLAN for human approval.
-- [x] DOCS-007 — Prepare and accept layout.
+- [ ] DOCS-007 — Prepare and accept layout.
     - Allocate source, tests, documentation and artifacts to physical paths consistently with the accepted design and PLAN.
     - Review layout against the design and PLAN, update the PLAN review report, then present layout for human approval.
-- [x] DOCS-008 — Prepare and accept TASKS.
+- [ ] DOCS-008 — Prepare and accept TASKS.
     - Derive executable tasks, dependencies and required milestone/phase review units from accepted SPEC, PLAN and layout.
     - Complete required task-list QC and its human acceptance checkpoint. Do not start implementation or project implementation-phase objects yet.
 - [ ] DOCS-009 — Pass documentation package QC.
@@ -54,7 +54,39 @@ Report the package QC result, published merge and tracking status. Confirm the f
 
 On interruption, recover the earliest unmet operation from documents, acceptance decisions, Git and hosted evidence. Preserve a pending mixed-initialization decision. Do not regenerate the list, infer acceptance from file presence or repeat completed work. Honor explicit narrower scope, local-only or no-merge instructions and report any remaining completion steps.
 
-## Current preparation evidence
+## Active docs-iteration protocol
+
+The user activated this project-specific protocol on 2026-10-22 after accepting TASKS, and clarified that the protocol is not part of SDD yet. It overrides the normal first-approval-only lifecycle for DOCS-002–DOCS-009 in this repository. SDD Manager itself is unchanged.
+
+1. Record and publish the current proposal's acceptance before resetting the preparation state. Preserve its exact accepted content and acceptance history.
+2. Keep DOCS-001 complete. Uncheck DOCS-002–DOCS-009 for the new iteration, reopen their existing issues, and retain the existing preparation milestone and issue identities. Keep the milestone open while preparation is incomplete.
+3. Start from the currently accepted document versions, including necessary children. Review and revise those versions in task order; do not regenerate them, rewind Git, or erase prior acceptance/QC evidence. Reassess affected QC under the owning procedure and retain unchanged valid evidence with its source identities.
+4. Record each new iteration's review and human decision separately from the retained baseline. Historical approvals do not complete the new iteration. Normal human checkpoints, publication/readback, and issue-closure requirements still apply; there is no future-checkpoint preapproval.
+5. At activation, stop ready at DOCS-002. Repeating the document reviews, package QC, integration, implementation, and releases are outside this reset's authorized work. Apply another reset only when the user requests it.
+
+### Iteration 2 activation
+
+- Accepted starting point: commit 1fc48c722bf55628af69e646b16f8483598498e7, published on design-docs/main with exact matching remote readback and confirmed process cleanup. DOCS-008 issue #8 was then closed and read back as completed before this reset.
+- Local state: DOCS-001 remains complete; DOCS-002–DOCS-009 are unchecked for iteration 2. Prior approvals below are retained baseline history. DOCS-009 has never passed; no whole-package QC report exists.
+- Hosted transition: publish/read back this reset, then reopen issues #2–#8 and verify issue #9 is open, retaining milestone #1 (sdd-docs-main). These effects require actual readback before activation is reported ready.
+- Next boundary: ready for DOCS-002 / PROJECT review using the retained version. No iteration 2 document review has started. Documentation remains on design-docs/main, unmerged; no implementation phase is activated and no release is due from this workflow-only change.
+
+The following accepted content identities are unchanged by activation:
+
+| Document | Accepted Git blob |
+| --- | --- |
+| [PROJECT.md](PROJECT.md) | 01071a30988992a29a75e26be6577b0fcc6257e1 |
+| [ARCHITECTURE.md](ARCHITECTURE.md) | e9aadc3553baf30230cbafd1b8735c51c71fa510 |
+| [DECOMPOSITION.md](DECOMPOSITION.md) | f182fecfff88394c54948d124957335b9b014038 |
+| [SPEC.md](SPEC.md) | bdf553202ed51a8983154a94b97cc5dd1b8b6672 |
+| [spec/GAMEPLAY.md](spec/GAMEPLAY.md) | 4ab78ecd8ef23cc0438b391b45c862970a2364b0 |
+| [PLAN.md](PLAN.md) | 2d02a3c4cc20a36937eeea797f6e1e3d871eada6 |
+| [layout.md](layout.md) | 4f2643c49661a477ee23dfac91b4fe67a1b5d35e |
+| [TASKS.md](TASKS.md) | b5c135676d04fac801e925191e09c727cc117c04 |
+
+The associated accepted AGENTS navigation was blob 6ed692d7057d468ad070e3a8497bcba8af38daeb. Its entire content is retained as a prefix; the new project protocol pointer is appended. QC reports retain baseline findings and add iteration context, without claiming a fresh technical review.
+
+## Retained first-cycle preparation evidence
 
 ### DOCS-001 initialization
 
@@ -120,5 +152,5 @@ On interruption, recover the earliest unmet operation from documents, acceptance
 - Prepared [TASKS.md](TASKS.md) with one phase, the accepted five milestone identities, and 24 unchecked executable tasks: 19 delivery tasks plus five dedicated reviews. Delivery counts are 6/4/5/4; the first milestone's six bounded units are explicitly assessed rather than compressed to meet a count target.
 - Assigned edit owners, prerequisites, contracts, relevant unit/native/browser/build/CI/documentation evidence, milestone/phase review reports and HANDOFF updates. Preserved full classic scope, the accepted early-slice limits, source/fixture isolation, complete contract coverage, and post-phase integration/release gates. No implementation issue projection is authorized by this proposal.
 - [TASKS-REVIEW-REPORT.md](TASKS-REVIEW-REPORT.md) retains exact governing/initial/final identities, semantic/count assessments, setup-probe/CI/report-path findings, Revisions 1–2 corrections/rechecks, and evidence limits. Technical gate: Ready for task decomposition; no confirmed issue remains. Root AGENTS navigation now links the task hierarchy while preserving its entire previous content.
-- Presented TASKS blob: b5c135676d04fac801e925191e09c727cc117c04. Associated navigation blob: 6ed692d7057d468ad070e3a8497bcba8af38daeb. The user accepted the published proposal in commit 0bd92a885f1b6822b9cb7dc889a538297f63edb3 with “Record acceptance” on 2026-10-22. This acceptance commit retains both source blobs, records human acceptance in the QC gate, and marks DOCS-008 complete. Publication/readback and issue #8 closure are the next operations; their outcomes must be verified before the requested reset.
+- Presented TASKS blob: b5c135676d04fac801e925191e09c727cc117c04. Associated navigation blob: 6ed692d7057d468ad070e3a8497bcba8af38daeb. The user accepted the published proposal in commit 0bd92a885f1b6822b9cb7dc889a538297f63edb3 with “Record acceptance” on 2026-10-22. Acceptance commit 1fc48c722bf55628af69e646b16f8483598498e7 retains both source blobs, records human acceptance in the QC gate, and marks DOCS-008 complete for the first cycle. It was pushed with exact matching remote readback and confirmed cleanup. Issue #8 was then closed and read back as completed before the requested reset.
 - The same request authorizes a project-specific docs-iteration loop: retain the accepted document contents, uncheck DOCS-002–DOCS-009, reopen their existing issues, and stop ready to repeat the cycle from DOCS-002. The user clarified that this protocol is not part of SDD yet. This request does not authorize package QC, preparation integration, implementation, or a release during the reset. No product code, installation, browser execution, CI run, hosted phase activation, or release is claimed.

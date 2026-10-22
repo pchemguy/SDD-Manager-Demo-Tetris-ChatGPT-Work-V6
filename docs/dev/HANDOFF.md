@@ -1,25 +1,25 @@
 # Project handoff
 
-Checkpoint: Main documentation preparation, DOCS-001 initialization.
-This snapshot describes that checkpoint. Recover subsequent work from [DOCS_TASKS.md](DOCS_TASKS.md) and Git; its containing commit identifies the snapshot.
+Checkpoint: Project-specific docs-iteration activation, iteration 2. Local reset is prepared; publication and hosted reopening require confirmation below. [DOCS_TASKS.md](DOCS_TASKS.md) owns task status, human decisions, and accepted document identities. Recover later effects from that record, Git, and exact hosted readback; the containing commit identifies this snapshot.
 
-Outcome: The four existing root guidance/disclosure files were preserved, and the preparation checklist and workflow checkpoint were established. No game implementation or accepted project brief exists at this checkpoint.
+Outcome: TASKS acceptance was published/read back and issue #8 closed/read back as completed before the reset. All seven accepted root development documents and the gameplay child remain unchanged. DOCS-001 stays complete; DOCS-002–DOCS-009 are unchecked for iteration 2. Whole-package QC has not run and no game implementation exists.
 
 ## Workflow and sources
 
-- Workflow/stage/owner: Main development, greenfield documentation preparation; sdd-manage coordinates initialization and sdd-design owns the next project brief.
+- Workflow/stage/owner: Main documentation preparation, user-defined docs-iteration loop; sdd-manage coordinates the reset and sdd-design owns the next PROJECT review.
 - Governing sources: [AGENTS.md](../../AGENTS.md), [discovery protocol](../../SKILL_DISCOVERY_PROTOCOL.md), [browser policy](../../BROWSER_DEV_POLICY.md), and the bundled [SDD Manager entry](../../.agents/plugins/sdd-manager/PLUGIN.md).
-- Current progress and decisions: [DOCS_TASKS.md](DOCS_TASKS.md), including later proposals and approval records.
-- Required package/setup availability: Repository-bundled SDD Manager 0.15.1. Execution host is Linux with Node 24 and Python 3.12. Product tooling is not selected.
+- Protocol and progress: [DOCS_TASKS.md — Active docs-iteration protocol](DOCS_TASKS.md#active-docs-iteration-protocol). The user clarified that this is a project-specific protocol, not part of SDD yet. SDD Manager itself is unchanged.
+- Required package/setup availability: Repository-bundled SDD Manager 0.15.1. Execution host is Linux with Node 24 and Python 3.12. The accepted design selects strict TypeScript, Canvas/HTML, Vite, Vitest, and Playwright; product tooling and validated application commands are not established yet.
 
 ## Scope and human decisions
 
-- Objective: Develop a browser-based Tetris game. The user selected the classic-only target on 2026-10-22.
+- Objective: Classic-only desktop browser Tetris, as defined by the retained accepted documents.
+- Accepted baseline: commit 1fc48c722bf55628af69e646b16f8483598498e7 on design-docs/main, with exact content identities in DOCS_TASKS. Acceptance publication/readback and issue #8 closure/readback were verified before the reset.
 - Release instruction: Manage versions and publish a corresponding tagged GitHub release with release notes after each implementation phase is completed, verified, and integrated.
-- Current authorized work: Initialize preparation and produce the reviewable PROJECT proposal under the development request.
-- Exact stopping boundary: Present PROJECT for first human acceptance before dependent ARCHITECTURE work.
-- Future-checkpoint preapprovals: None for this repository. The gameplay clarification and release instruction do not accept unseen documents.
-- Tracking: Enabled for documentation preparation and implementation by root AGENTS.md. The native sdd-docs-main milestone and all nine DOCS issues were verified before repository writes.
+- Current authorized work: Record acceptance, reset DOCS-002–DOCS-009, reopen their existing issues, and stop ready to repeat the cycle from DOCS-002 using the accepted versions. Keep DOCS-001 complete and preserve acceptance/QC history.
+- Exact stopping boundary: Ready for DOCS-002 / PROJECT review. No iteration 2 review has started; package QC, documentation integration, phase projection, implementation, and release are outside this reset.
+- Future-checkpoint preapprovals: None. Historical approvals are baseline evidence, not completion of the new iteration's checkpoints.
+- Tracking: Enabled for documentation preparation and implementation by root AGENTS.md. Reuse native milestone #1 (sdd-docs-main) and its nine existing issues. Exact definitions/associations were verified before these writes. Issue #1 stays complete; issues #2–#8 must be reopened and #9 verified open after reset publication. Keep milestone #1 open.
 - Publication: Push and read back each owned commit. Reporting preference: Standard.
 
 ## Branches and return
@@ -28,10 +28,10 @@ Outcome: The four existing root guidance/disclosure files were preserved, and th
 - Creation parent and eventual preparation integration target: main.
 - Branch-off commit: b0597bf0f02c5e4ed5329adb606acafab63c15a5.
 - Suspended parent or child campaign: None.
-- Complete accepted preparation must be explicitly merged, verified, and published to main before dependent implementation branching.
+- Preparation remains unmerged. Package QC and verified published integration precede implementation; the user must authorize the implementation range. Initial planned release is 0.1.0; no implementation phase or release has been delivered.
 
 ## Pending work and next action
 
-- This initialization commit still requires push/readback and verified DOCS-001 issue closure; do not infer those future effects from this file.
-- After those effects are confirmed, prepare and publish PROJECT with root README navigation, leaving DOCS-002 unchecked until first approval.
-- Reconstruct later decisions, proposals, publication, and issue operations from DOCS_TASKS, Git, and exact hosted readback before continuing.
+- Publish/read back the reset commit, then reopen issues #2–#8 and verify #9 open with their identities and milestone associations preserved. Do not infer those future effects from this checkpoint.
+- Read back the complete hosted state and persist the confirmed activation outcome. The local checklist already has only DOCS-001 checked; all accepted document contents are unchanged.
+- Stop ready at DOCS-002. On the user's next instruction to repeat the cycle, review the existing PROJECT first, then proceed in task order through normal QC and human checkpoints. Do not regenerate accepted documents or infer implementation authority from their presence.

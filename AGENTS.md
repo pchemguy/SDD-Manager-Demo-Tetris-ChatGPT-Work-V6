@@ -51,3 +51,5 @@ This project develops a classic desktop browser Tetris game. Development documen
 Read applicable nested instructions before editing their paths. Load this root file explicitly when the execution host has not discovered it.
 
 [TASKS](docs/dev/TASKS.md) contains the implementation hierarchy. Task-list acceptance, preparation completion, and implementation-range authorization follow DOCS_TASKS and the coordinator's checkpoints.
+
+The user-defined docs-iteration protocol is active for this project; [DOCS_TASKS](docs/dev/DOCS_TASKS.md#active-docs-iteration-protocol) owns its rules, iteration state, and accepted starting versions. It overrides the normal first-approval-only lifecycle by resetting DOCS-002–DOCS-009 and reopening their existing issues for a requested new cycle; DOCS-001 stays complete. Preserve accepted document contents and prior evidence, honor normal human checkpoints, and resume at the recorded task. Historical report approvals do not complete the active iteration. This project override does not change SDD Manager.

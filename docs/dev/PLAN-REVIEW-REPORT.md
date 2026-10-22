@@ -2,6 +2,8 @@
 
 ## Current gate
 
+Iteration context: this report retains the accepted first-cycle baseline below. Iteration 2 is active under [DOCS_TASKS.md](DOCS_TASKS.md#active-docs-iteration-protocol); its PLAN/layout reviews and human acceptances are pending in task order. The reset changes workflow status without performing new technical QC or changing either reviewed document.
+
 Technical QC: **Ready — PLAN and layout**. Human PLAN acceptance: **accepted** with “K” on 2026-10-22 for PLAN presented in commit `65bf300cfe6febdaab04fba05e3963e58da267a2`. Human layout acceptance: **accepted** with “K” on 2026-10-22 for the layout/navigation proposal in commit `c571fbf134f3c5346fb00a6f77b7af5cdc1ebacd`. [DOCS_TASKS.md](DOCS_TASKS.md) owns acceptance publication and issue progression evidence.
 
 Reviewed scope: [PLAN.md](PLAN.md), unchanged blob `2d02a3c4cc20a36937eeea797f6e1e3d871eada6`; [layout.md](layout.md), blob `4f2643c49661a477ee23dfac91b4fe67a1b5d35e`; and root navigation in [AGENTS.md](../../AGENTS.md), blob `c1458f61a903d66979227b34418235324e19901a`. No focused PLAN/layout children are needed. Revision 1 records combined coverage and rechecks. TASKS derivation follows verified acceptance publication and issue closure.
