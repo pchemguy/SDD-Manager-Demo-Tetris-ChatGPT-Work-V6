@@ -2,7 +2,7 @@
 
 ## Current gate
 
-Technical QC: **Ready** for the reviewed specification. Human acceptance: **pending**. Dependent PLAN authoring remains blocked by that human checkpoint.
+Technical QC: **Ready** for the reviewed specification. Human acceptance: **accepted** with “K” on 2026-10-22 for SPEC and its gameplay child presented in commit `3774c63e6795526afb5f384b5b59379a6322c520`. [DOCS_TASKS.md](DOCS_TASKS.md) owns the acceptance publication and issue progression evidence.
 
 Scope: [SPEC.md](SPEC.md), including [spec/GAMEPLAY.md](spec/GAMEPLAY.md). Current reviewed Git blobs:
 
@@ -21,7 +21,7 @@ Governing sources were inspected at published acceptance commit `2ba431411629f52
 | [AGENTS.md](../../AGENTS.md) | 2163357a7e0db0bc0900a87c9564dfe50a52776e |
 | [BROWSER_DEV_POLICY.md](../../BROWSER_DEV_POLICY.md) | ae71cfc01aaf694f5c4a7b055d2f15d469d7f7a7 |
 
-Both confirmed findings below are resolved in Revision 1. No technical blocker or design amendment remains. Detailed gameplay defaults are proposed for SPEC approval under PROJECT's explicit delegation; technical readiness does not accept those choices on the human's behalf. No product code, provisioning, or product-test result is certified.
+Both confirmed findings below are resolved in Revision 1. No technical blocker or design amendment remains. The human accepted the detailed gameplay defaults with SPEC under PROJECT's explicit delegation. Technical readiness and human acceptance are distinct gates. No product code, provisioning, or product-test result is certified.
 
 ## Initial review
 

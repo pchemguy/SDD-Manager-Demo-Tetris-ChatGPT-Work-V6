@@ -28,7 +28,7 @@ The running SDD Manager package's `assets/DOCS_TRACKING_TEMPLATE.json` supplies 
 - [x] DOCS-004 — Prepare and accept DECOMPOSITION.
     - Define component responsibilities, collaboration, ownership and design-level interface boundaries consistently with ARCHITECTURE.
     - Review the proposal with the human and complete its acceptance checkpoint.
-- [ ] DOCS-005 — Prepare and accept SPEC.
+- [x] DOCS-005 — Prepare and accept SPEC.
     - Specify observable behavior, interfaces, error contracts, required qualities and acceptance conditions from the accepted design.
     - Complete required SPEC QC and its human acceptance checkpoint.
 - [ ] DOCS-006 — Prepare and accept PLAN.
@@ -68,7 +68,7 @@ On interruption, recover the earliest unmet operation from documents, acceptance
 
 - 2026-10-22: The user selected the classic-only game target from the proposed scope options. This clarifies requirements; it does not approve a PROJECT document that has not yet been presented.
 - 2026-10-22: The user instructed the agent to manage versioning and publish a corresponding tagged GitHub release with release notes after every completed, verified, integrated implementation phase.
-- No future human checkpoint is preapproved for this repository. SPEC first approval is the next human boundary.
+- No future human checkpoint is preapproved for this repository. PLAN first approval is the next human boundary.
 
 ### DOCS-002 PROJECT proposal
 
@@ -99,4 +99,4 @@ On interruption, recover the earliest unmet operation from documents, acceptance
 - Prepared [SPEC.md](SPEC.md) with a focused [gameplay child](spec/GAMEPLAY.md). The root owns session/input/time, snapshots/presentation, failure, distribution/release, and system acceptance contracts; the child owns canonical geometry and core rules.
 - Proposed exact classic defaults within the accepted design's delegation: independent piece draws, fixed-matrix clockwise rotation without kicks, locking on failed downward movement, line-clear scoring multiplied by the pre-lock level, ten-line level increments, and 1000-to-100 ms gravity. Browser keys, explicit pause/focus behavior, a 250 ms frame-gap cap, restart and failure cleanup are specified for review.
 - Completed scoped design/contract QC and corrected state-precondition and malformed-timestamp gaps. [SPEC-REVIEW-REPORT.md](SPEC-REVIEW-REPORT.md) retains the initial findings, Revision 1, exact governing/reviewed blobs, grouped coverage, actual document checks, and implementation evidence limits. Current technical gate: Ready. No product tests or browser provisioning are claimed.
-- Presented content identities: SPEC blob bdf553202ed51a8983154a94b97cc5dd1b8b6672; gameplay child blob 4ab78ecd8ef23cc0438b391b45c862970a2364b0. Human SPEC acceptance is pending; DOCS-005 remains unchecked and issue #5 remains open. Do not author dependent PLAN until acceptance.
+- Presented content identities: SPEC blob bdf553202ed51a8983154a94b97cc5dd1b8b6672; gameplay child blob 4ab78ecd8ef23cc0438b391b45c862970a2364b0. The user accepted SPEC and its gameplay child with “K” on 2026-10-22 in response to the approval request for published proposal commit 3774c63e6795526afb5f384b5b59379a6322c520. The acceptance commit retains both source blobs, records human acceptance in the QC gate, and marks DOCS-005 complete. Publish and verify acceptance, then close/read back issue #5 before PLAN authoring. Future checkpoints remain pending.
