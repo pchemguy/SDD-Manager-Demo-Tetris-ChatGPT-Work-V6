@@ -25,7 +25,7 @@ The running SDD Manager package's `assets/DOCS_TRACKING_TEMPLATE.json` supplies 
 - [x] DOCS-003 — Prepare and accept ARCHITECTURE.
     - Define major system blocks, relationships, dependency direction and consequential structural decisions from the accepted brief.
     - Review the proposal with the human and complete its acceptance checkpoint.
-- [ ] DOCS-004 — Prepare and accept DECOMPOSITION.
+- [x] DOCS-004 — Prepare and accept DECOMPOSITION.
     - Define component responsibilities, collaboration, ownership and design-level interface boundaries consistently with ARCHITECTURE.
     - Review the proposal with the human and complete its acceptance checkpoint.
 - [ ] DOCS-005 — Prepare and accept SPEC.
@@ -68,7 +68,7 @@ On interruption, recover the earliest unmet operation from documents, acceptance
 
 - 2026-10-22: The user selected the classic-only game target from the proposed scope options. This clarifies requirements; it does not approve a PROJECT document that has not yet been presented.
 - 2026-10-22: The user instructed the agent to manage versioning and publish a corresponding tagged GitHub release with release notes after every completed, verified, integrated implementation phase.
-- No future human checkpoint is preapproved for this repository. DECOMPOSITION first approval is the next human boundary.
+- No future human checkpoint is preapproved for this repository. SPEC first approval is the next human boundary.
 
 ### DOCS-002 PROJECT proposal
 
@@ -92,4 +92,4 @@ On interruption, recover the earliest unmet operation from documents, acceptance
 - Defined provisional cell/board/input/piece-source/state/snapshot/binding/view/session collaboration contracts and single ownership of core state, rule time, browser timestamps, bindings and drawing resources.
 - Reviewed dependency direction, snapshot immutability, canonical geometry, deterministic time/randomness seams, complete transition publication, restart/resize/disposal and startup failure ownership against accepted ARCHITECTURE and PROJECT.
 - Kept gameplay constants and exact contracts for SPEC, sequence for PLAN, and file ownership for layout. No architecture or scope amendment was required. Local Markdown/link, content identity and preparation-state checks accompany the proposal commit. This is design review; no product execution is claimed.
-- Presented DECOMPOSITION content identity: blob f182fecfff88394c54948d124957335b9b014038. First human approval is pending; DOCS-004 remains unchecked and issue #4 remains open. Hold SPEC authoring at this checkpoint.
+- Presented DECOMPOSITION content identity: blob f182fecfff88394c54948d124957335b9b014038. The user accepted the published decomposition with “k” on 2026-10-22 in response to its approval request. Presented commit: 9d90fcaff860a0743e34104480cf6c4316eeeb76. The acceptance commit retains the exact DECOMPOSITION blob and marks DOCS-004 complete. Publish and verify acceptance, then close/read back issue #4 before SPEC authoring. Future checkpoints remain pending.
