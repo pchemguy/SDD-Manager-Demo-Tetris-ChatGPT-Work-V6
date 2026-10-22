@@ -2,6 +2,31 @@
 
 ## Current gate
 
+Technical QC: **Ready — iteration 3 task decomposition**. Human TASKS acceptance: **accepted under scoped preapproval** for the instructed DOCS-002–DOCS-008 loop on 2026-10-22. [DOCS_TASKS.md](DOCS_TASKS.md) owns the actual grant, accepted source, publication and issue evidence. Stop after DOCS-008 completion and verified issue closure; DOCS-009/further advancement require the user's next instruction.
+
+Reviewed TASKS blob: 63e8b388f19844e44442d893f974c71450358449. Three phases, 15 milestones and 64 unchecked tasks: 49 delivery plus 15 dedicated reviews; 82 unchecked phase/milestone/task boxes. No TASKS child or active FEATURE-TASKS exists. Accepted governing inputs at published layout completion b0854a6c01b0a87fe6cfc527cee353696cf77290:
+
+| Governing source | Git blob |
+| --- | --- |
+| [PROJECT.md](PROJECT.md) | 1a72042d6f7244922b21de09ff15967e841f94f9 |
+| [ARCHITECTURE.md](ARCHITECTURE.md) | 19a47420bbe1a66c810ad8206819d078a3130a61 |
+| [DECOMPOSITION.md](DECOMPOSITION.md) | f46bbca88917a4efeaaa61ea6933475b901c0915 |
+| [SPEC.md](SPEC.md) | 24bf3f21ec51fc4f247510d6f870fd5d933de1f6 |
+| [spec/GAMEPLAY.md](spec/GAMEPLAY.md) | 0a0ab4a87640886e2a5b03a1c3712fea89e55d86 |
+| [spec/CONFIGURATION.md](spec/CONFIGURATION.md) | 6a73acc35202020f7ab8e9b760f3eaf8745cda37 |
+| [SPEC-REVIEW-REPORT.md](SPEC-REVIEW-REPORT.md) | a17ca22e6402f69cce4e7a989f2638b38341c467 |
+| [PLAN.md](PLAN.md) | 36741b6f42c1bd01558db6ef0d71831b0d3688f4 |
+| [layout.md](layout.md) | 486c33d1b3076d46ce9ce2cb87181dc620b9190b |
+| [PLAN-REVIEW-REPORT.md](PLAN-REVIEW-REPORT.md) | 1de24f8ec7749df055ecebd401206d79a67696a4 |
+| [AGENTS.md](../../AGENTS.md) | 28dd2966297a912deda4f0cbf1c4e54e7a316aca |
+| [BROWSER_DEV_POLICY.md](../../BROWSER_DEV_POLICY.md) | ae71cfc01aaf694f5c4a7b055d2f15d469d7f7a7 |
+
+SPEC/design and combined PLAN/layout QC are current for these exact inputs. Revision 4 assesses complete combined-scope derivation, stable identities/parents, dependency order, bounded units and all review/report gates. TQ01–TQ06 remain historically resolved; TQ07–TQ08 are resolved below. No confirmed task-list blocker, deferred finding or exception remains. This Ready result certifies no implementation, whole-package QC, integration, phase projection or release.
+
+## Iteration 2 accepted baseline
+
+The following former current-gate evidence and Revision 3 describe the retained 43-task/two-phase baseline. They do not certify iteration 3.
+
 Technical QC: **Ready — iteration 2 task decomposition**. Human TASKS acceptance: **accepted under scoped preapproval** for DOCS-002–DOCS-008 on 2026-10-22. [DOCS_TASKS.md](DOCS_TASKS.md) owns the actual grant, accepted source, publication and issue evidence. The user's stop is completed DOCS-008; whole-package QC and further advancement require their next instruction.
 
 Reviewed TASKS blob: `f5ec46c51616189f793bdd762a12f3036520f2e0`. It contains two phases, ten milestones and 43 unchecked implementation tasks: 33 delivery plus ten reviews. No TASKS child or active FEATURE-TASKS exists. Accepted inputs at published layout completion `f56d87bc36523dc00a92c1fadda41d7abbe78d45`:
@@ -130,3 +155,33 @@ Manual conformance review mapped every milestone outcome and R01–R06/G01–G09
 Local checks passed: all 24 prior task IDs and parents retained; 43 unique IDs; 55 unchecked phase/milestone/task boxes; exact PLAN headings/parents; earlier-listed prerequisites and acyclic graph including T-025→T-003; delivery counts 7/4/5/4 and 3/4/3/3; one final review per delivery milestone; one task per phase review; canonical report paths and final-report owner; layout-owned source paths; and complete grouped contract references. Numeric file-order monotonicity is not imposed after insertion because it would require renumbering stable IDs. Markdown/link/current-source checks accompany this checkpoint.
 
 No implementation, setup, browser capability, CI run, integration or release is certified. Source findings and prior revisions are retained; no deferred confirmed issue or human exception supports Ready. Stop after recorded/published DOCS-008 completion and verified issue closure as instructed.
+
+## Revision 4 — Configurable penetrator task derivation
+
+Reviewed on 2026-10-22 by the author applying sdd-tasks and the development-document QC criteria. Starting TASKS blob was f5ec46c51616189f793bdd762a12f3036520f2e0. Accepted PLAN/layout and all SPEC/design inputs are unchanged from published layout completion b0854a6c01b0a87fe6cfc527cee353696cf77290; exact identities and reviewed TASKS are in Current gate. All existing T-001–T-043 IDs and phase/milestone parents are retained. New tasks are T-044–T-064; T-025 stays before dependent T-003 in listed order.
+
+| Delivery milestone | Delivery tasks | Excluded final review | Scope/count assessment |
+| --- | --- | --- | --- |
+| 1.1 | 7: T-001–T-006, T-025 | T-007 | Retain the justified seven-unit real browser slice: tooling, geometry, explicit bag, discrete engine, views, injected controller and concrete assembly. Adding variant data/regular palette does not add mode behavior. Distinct verification boundaries justify the departure from 3–5. |
+| 1.2 | 4: T-008–T-011 | T-012 | Continuous foundation rules/time/clear/progression and native integration; scoped defaults, no new configuration or bonus work hidden here. |
+| 1.3 | 5: T-013–T-017 | T-018 | Session transitions, controller clock/lifecycle, native focus, failure and resize remain distinct coherent boundaries. |
+| 1.4 | 4: T-019–T-022 | T-023 | Desktop, built hosting/version, CI and reproducible guidance/release preparation for the foundation. |
+| 2.1 | 3: T-026–T-028 | T-029 | Regular enabled hold transition, held presentation and native integration; variant/gate extensions are scheduled explicitly. |
+| 2.2 | 4: T-030–T-033 | T-034 | Ordered kicks, regular landing/projection, drawing and native placement evidence; dynamic/penetrator behavior remains in Phase 3. |
+| 2.3 | 3: T-035–T-037 | T-038 | Hard drop and follow/immediate override with fixed interval general policy, sampled routing and native select. Six-setting effects are not folded into this task group. |
+| 2.4 | 3: T-039–T-041 | T-042 | Scoped modern rule/controller regression, actual browser/distribution acceptance, version/guidance and clean-checkout rehearsal. |
+| 3.1 | 5: T-044–T-048 | T-049 | Pure schema/resolution, general locks, gates/projection, native controls, then real configurable play. T-047 coordinates the existing controller/binding/view/page consumers of one schema; core rules are already split into preceding tasks, rather than hidden in UI wiring. |
+| 3.2 | 3: T-050–T-052 | T-053 | Startup extraction/explicit-URL saves, player save/feedback, then real cookies/history/reload/failure evidence. Deterministic parsing/resolution is separate from native storage acceptance. |
+| 3.3 | 5: T-054–T-058 | T-059 | Pure board traversal/landing, bonus/identity state, engine placement/drop routing, white/bonus/native presentation, then complete play. T-055 is an internal state/identity step; T-056 completes movement consumers before native activation in T-057, preserving bounded changes and valid states. |
+| 3.4 | 3: T-060–T-062 | T-063 | Full rule/config/controller interactions, desktop/built/native/failure acceptance, then complete version/guidance/clean-checkout preparation; reuse existing checks and add only uncovered combinations. |
+
+All three phases retain four delivery milestones plus excluded 1.5/2.5/3.5 with exactly one phase-review task T-024/T-043/T-064 respectively. Review tasks depend on every delivery unit; phase reviews depend on their delivery milestone reviews/closures, never their own milestone closure. T-064 alone owns final implementation reporting and global TODO aggregation. Counts total 49 delivery and 15 review tasks. No 1–2 fragmentation or 10+ overload trigger applies; the seven-unit first slice is reassessed and retained with its prior rationale. In-range groups also received semantic scope, dependency, integration and evidence review; no padding or whole subsystem task is needed.
+
+| Finding | Located conflict under accepted iteration 3 PLAN | Correction owner / recheck | Disposition |
+| --- | --- | --- | --- |
+| TQ07 | The retained task list ended after two phases and lacked executable controls, dynamic ghost, persistence, penetrator/bonus and combined acceptance work. Early full-coverage claims also exceeded those releases' supported subsets. | sdd-tasks: derive 3.1–3.4 as localized pure/core/browser/view/integration units, retain existing IDs/parents, scope earlier evidence honestly and map every R/G/C/K/A/P group to work/reviews. | Resolved in Revision 4 |
+| TQ08 | T-043 and the phase transition still owned final implementation/two releases, conflicting with PLAN's final 3.5 and 0.3.0. | sdd-tasks: leave T-043 as Phase 2 review, assign final report/global aggregation to T-064 and extend all three phase release transitions without inventing extra review tasks. | Resolved in Revision 4 |
+
+Manual review checked each PLAN milestone/exit against executable scope, objective evidence, failure/integration/guidance work and physical owners. It traced six independent setting/default/omission/save paths, both general/drop policies, penetrator final safety and held/bonus/white state, native controls, real cookies/history, browser policy and release gates. No requirement, phase or source owner was invented in task derivation. Published CI is required after product workflow changes, with version/tag/GitHub evidence completed only at each authorized phase transition.
+
+Local checks passed: 64 unique IDs with all 43 prior parents preserved; exact three PLAN phase and 15 milestone identities; 82 unchecked boxes; acyclic listed-order dependencies including the retained T-025 insertion; all required Scope/Depends on/Contracts/Evidence fields; review predecessor/report paths and T-064 final-report ownership; layout-owned source paths; all 7 R / 10 G / 6 C / 22 A / 17 K / 6 P coverage references; current upstream QC/source identities; Markdown/links and unchanged governing artifacts/plugin. These verify document structure, examples and conformance, not a runnable game. No setup, browser capability, runtime/build/CI test, integration, phase tracking or release was performed. No confirmed issue or exception remains; stop at the requested completed DOCS-008 boundary after publication/readback and issue closure.

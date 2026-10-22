@@ -17,7 +17,7 @@ The running SDD Manager package's `assets/DOCS_TRACKING_TEMPLATE.json` supplies 
 - On 2026-10-22 the user requested another loop with four additional extensions together, then clarified: “You are to proceed with the loop with specified scope extension.” This continues the established bounded DOCS-002–DOCS-008 document pass and its checkpoint preapproval. Record acceptance under that grant, not as a new interactive approval. Technical QC, atomic document completion, publication/readback and issue closure remain required.
 - Extend the currently accepted documents in order, in one pass covering all four additions below. Preserve their contents as the starting baseline and retain earlier acceptance/QC evidence; do not create four separate loops or regenerate the documents.
 - Stop after DOCS-008 completion is recorded, published/read back and issue #8 closure verified. DOCS-009, preparation integration, implementation-phase projection, implementation and releases are outside this pass. The user will decide whether another loop or advancement follows.
-- Current operation: DOCS-007 combined layout QC and scoped acceptance are recorded below. Publish/read back its completion and verify issue #7 closure before DOCS-008. DOCS-009 remains unchecked/open; the exact stop remains completed DOCS-008.
+- Current operation: DOCS-008 task-list QC and scoped acceptance are recorded below. Publish/read back its completion and verify issue #8 closure, then stop without DOCS-009 or advancement. DOCS-009 remains unchecked/open; the exact stop remains completed DOCS-008.
 
 ### Combined scope additions
 
@@ -60,7 +60,7 @@ These additions supersede the retained brief's configuration/persistence exclusi
 - [x] DOCS-007 — Prepare and accept layout.
     - Allocate source, tests, documentation and artifacts to physical paths consistently with the accepted design and PLAN.
     - Review layout against the design and PLAN, update the PLAN review report, then present layout for human approval.
-- [ ] DOCS-008 — Prepare and accept TASKS.
+- [x] DOCS-008 — Prepare and accept TASKS.
     - Derive executable tasks, dependencies and required milestone/phase review units from accepted SPEC, PLAN and layout.
     - Complete required task-list QC and its human acceptance checkpoint. Do not start implementation or project implementation-phase objects yet.
 - [ ] DOCS-009 — Pass documentation package QC.
@@ -170,6 +170,13 @@ The associated accepted AGENTS navigation was blob 6ed692d7057d468ad070e3a8497bc
 - Extended the accepted layout with pure core settings/resolution and browser persistence modules, controller presentation/save contracts, feature/variant/bonus view ownership, targeted pure/adapter/native checks, the configuration child and all three phase/final-report homes. Preserved existing production/test separation, browser policy and source owners. No product path was created.
 - Combined PLAN/layout QC passed in appended Revision 5, retaining prior source/finding history and resolving L06–L07. Checked 17 unique application ownership definitions, source/check navigation, acyclic dependencies, startup/save/failure seams and unchanged PLAN/SPEC/design. A path-check false positive counted a narrative index.html reference; narrowing the check to definitions passed without a document repair.
 - Human acceptance uses the recorded scoped preapproval for this instructed loop. Accepted layout blob: 486c33d1b3076d46ce9ce2cb87181dc620b9190b; combined QC report: 1de24f8ec7749df055ecebd401206d79a67696a4. Submit these with this decision and checked DOCS-007; verify publication/readback and issue closure before TASKS.
+
+### DOCS-008 — Complete three-phase executable task list
+
+- Prior transition verified: DOCS-007 completion b0854a6c01b0a87fe6cfc527cee353696cf77290 was published/read back with confirmed cleanup; issue #7 was closed/read back as completed before TASKS authoring.
+- Extended the accepted list with the complete configurable penetrator phase, retaining all 43 prior IDs/parents and adding T-044–T-064. The list has 64 unchecked implementation tasks (49 delivery, 15 reviews), 15 milestones and three phases; 82 implementation hierarchy boxes remain unchecked. Delivery counts are 7/4/5/4, 3/4/3/3 and 5/3/5/3. Final implementation reporting belongs to T-064/3.5; phase versions are planned 0.1.0/0.2.0/0.3.0.
+- Task-list QC passed in appended Revision 4, retaining prior source/findings/rechecks and resolving TQ07–TQ08. Checked complete scope/acceptance routes, exact PLAN identities, stable parents, acyclic dependencies/review gates, one executable owner, report/source paths, count/semantic scope, current upstream QC and no product completion claims. No strategy or behavior amendment was needed.
+- Human acceptance uses the recorded scoped preapproval for this instructed loop. Accepted TASKS blob: 63e8b388f19844e44442d893f974c71450358449; QC report: beb6ee6ef07bbd5e9280c4464172af918fbb4f97. Submit these sources, this decision, checked DOCS-008 and refreshed HANDOFF together. Publication/readback and issue #8 closure remain subsequent effects requiring confirmation. Stop after they are verified; DOCS-009 stays unchecked/open.
 
 ## Iteration 2 document completion evidence
 
