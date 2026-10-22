@@ -37,7 +37,7 @@ The running SDD Manager package's `assets/DOCS_TRACKING_TEMPLATE.json` supplies 
 - [x] DOCS-007 — Prepare and accept layout.
     - Allocate source, tests, documentation and artifacts to physical paths consistently with the accepted design and PLAN.
     - Review layout against the design and PLAN, update the PLAN review report, then present layout for human approval.
-- [ ] DOCS-008 — Prepare and accept TASKS.
+- [x] DOCS-008 — Prepare and accept TASKS.
     - Derive executable tasks, dependencies and required milestone/phase review units from accepted SPEC, PLAN and layout.
     - Complete required task-list QC and its human acceptance checkpoint. Do not start implementation or project implementation-phase objects yet.
 - [ ] DOCS-009 — Pass documentation package QC.
@@ -68,7 +68,7 @@ On interruption, recover the earliest unmet operation from documents, acceptance
 
 - 2026-10-22: The user selected the classic-only game target from the proposed scope options. This clarifies requirements; it does not approve a PROJECT document that has not yet been presented.
 - 2026-10-22: The user instructed the agent to manage versioning and publish a corresponding tagged GitHub release with release notes after every completed, verified, integrated implementation phase.
-- No future human checkpoint is preapproved for this repository. TASKS first approval is the next human boundary.
+- No future human checkpoint is preapproved for this repository. The user accepted TASKS and requested a project-specific documentation iteration reset, followed by a stop ready at DOCS-002.
 
 ### DOCS-002 PROJECT proposal
 
@@ -120,4 +120,5 @@ On interruption, recover the earliest unmet operation from documents, acceptance
 - Prepared [TASKS.md](TASKS.md) with one phase, the accepted five milestone identities, and 24 unchecked executable tasks: 19 delivery tasks plus five dedicated reviews. Delivery counts are 6/4/5/4; the first milestone's six bounded units are explicitly assessed rather than compressed to meet a count target.
 - Assigned edit owners, prerequisites, contracts, relevant unit/native/browser/build/CI/documentation evidence, milestone/phase review reports and HANDOFF updates. Preserved full classic scope, the accepted early-slice limits, source/fixture isolation, complete contract coverage, and post-phase integration/release gates. No implementation issue projection is authorized by this proposal.
 - [TASKS-REVIEW-REPORT.md](TASKS-REVIEW-REPORT.md) retains exact governing/initial/final identities, semantic/count assessments, setup-probe/CI/report-path findings, Revisions 1–2 corrections/rechecks, and evidence limits. Technical gate: Ready for task decomposition; no confirmed issue remains. Root AGENTS navigation now links the task hierarchy while preserving its entire previous content.
-- Presented TASKS blob: b5c135676d04fac801e925191e09c727cc117c04. Associated navigation blob: 6ed692d7057d468ad070e3a8497bcba8af38daeb. Human TASKS acceptance is pending; DOCS-008 stays unchecked and issue #8 stays open. Approval/publication/closure precede DOCS-009 whole-package QC; implementation still requires complete preparation, verified integration, and an authorized range. No product code, installation, browser execution, CI run, hosted phase activation, or release is claimed.
+- Presented TASKS blob: b5c135676d04fac801e925191e09c727cc117c04. Associated navigation blob: 6ed692d7057d468ad070e3a8497bcba8af38daeb. The user accepted the published proposal in commit 0bd92a885f1b6822b9cb7dc889a538297f63edb3 with “Record acceptance” on 2026-10-22. This acceptance commit retains both source blobs, records human acceptance in the QC gate, and marks DOCS-008 complete. Publication/readback and issue #8 closure are the next operations; their outcomes must be verified before the requested reset.
+- The same request authorizes a project-specific docs-iteration loop: retain the accepted document contents, uncheck DOCS-002–DOCS-009, reopen their existing issues, and stop ready to repeat the cycle from DOCS-002. The user clarified that this protocol is not part of SDD yet. This request does not authorize package QC, preparation integration, implementation, or a release during the reset. No product code, installation, browser execution, CI run, hosted phase activation, or release is claimed.
