@@ -12,12 +12,28 @@ When tracking is enabled, each `DOCS-*` task maps to one issue in the `sdd-docs-
 
 The running SDD Manager package's `assets/DOCS_TRACKING_TEMPLATE.json` supplies the fixed milestone title/description and all nine issue definitions, including dependencies. Use those definitions through sdd-forge; this Markdown remains the local completion owner. Neither asset records provider handles or proves runtime eligibility. Resolve source/content conflicts before projection rather than replacing this list or inventing issue text.
 
-## Active iteration 2 scope and authorization
+## Active iteration 3 scope and authorization
+
+- On 2026-10-22 the user requested another loop with four additional extensions together, then clarified: “You are to proceed with the loop with specified scope extension.” This continues the established bounded DOCS-002–DOCS-008 document pass and its checkpoint preapproval. Record acceptance under that grant, not as a new interactive approval. Technical QC, atomic document completion, publication/readback and issue closure remain required.
+- Extend the currently accepted documents in order, in one pass covering all four additions below. Preserve their contents as the starting baseline and retain earlier acceptance/QC evidence; do not create four separate loops or regenerate the documents.
+- Stop after DOCS-008 completion is recorded, published/read back and issue #8 closure verified. DOCS-009, preparation integration, implementation-phase projection, implementation and releases are outside this pass. The user will decide whether another loop or advancement follows.
+- Current operation: reset DOCS-002–DOCS-009 and reopen their existing issues; DOCS-001 remains complete. Hosted reset effects require verification after publishing this reset. Then proceed at DOCS-002, not merely a ready-state pause.
+
+### Combined scope additions
+
+1. Conditional ghost-piece visibility: offer a mode that hides the ghost when its projected landing position is in the upper half of the board above the midline, and shows it again when that position returns to the lower half.
+2. Penetrator mode: a hotkey turns the current falling piece into a penetrator when a bonus is available. It passes through occupied cells without destroying them until it locks. Its final position must be entirely inside the board and not overlap occupied cells. Penetrator hard drop passes blocking cells to the lowest valid landing position; a visible ghost previews that same position. Clearing four lines at once awards one bonus, capped at three. Render penetrators entirely white, never use white for regular pieces, and show one side-panel symbol per available bonus with immediate earn/spend updates.
+3. Game configuration: side-panel controls for ghost visibility (always hide / dynamic above-midline hide / always show), hard drop on/off, next preview on/off, hard-drop locking (follow general policy / immediate), general locking (failed downward movement attempt / one full gravity interval from grounding), and hold on/off.
+4. Configuration persistence: support a cookie and URL query parameter for each setting. Resolve each independently: explicit URL value, then saved cookie value, then sensible default. Restore on reload/reopen. Every player change saves the setting's cookie and updates its URL parameter. Save explicit URL values to cookies even when equal to default. An omitted parameter retains its saved cookie rather than overwriting it with default.
+
+These additions supersede the retained brief's configuration/persistence exclusions when that brief is revised at DOCS-002. SPEC will define exact midline measurement, penetrator movement/locking interactions, setting defaults/identifiers, validation and failure behavior. Existing phase/task boundaries remain baseline proposals until their owning stages reassess the combined scope.
+
+## Iteration 2 scope and authorization (retained history)
 
 - On 2026-10-22 the user extended the complete target with hold, ghost pieces, seven-bag randomization, wall kicks, hard drop, and full-gravity-interval locking from grounding. Hard drop follows that policy by default, with a selectable immediate-hard-drop alternative.
 - The user explicitly preapproved human checkpoints through completed DOCS-008 and instructed this pass to start at DOCS-002. The grant covers PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC with its children, PLAN, layout, and TASKS, including their required owner review/QC and tracked completion. It does not waive technical gates or publication/readback.
 - Stop after DOCS-008 completion is recorded, published, and its issue closure verified. Wait for the user to request another loop or approve advancing. DOCS-009, preparation integration, phase projection, implementation, and releases are outside this pass.
-- Current position: DOCS-008 is complete, published/read back, and issue #8 is closed/read back as completed. This bounded pass is stopped. DOCS-009 stays unchecked/open; wait for the user to request another loop or approve advancing.
+- Historical stopping position: DOCS-008 was complete, published/read back, and issue #8 closed/read back as completed. DOCS-009 remained unchecked/open. The iteration 3 request below supersedes that wait.
 
 ## Preparation
 
@@ -26,25 +42,25 @@ The running SDD Manager package's `assets/DOCS_TRACKING_TEMPLATE.json` supplies 
     - Record which root files existed and which were copied; verify copied bytes and preserved content.
     - Establish/reconcile `docs/dev/HANDOFF.md` as generated checkpoint metadata, outside the four-file presence/copy test. Include it with this task's completion and initialization result, push and verify; then close and verify its issue when tracking is enabled.
     - Report initialization. If some but not all of the four root files existed initially, warn with the retained/copied filenames and end the turn before document work, unless the user explicitly preapproved continuation through this checkpoint. If none or all existed, continue without an additional approval pause.
-- [x] DOCS-002 — Prepare and accept PROJECT.
+- [ ] DOCS-002 — Prepare and accept PROJECT.
     - Establish the project brief: purpose, users, outcomes, scope, non-goals and consequential constraints; identify material assumptions and unresolved decisions.
     - Review the proposal with the human and complete its acceptance checkpoint.
-- [x] DOCS-003 — Prepare and accept ARCHITECTURE.
+- [ ] DOCS-003 — Prepare and accept ARCHITECTURE.
     - Define major system blocks, relationships, dependency direction and consequential structural decisions from the accepted brief.
     - Review the proposal with the human and complete its acceptance checkpoint.
-- [x] DOCS-004 — Prepare and accept DECOMPOSITION.
+- [ ] DOCS-004 — Prepare and accept DECOMPOSITION.
     - Define component responsibilities, collaboration, ownership and design-level interface boundaries consistently with ARCHITECTURE.
     - Review the proposal with the human and complete its acceptance checkpoint.
-- [x] DOCS-005 — Prepare and accept SPEC.
+- [ ] DOCS-005 — Prepare and accept SPEC.
     - Specify observable behavior, interfaces, error contracts, required qualities and acceptance conditions from the accepted design.
     - Complete required SPEC QC and its human acceptance checkpoint.
-- [x] DOCS-006 — Prepare and accept PLAN.
+- [ ] DOCS-006 — Prepare and accept PLAN.
     - Define delivery phases, milestones, dependencies and exit conditions against SPEC.
     - Complete PLAN QC, then present PLAN for human approval.
-- [x] DOCS-007 — Prepare and accept layout.
+- [ ] DOCS-007 — Prepare and accept layout.
     - Allocate source, tests, documentation and artifacts to physical paths consistently with the accepted design and PLAN.
     - Review layout against the design and PLAN, update the PLAN review report, then present layout for human approval.
-- [x] DOCS-008 — Prepare and accept TASKS.
+- [ ] DOCS-008 — Prepare and accept TASKS.
     - Derive executable tasks, dependencies and required milestone/phase review units from accepted SPEC, PLAN and layout.
     - Complete required task-list QC and its human acceptance checkpoint. Do not start implementation or project implementation-phase objects yet.
 - [ ] DOCS-009 — Pass documentation package QC.
@@ -70,6 +86,25 @@ The user activated this project-specific protocol on 2026-10-22 after accepting 
 3. Start from the currently accepted document versions, including necessary children. Review and revise those versions in task order; do not regenerate them, rewind Git, or erase prior acceptance/QC evidence. Reassess affected QC under the owning procedure and retain unchanged valid evidence with its source identities.
 4. Record each new iteration's review and human decision separately from the retained baseline. Historical approvals do not complete the new iteration. Normal human checkpoints, publication/readback, and issue-closure requirements still apply; honor only the explicitly recorded scope of any future-checkpoint preapproval.
 5. Activation alone stops ready at DOCS-002. A later instruction may authorize a bounded document pass; retain its actual task range and stopping checkpoint. Apply another reset only when the user requests it.
+
+### Iteration 3 activation
+
+- Accepted starting point: iteration 2 DOCS-008 completion 444da5a092543b8121ba1044b9bde773b99c7560 and verified stopping record c330297a0e5de93b8508cb1abc62e21db50599c4. Both were published with exact remote readback and confirmed cleanup; issue #8 was closed/read back as completed before this reset. No duplicate acceptance is needed.
+- Before reset writes, all nine exact predefined issue definitions/markers/dependencies/milestone associations and native milestone #1 title/description/open state were read back and verified. DOCS-001 remains complete; DOCS-002–DOCS-009 are reset locally. Existing issues #2–#8 must be reopened after reset publication; #9 was already open. Preserve all identities and historical comments. The preparation milestone remains open.
+- The accepted content identities below are unchanged by reset. Existing QC reports describe that retained iteration 2 baseline; they do not certify the new scope. Each affected owner must append the next assessment and retain old findings/source identities.
+
+| Document | Accepted starting Git blob |
+| --- | --- |
+| [PROJECT.md](PROJECT.md) | 979274fe1d8af394300b13eb53f96df1c2ec0c46 |
+| [ARCHITECTURE.md](ARCHITECTURE.md) | 821f53a68bc9e0ec20e518d63e4b1d0003628967 |
+| [DECOMPOSITION.md](DECOMPOSITION.md) | c24ea1ba1f3e6712c65805f49842784e0f10da93 |
+| [SPEC.md](SPEC.md) | 765e6c865675dca7e8dab419e221315fdd448065 |
+| [spec/GAMEPLAY.md](spec/GAMEPLAY.md) | 2e1139f2ff1d791af9676c4ce423a9c7bd0e1279 |
+| [PLAN.md](PLAN.md) | 84e0d67d1c20010b70852966647220560b5b4e66 |
+| [layout.md](layout.md) | 71c5936100b2e9c5769f181b1c76188476fa112f |
+| [TASKS.md](TASKS.md) | f5ec46c51616189f793bdd762a12f3036520f2e0 |
+
+AGENTS navigation, root README, implementation task state and bundled SDD Manager are also unchanged by reset. The authorized next action after verified hosted reset is DOCS-002 with all four scope additions in one pass.
 
 ### Iteration 2 activation
 

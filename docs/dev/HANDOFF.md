@@ -1,32 +1,31 @@
 # Project handoff
 
-Checkpoint: Main-document preparation, iteration 2, stopped after completed DOCS-008. Document review/acceptance, completion publication/readback, and issue #8 closure/readback are verified. Await the user's decision on another loop or advancing. Recover subsequent effects from [DOCS_TASKS.md](DOCS_TASKS.md), Git and exact hosted readback; this snapshot's containing commit identifies its document state.
+Checkpoint: Main-document preparation, iteration 3 entry. The user requested all four scope additions in one loop and explicitly instructed proceeding with that loop. The local reset is recorded; publication and existing-issue reopening require actual readback before DOCS-002 authoring. Recover later effects from [DOCS_TASKS.md](DOCS_TASKS.md), Git and hosted readback.
 
 ## Workflow and sources
 
-- Workflow/owner: Main development, project-specific docs-iteration pass coordinated by sdd-manage. The design, specification, plan/layout and task owners extended their existing documents in order.
-- Governing sources: [AGENTS.md](../../AGENTS.md), [discovery protocol](../../SKILL_DISCOVERY_PROTOCOL.md), [browser policy](../../BROWSER_DEV_POLICY.md), and bundled [SDD Manager entry](../../.agents/plugins/sdd-manager/PLUGIN.md).
-- Current accepted content, checkpoint grant, completion evidence and prior histories: [DOCS_TASKS.md](DOCS_TASKS.md). The docs-iteration protocol remains a project override; SDD Manager itself is unchanged.
-- Available environment: Bundled SDD Manager 0.15.1; Linux, Node 24, Python 3.12. Product tooling/browser capability has not been established. No application or test implementation exists.
+- Workflow/owner: Main development, project-specific docs-iteration pass coordinated by sdd-manage. Design, specification, plan/layout and task owners revise the accepted documents in order.
+- Governing sources: [AGENTS.md](../../AGENTS.md), [discovery protocol](../../SKILL_DISCOVERY_PROTOCOL.md), [browser policy](../../BROWSER_DEV_POLICY.md) and bundled [SDD Manager entry](../../.agents/plugins/sdd-manager/PLUGIN.md).
+- [DOCS_TASKS.md](DOCS_TASKS.md) owns iteration 3 scope/authorization, accepted starting identities, local status, completion evidence and prior history. The protocol is a project override; SDD Manager remains unchanged.
+- Available environment: Bundled SDD Manager 0.15.1; Linux, Node 24, Python 3.12. Product tooling/browser capability has not been established; no game/test implementation exists.
 
-## Target and accepted preparation
+## Target and accepted baseline
 
-- Complete target: Desktop browser Tetris with the classic foundation, hold, ghost, seven-bag, clockwise wall kicks, hard drop, and full-gravity-interval locking from grounding. Hard drop uses that delay unless the session-only immediate option is selected. Up/Space remain clockwise rotation; C is hold and D hard drop.
-- PROJECT, ARCHITECTURE, DECOMPOSITION, SPEC/gameplay child, PLAN, layout and TASKS have been extended from their accepted starting versions and accepted under the user's scoped preapproval. SPEC/design, PLAN strategy/combined layout, and TASKS QC passed with retained prior findings and appended rechecks. This is per-document QC; DOCS-009 whole-package QC is still outstanding.
-- PLAN: Classic foundation 0.1.0 followed by Modern play 0.2.0, four delivery milestones and one phase review each. TASKS has 43 unchecked implementation tasks, 33 delivery and ten review. Existing task IDs/parents are retained; T-025 is listed before dependent T-003.
-- Version/release instruction remains: Publish a corresponding version tag and GitHub release with notes after each completed, verified, integrated implementation phase. Versions above are planned; no implementation phase or release is delivered.
+- Retain the accepted classic-plus-modern documents from iteration 2: hold, ghost, seven-bag, wall kicks, hard drop and grounding-based delay. Accepted source identities are recorded with iteration 3 activation.
+- Add conditional ghost visibility, penetrator bonuses/mode, all six configuration controls and per-setting cookie/URL persistence together in this pass. Their exact behavior and design will be incorporated by the responsible stages; the old configuration/persistence exclusions are superseded requirements pending the PROJECT revision.
+- PLAN's two phases (0.1.0 foundation / 0.2.0 modern play), layout and 43 unchecked implementation tasks are retained starting versions, not an assessed plan for the new scope. Reassess them at DOCS-006–008.
+- Publish a corresponding version tag and GitHub release with notes after each completed, verified, integrated implementation phase. No implementation phase or release has been delivered.
 
 ## Authorization and exact stop
 
-- The user extended scope and explicitly preapproved checkpoints through completed DOCS-008 on 2026-10-22. The requested pass began at DOCS-002. Technical QC, publication/readback, and issue closure remain required.
-- The requested DOCS-002–DOCS-008 pass is complete and stopped. Wait for the user to request another loop or approve advancing. DOCS-009, preparation integration, phase projection, implementation and releases remain outside this pass.
-- A requested next loop starts from these extended accepted document versions. No checkpoint beyond DOCS-008 or implementation range is authorized by this grant.
+- The user requested another loop with four additions and clarified that work must proceed. Continue the established DOCS-002–DOCS-008 pass with its scoped checkpoint preapproval. QC, publication/readback and issue closure remain required; no new interactive approval is claimed.
+- Stop after recorded/published DOCS-008 completion and verified issue #8 closure. Await the user's next loop/advancement decision. DOCS-009, preparation integration, phase projection, implementation and releases remain outside this pass.
 
 ## Branches, tracking and current operation
 
-- Working branch: design-docs/main. Creation parent/eventual preparation integration target: main. Branch-off: b0597bf0f02c5e4ed5329adb606acafab63c15a5. No suspended child campaign. Preparation remains unmerged.
-- Tracking is enabled. Reuse native milestone #1 (sdd-docs-main) and existing issues #1–#9; exact definitions/associations were verified before writes. Final readback confirmed issues #1–#8 closed as completed, issue #9 open, exact definitions/associations preserved, and milestone #1 open with its predefined title/description. The local DOCS checklist matches those states.
-- Verified completion: 444da5a092543b8121ba1044b9bde773b99c7560 was published with exact matching remote readback and confirmed cleanup; issue #8 closure was then verified. Current operation: wait for the user. No further document or implementation task is active.
-- Push/read back every owned commit. On interruption reconcile the retained operation before other work and preserve the user's exact stopping boundary.
+- Working branch: design-docs/main. Creation parent/eventual preparation integration target: main. Branch-off: b0597bf0f02c5e4ed5329adb606acafab63c15a5. No suspended child campaign; preparation remains unmerged.
+- Tracking is enabled. Native milestone #1 (sdd-docs-main) and all nine issue definitions/associations were verified before entry writes. DOCS-001 stays checked/closed. DOCS-002–DOCS-009 are unchecked; publish/read back this reset, reopen existing issues #2–#8, verify #9 open, and preserve object identities. Milestone #1 remains open.
+- Last accepted completion: 444da5a092543b8121ba1044b9bde773b99c7560; verified stop c330297a0e5de93b8508cb1abc62e21db50599c4. Both are published; issue #8 closure was verified. Current entry effects are pending, not yet complete.
+- Push/read back every owned commit before further work. Reconcile interrupted effects before replay and retain the exact stopping boundary.
 
-Implementation remains gated by DOCS-009, verified published preparation integration, a later human advancement/range decision, and eligible-phase tracking.
+Implementation remains gated by DOCS-009, published preparation integration, a later advancement/range decision and eligible-phase tracking.
