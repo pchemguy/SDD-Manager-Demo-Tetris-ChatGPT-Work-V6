@@ -1,0 +1,76 @@
+# Architecture
+
+This document defines the intended structure of the classic browser game described in [PROJECT.md](PROJECT.md). Document acceptance and preparation progress are recorded in [DOCS_TASKS.md](DOCS_TASKS.md).
+
+## Technology and rationale
+
+Use TypeScript with strict checking, Canvas 2D for the board and next-piece drawing, and semantic HTML/CSS for controls, instructions, scores, and status. The application runs entirely in the browser and is distributed as static assets.
+
+| Approach considered | Tradeoff and decision |
+| --- | --- |
+| TypeScript with Canvas and HTML controls | Recommended. Explicit state and command types support rule maintenance; Canvas fits grid and piece drawing, while HTML keeps controls and status accessible to ordinary browser tools. |
+| JavaScript with Canvas and HTML controls | Reduces compiler configuration, but provides fewer static checks when changing board, piece, and session state. |
+| TypeScript with a DOM cell grid | Makes individual cells directly inspectable, but adds cell elements and CSS layout responsibilities to the view. It remains a viable rendering alternative if cell-level semantics become a requirement. |
+
+Use Vite for development serving and production asset generation. Run the TypeScript compiler separately for type checking because Vite's TypeScript transform does not perform that check. Use Vitest for deterministic unit and controller tests and Playwright for actual browser interactions and rendering checks.
+
+These choices keep the production application limited to game code and browser APIs. Tool versions, the compatible Node runtime, and the dependency lockfile are established during setup before implementation relies on them.
+
+## Major blocks and dependency direction
+
+| Block | Responsibility and state ownership | Dependencies |
+| --- | --- | --- |
+| Game core | Own the board, active and upcoming pieces, gameplay/session status, rule timers, score, cleared lines, and level. Apply gameplay transitions and provide snapshots for presentation. | Plain TypeScript data and explicit inputs; no browser APIs. |
+| Session controller | Hold the current core state, route commands, convert browser timestamps into elapsed-time inputs, and coordinate snapshot presentation. Own lifecycle handles and the clock anchor. | Game core and narrow callbacks for browser services and presentation. |
+| Browser adapters | Translate keyboard/button events and animation timestamps into controller inputs. Supply production piece randomness and attach/detach browser bindings under the controller's lifecycle ownership. | Browser APIs and the controller's command boundary. |
+| Presentation | Draw board and preview snapshots, update HTML metrics/status, and size the drawing surface for the available desktop layout. Own visual styling and drawing resources. | Read-only core snapshots, Canvas 2D, and the DOM. |
+
+Compose these blocks through direct function calls and narrow callbacks. Browser adapters and presentation depend on the core's public data contracts; the core has no dependency on either. Detailed component boundaries and interface shapes belong in DECOMPOSITION.
+
+## State and execution flow
+
+Browser startup resolves the HTML elements and drawing context, creates the production piece source, initializes the core, and connects the controller to input, timing, and presentation.
+
+Input adapters submit game commands. The controller passes commands and explicit elapsed time into the core, stores the resulting state, and presents its snapshot. The core owns all rule decisions, including collision, rotation, locking, line removal, scoring, progression, and game over. Presentation does not reproduce those rules.
+
+Random piece choices enter through a supplied piece source. Production can use browser JavaScript randomness behind that boundary; tests supply a fixed sequence or seeded source. The core does not read ambient randomness or wall-clock time.
+
+The controller owns the browser clock anchor and animation-loop lifecycle; the core owns time accumulated for gameplay rules. Pause, resume, and restart coordinate these owners so browser scheduling does not become a second source of gameplay state. SPEC defines the precise timing and input policies.
+
+The board's logical coordinates remain independent of CSS size and device-pixel scaling. Presentation sizes its drawing buffer and cell geometry from the viewport and draws from the same logical snapshot.
+
+## System invariants and failure boundaries
+
+- Given the same initial state, commands, elapsed time, and piece choices, the core produces the same result.
+- A rendering pass consumes a snapshot without advancing gameplay, selecting a piece, or modifying the board.
+- One controller owns each game's current state, event registrations, and animation-loop lifecycle.
+- Game over is an ordinary core state. The browser composition boundary owns startup failures, including an unavailable drawing context, and presents a readable failure state.
+- Controls, instructions, score, and status use semantic HTML. Canvas pixels are not the authoritative source of textual state.
+
+## Verification and delivery
+
+| Boundary | Verification approach |
+| --- | --- |
+| Game core | Vitest exercises accepted rule contracts using controlled state, elapsed time, and piece sequences. |
+| Session controller | Tests supply a controlled clock and callbacks to check command routing and lifecycle coordination. |
+| Browser integration | Playwright drives the served application with real keyboard/button input and checks DOM state plus Canvas output. |
+| Production build | Explicit TypeScript checking, Vite build, and browser checks against the generated static application. |
+
+Apply [BROWSER_DEV_POLICY.md](../../BROWSER_DEV_POLICY.md) for browser selection, isolated provisioning, headless modes, diagnostics, and recovery. Chromium is primary and Playwright-managed Firefox is secondary. Representative provisioning and execution must be established before browser-dependent implementation relies on those facilities. Document-only planning establishes no browser capability evidence.
+
+Test fixtures use the core's input boundaries and the application's composition seams. The production bundle excludes test fixtures and runner dependencies. Browser verification must exercise the application's real entry and server path; core tests and synthetic provisioning probes supply separate evidence.
+
+GitHub provides source hosting, tracking, CI, and release publication. Gameplay has no service dependency. Build and test commands must be repeatable from the committed toolchain and lockfile.
+
+Package metadata supplies the authoritative application version. Built version information, release tag, and release notes must agree. Phase completion, verification, integration, and release publication follow the accepted PROJECT policy.
+
+## Subsequent design boundaries
+
+DECOMPOSITION defines cohesive components, ownership details, and interfaces for commands, snapshots, piece supply, timing, and rendering. SPEC owns exact gameplay and failure contracts. PLAN owns delivery order and phase exits, and layout owns physical paths. This architecture requires no focused child documents.
+
+## Technical sources
+
+- [TypeScript strict checking](https://www.typescriptlang.org/tsconfig/strict.html)
+- [Vite TypeScript support and separate type checking](https://vite.dev/guide/features#typescript)
+- [Canvas API and semantic-content considerations](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)
+- [Vitest guide](https://vitest.dev/guide/)
